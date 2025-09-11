@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Starting PREMIUM IPTV React Application..."
+echo ""
+echo "Installing dependencies..."
+npm install
+echo ""
+echo "Starting development server..."
+npm run dev

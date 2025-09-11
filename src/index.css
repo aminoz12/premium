@@ -1,0 +1,49 @@
+/* Additional CSS for components that need base styles */
+
+/* Loading animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 120, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 120, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 120, 255, 0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Optimized transitions - only for interactive elements */
+button, a, input, select, textarea, .btn, .card {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Reduce transition complexity for better performance */
+.hover-effect {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
