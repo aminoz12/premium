@@ -65,12 +65,12 @@ const Hero = () => {
   }
 
   const features = [
-    { icon: 'fas fa-tv', text: t('features.quality8K'), color: '#00d4ff' }, // Cyan blue
-    { icon: 'fas fa-bolt', text: t('features.zeroBuffering'), color: 'var(--accent-secondary)' },
-    { icon: 'fas fa-headset', text: t('features.support24_7'), color: '#ff6b9d' }, // Pink
-    { icon: 'fas fa-mobile-alt', text: t('features.allDevices'), color: 'var(--success)' },
-    { icon: 'fas fa-cogs', text: t('features.allApps'), color: '#9c27b0' }, // Purple
-    { icon: 'fas fa-shield-alt', text: t('features.vpnIncluded'), color: '#4caf50' } // Green
+    { icon: 'fas fa-tv', text: '8K HDR QUALITY', color: '#00d4ff' }, // Cyan blue
+    { icon: 'fas fa-bolt', text: 'ZERO BUFFERING', color: 'var(--accent-secondary)' },
+    { icon: 'fas fa-headset', text: '24/7 PREMIUM SUPPORT', color: '#ff6b9d' }, // Pink
+    { icon: 'fas fa-mobile-alt', text: 'ALL DEVICES SUPPORTED', color: 'var(--success)' },
+    { icon: 'fas fa-cogs', text: 'ALL APPLICATIONS SUPPORTED', color: '#9c27b0' }, // Purple
+    { icon: 'fas fa-shield-alt', text: 'VPN INCLUDED', color: '#4caf50' } // Green
   ]
 
   return (
@@ -156,7 +156,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="hero-description"
               >
-                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">{t('features.watchAnywhere')}</span>
+                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">WATCH ANYTIME, ANYWHERE, NO INTERRUPTIONS !</span>
               </motion.p>
               
               <motion.div
@@ -220,14 +220,14 @@ const Hero = () => {
                     onClick={() => scrollToSection('pricing')}
                   >
                     <i className="fas fa-play"></i>
-{t('features.startJourney')}
+                    Start Your Journey
                   </button>
                   <button 
                     className="btn btn-secondary btn-xl"
                     onClick={() => scrollToSection('channels')}
                   >
                     <i className="fas fa-tv"></i>
-{t('features.exploreChannels')}
+                    Explore Channels
                   </button>
                 </HeroCTA>
               </motion.div>
@@ -368,7 +368,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="hero-description"
               >
-                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">{t('features.watchAnywhere')}</span>
+                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">WATCH ANYTIME, ANYWHERE, NO INTERRUPTIONS !</span>
               </motion.p>
               
               {/* Trust Indicators - Moved up for mobile */}
@@ -459,14 +459,14 @@ const Hero = () => {
                     onClick={() => scrollToSection('pricing')}
                   >
                     <i className="fas fa-play"></i>
-{t('features.startJourney')}
+                    Start Your Journey
                   </button>
                   <button 
                     className="btn btn-secondary btn-xl"
                     onClick={() => scrollToSection('channels')}
                   >
                     <i className="fas fa-tv"></i>
-{t('features.exploreChannels')}
+                    Explore Channels
                   </button>
                 </HeroCTA>
               </motion.div>
