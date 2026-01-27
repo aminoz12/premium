@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import LazyImage from '../LazyImage/LazyImage'
 
 const Channels = () => {
   const { t } = useTranslation()
@@ -52,28 +51,60 @@ const Channels = () => {
             {/* Original channels */}
             {channelImages.map((channel, index) => (
               <ChannelItem key={`${channel.name}-${index}`}>
-                <LazyImage 
-                  src={channel.logo} 
-                  alt={channel.name}
-                  placeholder="Loading..."
-                  onError={(e) => {
-                    e.target.src = '/assets/channels/placeholder.png'
-                  }}
-                />
+                <ChannelImageWrapper>
+                  <img 
+                    src={channel.logo} 
+                    alt={`${channel.name} IPTV Channel - Premium IPTV Service`}
+                    loading={index < 3 ? 'eager' : 'lazy'}
+                    onError={(e) => {
+                      // Show fallback with channel initial
+                      const img = e.target
+                      img.style.display = 'none'
+                      const wrapper = img.parentElement
+                      if (wrapper && !wrapper.querySelector('.channel-fallback')) {
+                        const fallback = document.createElement('div')
+                        fallback.className = 'channel-fallback'
+                        fallback.textContent = channel.name.charAt(0)
+                        wrapper.appendChild(fallback)
+                      }
+                    }}
+                    onLoad={(e) => {
+                      // Ensure image is visible when loaded
+                      e.target.style.opacity = '1'
+                      e.target.style.display = 'block'
+                    }}
+                  />
+                </ChannelImageWrapper>
                 <ChannelName>{channel.name}</ChannelName>
               </ChannelItem>
             ))}
             {/* Duplicate channels for seamless loop */}
             {channelImages.map((channel, index) => (
               <ChannelItem key={`${channel.name}-duplicate-${index}`}>
-                <LazyImage 
-                  src={channel.logo} 
-                  alt={channel.name}
-                  placeholder="Loading..."
-                  onError={(e) => {
-                    e.target.src = '/assets/channels/placeholder.png'
-                  }}
-                />
+                <ChannelImageWrapper>
+                  <img 
+                    src={channel.logo} 
+                    alt={`${channel.name} IPTV Channel - Premium IPTV Service`}
+                    loading="lazy"
+                    onError={(e) => {
+                      // Show fallback with channel initial
+                      const img = e.target
+                      img.style.display = 'none'
+                      const wrapper = img.parentElement
+                      if (wrapper && !wrapper.querySelector('.channel-fallback')) {
+                        const fallback = document.createElement('div')
+                        fallback.className = 'channel-fallback'
+                        fallback.textContent = channel.name.charAt(0)
+                        wrapper.appendChild(fallback)
+                      }
+                    }}
+                    onLoad={(e) => {
+                      // Ensure image is visible when loaded
+                      e.target.style.opacity = '1'
+                      e.target.style.display = 'block'
+                    }}
+                  />
+                </ChannelImageWrapper>
                 <ChannelName>{channel.name}</ChannelName>
               </ChannelItem>
             ))}
@@ -93,7 +124,9 @@ const Channels = () => {
                 data-aos-delay={100 + index * 50}
               >
                 <SportCard>
-                  <i className={sport.icon}></i>
+                  <SportIconWrapper>
+                    <i className={sport.icon}></i>
+                  </SportIconWrapper>
                   <h4>{sport.title}</h4>
                   <p>{sport.description}</p>
                 </SportCard>
@@ -134,9 +167,84 @@ const ChannelCarousel = styled.div`
   }
 `
 
+const ChannelImageWrapper = styled.div`
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  
+  img {
+    width: 100%;
+    max-width: 120px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    display: block;
+    opacity: 1;
+  }
+  
+  .channel-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(247, 147, 30, 0.2));
+    border-radius: var(--border-radius-sm);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    height: 110px;
+    
+    img {
+      max-width: 110px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 100px;
+    
+    img {
+      max-width: 100px;
+    }
+    
+    .channel-fallback {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 90px;
+    
+    img {
+      max-width: 90px;
+    }
+    
+    .channel-fallback {
+      font-size: 1.25rem;
+    }
+  }
+`
+
 const ChannelItem = styled.div`
   background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 107, 53, 0.05) 100%);
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-xl);
   padding: var(--spacing-md);
   text-align: center;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -147,30 +255,47 @@ const ChannelItem = styled.div`
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 0 rgba(255, 107, 53, 0);
+  
+  /* Animated gradient border on hover */
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #ff8c42, #ff6b35);
+    background-size: 200% 200%;
+    border-radius: var(--border-radius-xl);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    animation: gradientRotate 3s linear infinite;
+  }
+  
+  @keyframes gradientRotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
   &:hover {
-    transform: translateY(-8px) scale(1.08);
+    transform: translateY(-10px) scale(1.1);
     box-shadow: 
-      0 20px 40px rgba(255, 107, 53, 0.4),
-      0 0 30px rgba(255, 107, 53, 0.2);
+      0 25px 50px rgba(255, 107, 53, 0.5),
+      0 0 40px rgba(255, 107, 53, 0.3),
+      inset 0 0 20px rgba(255, 107, 53, 0.1);
     border-color: var(--accent-primary);
+    
+    &::after {
+      opacity: 1;
+    }
   }
 
-  img {
-    width: 100%;
-    max-width: 120px;
-    height: 120px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: var(--border-radius-sm);
-    margin: 0 auto var(--spacing-sm) auto;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-    display: block;
-  }
-
-  &:hover img {
+  &:hover ${ChannelImageWrapper} img {
     transform: scale(1.1) rotateZ(2deg);
     filter: drop-shadow(0 8px 16px rgba(255, 107, 53, 0.3));
   }
@@ -285,20 +410,39 @@ const SportCard = styled.div`
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
   }
+`
 
+const SportIconWrapper = styled.div`
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+  border-radius: 50%;
+  border: 2px solid rgba(255, 107, 53, 0.3);
+  margin: 0 auto var(--spacing-md);
+  transition: all 0.3s ease;
+  
   i {
     font-size: var(--font-size-3xl);
     color: var(--accent-primary);
-    margin-bottom: var(--spacing-md);
-
+    display: block;
+    
     @media (max-width: 768px) {
       font-size: var(--font-size-2xl);
-      margin-bottom: var(--spacing-sm);
     }
 
     @media (max-width: 480px) {
       font-size: var(--font-size-xl);
     }
+  }
+  
+  ${SportCard}:hover & {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(247, 147, 30, 0.2));
+    border-color: var(--accent-primary);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
   }
 
   h4 {

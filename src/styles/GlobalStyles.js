@@ -39,13 +39,17 @@ const GlobalStyles = createGlobalStyle`
     --hover-bg: #2a2a2a;
     --active-bg: #3a3a3a;
     
-    /* Shadows */
+    /* Shadows - Enhanced Modern Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
     --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+    --shadow-2xl: 0 30px 60px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+    --shadow-glow-accent: 0 0 30px rgba(255, 107, 53, 0.4);
+    --shadow-hover: 0 15px 35px rgba(255, 107, 53, 0.2);
+    --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.1);
     
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -260,8 +264,8 @@ const GlobalStyles = createGlobalStyle`
 
   .btn-primary:hover:not(:disabled) {
     background: var(--accent-gradient-hover);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-accent), var(--shadow-xl);
   }
 
   .btn-primary:active {
@@ -280,8 +284,8 @@ const GlobalStyles = createGlobalStyle`
     background: var(--accent-secondary);
     border-color: var(--accent-secondary);
     color: var(--text-primary);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-accent), var(--shadow-lg);
   }
 
   .btn-outline {
@@ -295,8 +299,8 @@ const GlobalStyles = createGlobalStyle`
     border-color: var(--accent-primary);
     background: var(--accent-primary);
     color: var(--text-primary);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-accent), var(--shadow-lg);
   }
 
   .btn-ghost {

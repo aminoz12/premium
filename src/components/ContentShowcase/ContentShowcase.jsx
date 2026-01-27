@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import LazyImage from '../LazyImage/LazyImage'
 
 const ContentShowcase = () => {
   const { t } = useTranslation()
@@ -134,12 +133,30 @@ const ContentShowcase = () => {
             >
               <ContentCard>
                 <ContentImage>
-                  <LazyImage 
+                  <img 
                     src={item.image} 
-                    alt={item.title}
-                    placeholder="Loading..."
+                    alt={`${item.title} - Premium IPTV ${item.type}`}
+                    loading={index < 4 ? 'eager' : 'lazy'}
                     onError={(e) => {
-                      e.target.src = '/assets/content/placeholder.jpg'
+                      // Try fallback image or show placeholder
+                      const img = e.target
+                      if (img.src !== '/assets/content/placeholder.jpg') {
+                        img.src = '/assets/content/placeholder.jpg'
+                      } else {
+                        // If placeholder also fails, show a fallback
+                        img.style.display = 'none'
+                        const wrapper = img.parentElement
+                        if (wrapper && !wrapper.querySelector('.content-fallback')) {
+                          const fallback = document.createElement('div')
+                          fallback.className = 'content-fallback'
+                          fallback.innerHTML = `<i class="fas fa-film"></i><span>${item.title}</span>`
+                          wrapper.appendChild(fallback)
+                        }
+                      }
+                    }}
+                    onLoad={(e) => {
+                      e.target.style.opacity = '1'
+                      e.target.style.display = 'block'
                     }}
                   />
                   <ContentOverlay>
@@ -243,17 +260,50 @@ const ContentImage = styled.div`
   position: relative;
   height: 400px;
   overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
     border-radius: 0;
+    opacity: 1;
+    display: block;
   }
 
   &:hover img {
     transform: scale(1.08);
+  }
+  
+  .content-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(247, 147, 30, 0.2));
+    color: var(--accent-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+    
+    span {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 0 1rem;
+      opacity: 0.9;
+    }
   }
 
   @media (max-width: 1200px) {
@@ -262,6 +312,17 @@ const ContentImage = styled.div`
 
   @media (max-width: 768px) {
     height: 320px;
+    
+    .content-fallback {
+      i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      span {
+        font-size: 0.875rem;
+      }
+    }
   }
 `
 

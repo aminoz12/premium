@@ -16,6 +16,15 @@
     "movies": "Films",
     "series": "Séries"
   },
+  "heroFeatures": {
+    "watchAnywhere": "REGARDEZ N'IMPORTE QUAND, N'IMPORTE OÙ, SANS INTERRUPTION !",
+    "quality8K": "QUALITÉ 8K HDR",
+    "zeroBuffering": "ZÉRO BUFFERING",
+    "support24_7": "SUPPORT PREMIUM 24/7",
+    "allDevices": "TOUS APPAREILS SUPPORTÉS",
+    "allApps": "TOUTES APPLICATIONS SUPPORTÉES",
+    "vpnIncluded": "VPN INCLUS"
+  },
   "channels": {
     "title": "Chaînes Premium",
     "subtitle": "Accédez à des milliers de chaînes du monde entier"
@@ -107,6 +116,13 @@
     "answer5": "Nous acceptons toutes les cartes de crédit majeures (Visa, Mastercard), PayPal et les cryptomonnaies (Bitcoin, Ethereum). Tous les paiements sont traités de manière sécurisée.",
     "question6": "Y a-t-il une garantie de remboursement ?",
     "answer6": "Oui ! Nous offrons une garantie de remboursement de 7 jours. Si vous n'êtes pas satisfait de notre service, contactez-nous dans les 7 jours pour un remboursement complet."
+  },
+  "blog": {
+    "title": "Blog & Guides IPTV",
+    "subtitle": "Guides experts, tutoriels et conseils pour tirer le meilleur parti de votre service Premium IPTV",
+    "getFreeTest": "Obtenez un Test Gratuit",
+    "tryNow": "Essayez Premium IPTV Maintenant !",
+    "backToBlog": "Retour au Blog"
   },
   "features": {
     "title": "Pourquoi Nous Choisir",

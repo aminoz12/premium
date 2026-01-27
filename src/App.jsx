@@ -22,6 +22,7 @@ const Support = lazy(() => import('./components/Support/Support'))
 const Footer = lazy(() => import('./components/Footer/Footer'))
 const FloatingSupport = lazy(() => import('./components/FloatingSupport/FloatingSupport'))
 const Checkout = lazy(() => import('./pages/Checkout/Checkout'))
+const Blog = lazy(() => import('./pages/Blog/Blog'))
 
 // Loading fallback component
 const ComponentLoader = () => (
@@ -63,6 +64,7 @@ function App() {
       <LoadingScreen />
       
       <Routes>
+        {/* Main Homepage */}
         <Route path="/" element={
           <>
             <Header />
@@ -99,9 +101,161 @@ function App() {
             </Suspense>
           </>
         } />
+        
+        {/* Language-specific routes */}
+        <Route path="/fr/" element={
+          <>
+            <Header />
+            <Hero />
+            <Suspense fallback={<ComponentLoader />}>
+              <Channels />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <ContentShowcase />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Pricing />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <SportsSection />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Features />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Testimonials />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <FAQ />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Support />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Footer />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <FloatingSupport />
+            </Suspense>
+          </>
+        } />
+        <Route path="/gr/" element={
+          <>
+            <Header />
+            <Hero />
+            <Suspense fallback={<ComponentLoader />}>
+              <Channels />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <ContentShowcase />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Pricing />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <SportsSection />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Features />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Testimonials />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <FAQ />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Support />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Footer />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <FloatingSupport />
+            </Suspense>
+          </>
+        } />
+        <Route path="/al/" element={
+          <>
+            <Header />
+            <Hero />
+            <Suspense fallback={<ComponentLoader />}>
+              <Channels />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <ContentShowcase />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Pricing />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <SportsSection />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Features />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Testimonials />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <FAQ />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Support />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <Footer />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
+              <FloatingSupport />
+            </Suspense>
+          </>
+        } />
+        
+        {/* Other Pages */}
         <Route path="/checkout" element={
           <Suspense fallback={<ComponentLoader />}>
             <Checkout />
+          </Suspense>
+        } />
+        <Route path="/blog" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/blog/:slug" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/fr/blog" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/fr/blog/:slug" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/gr/blog" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/gr/blog/:slug" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/al/blog" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
+          </Suspense>
+        } />
+        <Route path="/al/blog/:slug" element={
+          <Suspense fallback={<ComponentLoader />}>
+            <Blog />
           </Suspense>
         } />
       </Routes>

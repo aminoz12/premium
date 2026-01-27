@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
@@ -7,6 +7,7 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 
 const Header = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
@@ -35,10 +36,17 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId, isLink = false, path = '') => {
     // If support is clicked, redirect to WhatsApp
     if (sectionId === 'support') {
       window.open('https://wa.me/212723279328?text=Hi! I need support for IPTV service', '_blank')
+      setIsMobileMenuOpen(false)
+      return
+    }
+    
+    // If it's a link (like blog), navigate to the route using React Router
+    if (isLink && path) {
+      navigate(path)
       setIsMobileMenuOpen(false)
       return
     }
@@ -62,6 +70,7 @@ const Header = () => {
     { id: 'channels', label: t('header.channels') },
     { id: 'features', label: t('header.features') },
     { id: 'pricing', label: t('header.pricing') },
+    { id: 'blog', label: 'Blog', isLink: true, path: '/blog' },
     { id: 'support', label: t('header.support') }
   ]
 
@@ -70,7 +79,7 @@ const Header = () => {
       <NavContainer>
         <NavLogo>
           <LogoImage>
-            <img src="/assets/logo.png" alt="PREMIUM IPTV" />
+            <img src="/assets/logo.png" alt="Premium IPTV Logo - Best IPTV Service with 35,000+ Channels" />
           </LogoImage>
           <LogoText>
             <span className="brand">{t('header.brand')}</span>
@@ -84,7 +93,7 @@ const Header = () => {
               <NavLink 
                 key={item.id}
                 active={activeSection === item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.id, item.isLink, item.path)}
               >
                 {item.label}
               </NavLink>
@@ -109,7 +118,7 @@ const Header = () => {
                   >
                     <NavLink 
                       active={activeSection === item.id}
-                      onClick={() => scrollToSection(item.id)}
+                      onClick={() => scrollToSection(item.id, item.isLink, item.path)}
                     >
                       {item.label}
                     </NavLink>

@@ -1,20 +1,52 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
-  const [isOpen, setIsOpen] = useState(false)
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language || 'en')
+  const navigate = useNavigate()
+  const location = useLocation()
   const dropdownRef = useRef(null)
 
+  // Detect initial language from URL
+  const getInitialLanguage = () => {
+    const path = location.pathname
+    if (path.startsWith('/fr/')) return 'fr'
+    if (path.startsWith('/gr/')) return 'el'
+    if (path.startsWith('/al/')) return 'sq'
+    return i18n.language || 'en'
+  }
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectedLanguage, setSelectedLanguage] = useState(getInitialLanguage())
+
   const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'fr', name: 'Français' },
-    { code: 'el', name: 'Ελληνικά' },
-    { code: 'sq', name: 'Shqip' }
+    { code: 'en', name: 'English', path: '/' },
+    { code: 'fr', name: 'Français', path: '/fr/' },
+    { code: 'el', name: 'Ελληνικά', path: '/gr/' },
+    { code: 'sq', name: 'Shqip', path: '/al/' }
   ]
+
+  // Detect language from URL path on mount
+  useEffect(() => {
+    const path = location.pathname
+    let detectedLang = 'en'
+    
+    if (path.startsWith('/fr/')) {
+      detectedLang = 'fr'
+    } else if (path.startsWith('/gr/')) {
+      detectedLang = 'el'
+    } else if (path.startsWith('/al/')) {
+      detectedLang = 'sq'
+    }
+    
+    if (detectedLang !== i18n.language) {
+      setSelectedLanguage(detectedLang)
+      i18n.changeLanguage(detectedLang)
+    }
+  }, [location.pathname, i18n])
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -27,10 +59,28 @@ const LanguageSwitcher = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  const handleLanguageChange = (languageCode) => {
+  const handleLanguageChange = (languageCode, languagePath) => {
     setSelectedLanguage(languageCode)
     setIsOpen(false)
     i18n.changeLanguage(languageCode)
+    
+    // Get current path without language prefix
+    let currentPath = location.pathname
+    const languagePrefixes = ['/fr/', '/gr/', '/al/', '/en/']
+    for (const prefix of languagePrefixes) {
+      if (currentPath.startsWith(prefix)) {
+        currentPath = currentPath.replace(prefix, '/')
+        break
+      }
+    }
+    
+    // Build new path with selected language
+    const newPath = languagePath === '/' 
+      ? currentPath === '/' ? '/' : currentPath
+      : languagePath + (currentPath === '/' ? '' : currentPath.replace(/^\//, ''))
+    
+    // Navigate to new path
+    navigate(newPath)
   }
 
   const currentLanguage = languages.find(lang => lang.code === selectedLanguage)
@@ -57,7 +107,7 @@ const LanguageSwitcher = () => {
               {languages.map((language) => (
                 <LanguageOption
                   key={language.code}
-                  onClick={() => handleLanguageChange(language.code)}
+                  onClick={() => handleLanguageChange(language.code, language.path)}
                   isSelected={selectedLanguage === language.code}
                 >
                   <span className="name">{language.name}</span>

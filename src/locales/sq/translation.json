@@ -16,6 +16,15 @@
     "movies": "Filma",
     "series": "Seriale"
   },
+  "heroFeatures": {
+    "watchAnywhere": "SHIKONI KURDOHERË, KUDO, PA NDRËRPREJE !",
+    "quality8K": "CILËSI 8K HDR",
+    "zeroBuffering": "ZERO BUFFERING",
+    "support24_7": "MBËSHTETJE PREMIUM 24/7",
+    "allDevices": "TË GJITHA PAJISJET MBËSHTETEN",
+    "allApps": "TË GJITHA APLIKACIONET MBËSHTETEN",
+    "vpnIncluded": "VPN PËRFSHIRË"
+  },
   "channels": {
     "title": "Kanale Premium",
     "subtitle": "Aksesoni mijëra kanale nga e gjithë bota"
@@ -107,6 +116,13 @@
     "answer5": "Ne pranojmë të gjitha kartat e mëdha të kreditit (Visa, Mastercard), PayPal dhe kriptomonedhat (Bitcoin, Ethereum). Të gjitha pagesat përpunohen në mënyrë të sigurt.",
     "question6": "A ka garanci për kthimin e parave?",
     "answer6": "Po! Ne ofrojmë garanci për kthimin e parave 7 ditësh. Nëse nuk jeni të kënaqur me shërbimin tonë, na kontaktoni brenda 7 ditëve për kthim të plotë."
+  },
+  "blog": {
+    "title": "Blog & Udhëzues IPTV",
+    "subtitle": "Udhëzues ekspertë, tutoriale dhe këshilla për të marrë maksimumin nga shërbimi juaj Premium IPTV",
+    "getFreeTest": "Merrni një Test Falas",
+    "tryNow": "Provoni Premium IPTV Tani !",
+    "backToBlog": "Kthehu te Blogu"
   },
   "features": {
     "title": "Pse të Na Zgjidhni",

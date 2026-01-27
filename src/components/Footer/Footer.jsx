@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
@@ -39,7 +40,7 @@ const Footer = () => {
         <FooterContent>
           <FooterColumn>
             <FooterLogo>
-              <img src="/assets/logo.png" alt={t('header.brand')} />
+              <img src="/assets/logo.png" alt="Premium IPTV - Best IPTV Service UK, USA, France, Germany, Spain" />
               <span>{t('header.brand')}</span>
             </FooterLogo>
             <p>
@@ -61,6 +62,7 @@ const Footer = () => {
               <li><button onClick={() => scrollToSection('channels')}>{t('header.channels')}</button></li>
               <li><button onClick={() => scrollToSection('features')}>{t('header.features')}</button></li>
               <li><button onClick={() => scrollToSection('pricing')}>{t('header.pricing')}</button></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><button onClick={() => scrollToSection('support')}>{t('header.support')}</button></li>
             </ul>
           </FooterColumn>
@@ -68,21 +70,9 @@ const Footer = () => {
           <FooterColumn>
             <h3>{t('header.support')}</h3>
             <ul>
-              <li><a href="#">{t('footer.setupGuide')}</a></li>
               <li><a href="#">{t('footer.faq')}</a></li>
               <li><a href="#">{t('footer.contactUs')}</a></li>
               <li><a href="https://wa.me/212723279328?text=Hi! I need live chat support for IPTV service" target="_blank" rel="noopener noreferrer">{t('footer.liveChat')}</a></li>
-              <li><a href="#">{t('footer.tutorials')}</a></li>
-            </ul>
-          </FooterColumn>
-          
-          <FooterColumn>
-            <h3>Legal</h3>
-            <ul>
-              <li><a href="#">{t('footer.termsOfService')}</a></li>
-              <li><a href="#">{t('footer.privacyPolicy')}</a></li>
-              <li><a href="#">{t('footer.refundPolicy')}</a></li>
-              <li><a href="#">{t('footer.dmca')}</a></li>
             </ul>
           </FooterColumn>
         </FooterContent>

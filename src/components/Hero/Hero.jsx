@@ -65,12 +65,12 @@ const Hero = () => {
   }
 
   const features = [
-    { icon: 'fas fa-tv', text: '8K HDR QUALITY', color: '#00d4ff' }, // Cyan blue
-    { icon: 'fas fa-bolt', text: 'ZERO BUFFERING', color: 'var(--accent-secondary)' },
-    { icon: 'fas fa-headset', text: '24/7 PREMIUM SUPPORT', color: '#ff6b9d' }, // Pink
-    { icon: 'fas fa-mobile-alt', text: 'ALL DEVICES SUPPORTED', color: 'var(--success)' },
-    { icon: 'fas fa-cogs', text: 'ALL APPLICATIONS SUPPORTED', color: '#9c27b0' }, // Purple
-    { icon: 'fas fa-shield-alt', text: 'VPN INCLUDED', color: '#4caf50' } // Green
+    { icon: 'fas fa-tv', textKey: 'heroFeatures.quality8K', color: '#00d4ff' }, // Cyan blue
+    { icon: 'fas fa-bolt', textKey: 'heroFeatures.zeroBuffering', color: 'var(--accent-secondary)' },
+    { icon: 'fas fa-headset', textKey: 'heroFeatures.support24_7', color: '#ff6b9d' }, // Pink
+    { icon: 'fas fa-mobile-alt', textKey: 'heroFeatures.allDevices', color: 'var(--success)' },
+    { icon: 'fas fa-cogs', textKey: 'heroFeatures.allApps', color: '#9c27b0' }, // Purple
+    { icon: 'fas fa-shield-alt', textKey: 'heroFeatures.vpnIncluded', color: '#4caf50' } // Green
   ]
 
   return (
@@ -129,7 +129,7 @@ const Hero = () => {
           >
             <img 
               src={heroImages[currentImageIndex]} 
-              alt={`Hero background ${currentImageIndex + 1}`}
+              alt="Premium IPTV Service - Best IPTV Streaming with 35,000+ Channels, 4K Quality, Live Sports"
               onError={(e) => {
                 e.target.style.display = 'none'
               }}
@@ -156,7 +156,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="hero-description"
               >
-                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">WATCH ANYTIME, ANYWHERE, NO INTERRUPTIONS !</span>
+                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">{t('heroFeatures.watchAnywhere')}</span>
               </motion.p>
               
               <motion.div
@@ -167,7 +167,7 @@ const Hero = () => {
                 <HeroFeatures>
                   {features.map((feature, index) => (
                     <motion.div
-                      key={feature.text}
+                      key={feature.textKey}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
@@ -201,7 +201,7 @@ const Hero = () => {
                             delay: index * 0.3
                           }}
                         >
-                          {feature.text}
+                          {t(feature.textKey)}
                         </motion.span>
                       </FeatureItem>
                     </motion.div>
@@ -342,7 +342,7 @@ const Hero = () => {
           >
             <img 
               src={heroImages[currentImageIndex]} 
-              alt={`Hero background ${currentImageIndex + 1}`}
+              alt="Premium IPTV Service - Best IPTV Streaming with 35,000+ Channels, 4K Quality, Live Sports"
               onError={(e) => {
                 e.target.style.display = 'none'
               }}
@@ -360,7 +360,27 @@ const Hero = () => {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <HeroText>
-
+              {/* SEO Optimized H1 for Mobile */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                style={{ 
+                  fontSize: '2rem',
+                  fontWeight: 900,
+                  lineHeight: 1.1,
+                  marginBottom: '12px',
+                  letterSpacing: '-0.02em',
+                  background: 'linear-gradient(135deg, #ffffff, #e0e0e0)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+                  textAlign: 'center'
+                }}
+              >
+                Best Premium IPTV Service 2025 | 35,000+ Channels
+              </motion.h1>
               
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -368,7 +388,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="hero-description"
               >
-                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">WATCH ANYTIME, ANYWHERE, NO INTERRUPTIONS !</span>
+                <span className="main-description laptop-hide">{t('hero.title')}: {t('hero.subtitle')}</span> <span className="highlight-text">{t('heroFeatures.watchAnywhere')}</span>
               </motion.p>
               
               {/* Trust Indicators - Moved up for mobile */}
@@ -570,13 +590,40 @@ const HeroGradient = styled.div`
 
 const HeroContent = styled.div`
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   padding: var(--spacing-8) 0 var(--spacing-20) 0;
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  
+  /* Add subtle glow effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
 `
 
 const HeroText = styled.div`
@@ -1112,6 +1159,24 @@ const BackgroundImageCarousel = styled.div`
   z-index: 1;
   overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  
+  /* Enhanced overlay for better text readability */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 12, 12, 0.4) 0%,
+      rgba(12, 12, 12, 0.2) 50%,
+      rgba(12, 12, 12, 0.6) 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
 
   .image-container {
     position: relative;

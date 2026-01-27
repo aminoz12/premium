@@ -1,71 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 const FloatingSupport = () => {
   const { t } = useTranslation()
-  const [isOpen, setIsOpen] = useState(false)
   const floatingRef = useRef(null)
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (floatingRef.current && !floatingRef.current.contains(event.target)) {
-        setIsOpen(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
-
-  const supportOptions = [
-    {
-      icon: 'fab fa-whatsapp',
-      title: 'Live Chat',
-      color: '#25d366',
-      action: () => {
-        // Redirect to WhatsApp for live chat
-        window.open('https://wa.me/212723279328?text=Hi! I need live chat support for IPTV service', '_blank')
-      }
-    }
-  ]
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/212723279328?text=Hi! I need support for Premium IPTV service', '_blank')
+  }
 
   return (
     <FloatingContainer ref={floatingRef}>
-      <SupportMainButton onClick={() => setIsOpen(!isOpen)}>
-        <i className="fas fa-headset"></i>
+      <SupportMainButton onClick={handleWhatsAppClick}>
+        <i className="fab fa-whatsapp"></i>
       </SupportMainButton>
-      
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <SupportOptionsFloating>
-              {supportOptions.map((option, index) => (
-                <motion.div
-                  key={option.title}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.3 }}
-                >
-                  <SupportButton 
-                    color={option.color}
-                    onClick={option.action}
-                  >
-                    <i className={option.icon}></i>
-                    <span>{option.title}</span>
-                  </SupportButton>
-                </motion.div>
-              ))}
-            </SupportOptionsFloating>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </FloatingContainer>
   )
 }
@@ -83,37 +32,56 @@ const FloatingContainer = styled.div`
 `
 
 const SupportMainButton = styled.button`
-  width: 60px;
-  height: 60px;
-  background: var(--accent-primary);
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
   border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: all var(--transition-base);
-  animation: pulse 2s infinite;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: whatsappPulse 2s infinite;
+  position: relative;
+  overflow: visible;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #2fe576, #1ba085);
+  }
+
+  &:active {
+    transform: scale(1.05);
   }
 
   i {
-    font-size: var(--font-size-xl);
-    color: var(--text-primary);
+    font-size: 32px;
+    color: white;
+    z-index: 2;
+    position: relative;
   }
 
-  @keyframes pulse {
+  @keyframes whatsappPulse {
     0% {
-      box-shadow: 0 0 0 0 rgba(0, 120, 255, 0.7);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.7);
     }
-    70% {
-      box-shadow: 0 0 0 20px rgba(0, 120, 255, 0);
+    50% {
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(0, 120, 255, 0);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 56px;
+    height: 56px;
+    
+    i {
+      font-size: 28px;
     }
   }
 `

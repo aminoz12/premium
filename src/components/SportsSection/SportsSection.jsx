@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import LazyImage from '../LazyImage/LazyImage'
 
 const SportsSection = () => {
   const { t } = useTranslation()
@@ -73,12 +72,25 @@ const SportsSection = () => {
             >
               <SportsCard>
                 <SportsLogo>
-                  <LazyImage 
+                  <img 
                     src={league.logo} 
-                    alt={league.name}
-                    placeholder="Loading..."
+                    alt={`${league.name} - ${league.description} - Premium IPTV Sports`}
+                    loading={index < 4 ? 'eager' : 'lazy'}
                     onError={(e) => {
-                      e.target.src = '/assets/sports/placeholder.png'
+                      // Show fallback with league initial
+                      const img = e.target
+                      img.style.display = 'none'
+                      const wrapper = img.parentElement
+                      if (wrapper && !wrapper.querySelector('.sports-fallback')) {
+                        const fallback = document.createElement('div')
+                        fallback.className = 'sports-fallback'
+                        fallback.textContent = league.name.charAt(0)
+                        wrapper.appendChild(fallback)
+                      }
+                    }}
+                    onLoad={(e) => {
+                      e.target.style.opacity = '1'
+                      e.target.style.display = 'block'
                     }}
                   />
                 </SportsLogo>
@@ -238,11 +250,33 @@ const SportsLogo = styled.div`
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
+    opacity: 1;
+    display: block;
 
     ${SportsCard}:hover & {
       filter: brightness(1.2);
       transform: scale(1.1);
     }
+  }
+  
+  .sports-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(247, 147, 30, 0.2));
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
   }
 `
 

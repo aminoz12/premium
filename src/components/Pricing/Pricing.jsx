@@ -169,30 +169,66 @@ const PricingGrid = styled.div`
 
 const PricingCard = styled.div`
   background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 40px 30px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 2px solid ${props => props.popular ? '#ff6b35' : '#404040'};
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  /* Modern gradient overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: ${props => props.popular 
+      ? 'linear-gradient(90deg, #ff6b35, #f7931e, #ff8c42, #ff6b35)' 
+      : 'linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent)'};
+    background-size: ${props => props.popular ? '200% 100%' : '100% 100%'};
+    animation: ${props => props.popular ? 'shimmer 3s infinite' : 'none'};
+    opacity: ${props => props.popular ? '1' : '0'};
+    transition: opacity 0.3s ease;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.4),
+      0 0 40px rgba(255, 107, 53, 0.3);
     border-color: #ff6b35;
+    
+    &::before {
+      opacity: 1;
+    }
   }
 
   ${props => props.popular && `
     transform: scale(1.05);
     background: linear-gradient(145deg, #2a1a1a, #3a2a2a);
     border-color: #ff6b35;
-    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+    box-shadow: 
+      0 15px 35px rgba(255, 107, 53, 0.2),
+      0 0 30px rgba(255, 107, 53, 0.15);
+    
+    &::before {
+      opacity: 1;
+    }
     
     &:hover {
-      transform: scale(1.05) translateY(-10px);
-      box-shadow: 0 25px 45px rgba(255, 107, 53, 0.3);
+      transform: scale(1.05) translateY(-12px);
+      box-shadow: 
+        0 30px 60px rgba(255, 107, 53, 0.4),
+        0 0 50px rgba(255, 107, 53, 0.3);
     }
   `}
 
