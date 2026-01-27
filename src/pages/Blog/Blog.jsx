@@ -31,7 +31,7 @@ const Blog = () => {
 
 const BlogList = ({ currentLang }) => {
   const { t, i18n } = useTranslation()
-  const recentArticles = getRecentArticles(10)
+  const recentArticles = getRecentArticlesByLanguage(currentLang, 10)
   
   // Update language if needed
   useEffect(() => {
