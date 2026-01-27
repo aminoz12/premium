@@ -6,9 +6,20 @@ Netlify build fails with exit code 127: "npm not found"
 ## Root Cause
 Exit code 127 means the command (`npm`) is not found. This happens when Node.js is not installed or activated in the build environment.
 
+**IMPORTANT**: If your build finishes in ~10 seconds, Node.js is NOT being installed at all. This means Netlify isn't detecting your project as a Node.js project.
+
 ## Solution Steps
 
-### Step 1: Set Node.js Version in Netlify UI
+### Step 1: CRITICAL - Verify package.json is at Repository Root
+**This is the most common cause!**
+
+1. Check that `package.json` is in the **root** of your repository (not in a subdirectory)
+2. Verify it's committed to Git: `git ls-files | grep package.json`
+3. If `package.json` is in a subdirectory, you MUST set the **Base directory** in Netlify UI:
+   - Go to **Site settings** → **Build & deploy** → **Build settings**
+   - Set **Base directory** to the folder containing `package.json`
+
+### Step 2: Set Node.js Version in Netlify UI
 1. Go to your Netlify site dashboard
 2. Navigate to **Site settings** → **Build & deploy** → **Environment**
 3. Click **Add variable**
