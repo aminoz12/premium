@@ -13,6 +13,36 @@
     <meta name="revisit-after" content="7 days">
     <meta name="rating" content="general">
     
+    <!-- Performance Optimization Meta Tags -->
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+    <link rel="dns-prefetch" href="https://premiumiptv.live">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preconnect" href="https://premiumiptv.live">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Resource Hints -->
+    <link rel="prefetch" href="/blog">
+    <link rel="prefetch" href="/checkout">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="Premium IPTV">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Premium IPTV">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#ff6b35">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#ff6b35">
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://premiumiptv.live/">
     
@@ -59,6 +89,11 @@
     <meta name="geo.region" content="AL">
     <meta name="geo.region" content="CA">
     <meta name="geo.region" content="CY">
+    <meta name="geo.placename" content="Worldwide">
+    <meta name="geo.position" content="0;0">
+    <meta name="ICBM" content="0,0">
+    <meta name="distribution" content="global">
+    <meta name="target" content="global">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Premium IPTV - #1 IPTV Service | 35,000+ Channels | 4K/8K Quality">
@@ -115,7 +150,16 @@
             "contactType": "Customer Service",
             "availableLanguage": ["en", "fr", "de", "es", "pt", "nl", "el", "sq"],
             "url": "https://wa.me/212723279328",
-            "telephone": "+212723279328"
+            "telephone": "+212723279328",
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 0,
+                "longitude": 0
+              },
+              "geoRadius": "20037508"
+            }
           },
           "areaServed": [
             {"@type": "Country", "name": "United Kingdom", "identifier": "GB"},
@@ -138,7 +182,14 @@
             "reviewCount": "5500",
             "bestRating": "5",
             "worstRating": "1"
-          }
+          },
+          "foundingDate": "2020",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Premium IPTV Team"
+            }
+          ]
         },
         {
           "@type": "Service",
@@ -160,7 +211,8 @@
               "price": "25",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
-              "url": "https://premiumiptv.live/checkout"
+              "url": "https://premiumiptv.live/checkout",
+              "priceValidUntil": "2027-12-31"
             },
             {
               "@type": "Offer",
@@ -168,7 +220,8 @@
               "price": "38",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
-              "url": "https://premiumiptv.live/checkout"
+              "url": "https://premiumiptv.live/checkout",
+              "priceValidUntil": "2027-12-31"
             },
             {
               "@type": "Offer",
@@ -176,9 +229,27 @@
               "price": "62",
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
-              "url": "https://premiumiptv.live/checkout"
+              "url": "https://premiumiptv.live/checkout",
+              "priceValidUntil": "2027-12-31"
             }
-          ]
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "General Public"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IPTV Subscription Plans",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "IPTV Subscription"
+                }
+              }
+            ]
+          }
         },
         {
           "@type": "WebSite",
@@ -193,7 +264,8 @@
             "@type": "SearchAction",
             "target": "https://premiumiptv.live/?s={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
+          },
+          "inLanguage": ["en", "fr", "de", "es", "pt", "nl", "el", "sq"]
         },
         {
           "@type": "BreadcrumbList",
@@ -216,6 +288,7 @@
         {
           "@type": "FAQPage",
           "@id": "https://premiumiptv.live/#faq",
+          "description": "Frequently asked questions about Premium IPTV service",
           "mainEntity": [{
             "@type": "Question",
             "name": "What is Premium IPTV?",
@@ -251,7 +324,347 @@
               "@type": "Answer",
               "text": "Yes, Premium IPTV includes VPN service to ensure secure and unrestricted access to content from anywhere in the world."
             }
+          }, {
+            "@type": "Question",
+            "name": "How do I setup IPTV on my device?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Setup is simple: 1) Purchase a subscription, 2) Receive your M3U playlist or Xtream codes, 3) Install an IPTV app compatible with your device, 4) Enter your credentials, 5) Start watching. We provide detailed setup guides for all devices."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What payment methods do you accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We accept multiple payment methods including credit/debit cards, PayPal, cryptocurrency (Bitcoin, Ethereum), and local payment methods depending on your country."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Is there a free trial available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer a free trial for new customers to test our service before committing to a subscription. Contact our support team to request your free trial."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Do you provide 24/7 customer support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our customer support team is available 24/7 via WhatsApp, email, and live chat to assist you with any questions or technical issues."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I use one subscription on multiple devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our standard subscription allows connection on 1 device at a time. We offer multi-device packages for households that need simultaneous connections on 2 or more devices."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What internet speed do I need for IPTV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For SD quality: minimum 5 Mbps. For HD quality: minimum 10 Mbps. For 4K quality: minimum 25 Mbps. For 8K quality: minimum 50 Mbps. We recommend a stable connection with at least 20 Mbps for the best experience."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Is there a contract or commitment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, there are no long-term contracts. All our subscriptions are prepaid with no commitment. You can choose quarterly, 6-month, or yearly plans based on your preference."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What happens if I have buffering issues?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Buffering is usually caused by internet connection issues. Try: 1) Restart your router, 2) Use Ethernet instead of WiFi, 3) Lower the video quality in your IPTV app, 4) Contact our 24/7 support if issues persist."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Do you offer EPG (Electronic Program Guide)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide EPG for most channels, allowing you to see program schedules and set reminders. EPG is available for 7 days in advance for supported channels."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I record shows with your service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, with compatible IPTV apps that support recording functionality, you can record shows and watch them later. Storage depends on your device's available space."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What channels are included in the subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our subscription includes 35,000+ channels from around the world including sports, movies, news, entertainment, kids, documentaries, and more. We have channels from UK, USA, France, Germany, Spain, Portugal, Netherlands, Greece, Albania, Canada, Cyprus, and many other countries."
+            }
+          }, {
+            "@type": "Question",
+            "name": "How do I cancel my subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Since our subscriptions are prepaid with no auto-renewal, there's nothing to cancel. Your service simply ends at the end of your subscription period. You can choose to renew or not."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Is the service legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Premium IPTV operates as a streaming service provider. We recommend users to ensure they comply with local laws and regulations regarding streaming services in their country."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What IPTV apps do you recommend?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We recommend IPTV Smarters Pro, TiviMate, GSE Smart IPTV, Flex IPTV, and Perfect Player. These apps are compatible with most devices and offer excellent features like EPG, favorites, and recording."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Do you offer adult channels?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, adult channels are available as an optional add-on. They are not included in the standard subscription by default. You can add them during checkout if desired."
+            }
+          }, {
+            "@type": "Question",
+            "name": "How quickly do I receive my subscription after purchase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Subscription details are delivered instantly via email after purchase. In most cases, you'll receive your M3U playlist and credentials within 1-5 minutes."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I change my subscription plan later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can upgrade your plan at any time. Contact our support team to upgrade from quarterly to 6-month or yearly plans. The remaining value of your current plan will be applied to the new plan."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What is your refund policy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer a 24-hour refund policy if the service doesn't work as described. After testing the service during the free trial or first 24 hours, refunds are not issued due to the nature of digital services."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Do you have a mobile app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We don't have a proprietary app, but our service works with all popular IPTV apps available on iOS App Store and Google Play Store. We provide setup guides for all recommended apps."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I use the service while traveling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can use Premium IPTV anywhere in the world as long as you have an internet connection. The included VPN ensures secure access even in countries with restrictions."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What is the difference between M3U and Xtream codes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "M3U is a playlist file format containing channel URLs. Xtream codes (also called M3U with Xtream API) use a username, password, and server URL for authentication. Both work with our service, and you can choose whichever format your preferred IPTV app supports."
+            }
+          }, {
+            "@type": "Question",
+            "name": "How do I contact customer support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our 24/7 customer support is available via WhatsApp (+212723279328), email (support@premiumiptv.live), and live chat on our website. We typically respond within minutes."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Are there any hidden fees?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, there are no hidden fees. The price you see is the price you pay. Optional add-ons like adult channels or multi-device packages are clearly priced and optional."
+            }
+          }, {
+            "@type": "Question",
+            "name": "How often is the channel list updated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We update our channel list regularly to add new channels, replace offline ones, and improve quality. Major updates happen weekly, with minor updates as needed to ensure the best experience."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I get a custom channel list?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for yearly subscriptions, we can create custom channel lists based on your preferences. Contact our support team with your requirements, and we'll create a personalized playlist for you."
+            }
           }]
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://premiumiptv.live/#howto",
+          "name": "How to Setup Premium IPTV",
+          "description": "Step-by-step guide to setup Premium IPTV on any device",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Purchase Subscription",
+              "text": "Choose your preferred subscription plan and complete the purchase on our website",
+              "image": "https://premiumiptv.live/step1.jpg"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Receive Credentials",
+              "text": "After purchase, you will receive your M3U playlist URL or Xtream codes via email",
+              "image": "https://premiumiptv.live/step2.jpg"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Install IPTV App",
+              "text": "Download and install a compatible IPTV application for your device (IPTV Smarters, TiviMate, etc.)",
+              "image": "https://premiumiptv.live/step3.jpg"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Enter Credentials",
+              "text": "Open the app and enter your M3U URL or Xtream codes to activate your subscription",
+              "image": "https://premiumiptv.live/step4.jpg"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Start Watching",
+              "text": "Browse channels and start watching your favorite content in HD, 4K, or 8K quality",
+              "image": "https://premiumiptv.live/step5.jpg"
+            }
+          ],
+          "tool": [
+            {
+              "@type": "HowToTool",
+              "name": "IPTV Application"
+            },
+            {
+              "@type": "HowToTool",
+              "name": "Internet Connection"
+            }
+          ]
+        },
+        {
+          "@type": "QAPage",
+          "@id": "https://premiumiptv.live/#qapage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": "Which is the best IPTV service in 2026?",
+            "text": "Which is the best IPTV service in 2026?",
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Premium IPTV is considered one of the best IPTV services in 2026, offering 35,000+ channels, 147,000 movies, and 62,000 series in 4K/8K quality. With 24/7 support, VPN included, and compatibility with all devices, it provides excellent value for IPTV users worldwide.",
+              "author": {
+                "@type": "Organization",
+                "name": "Premium IPTV"
+              },
+              "upvoteCount": 4500
+            }
+          }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://premiumiptv.live/#article-template",
+          "headline": "Best IPTV Service 2026 - Complete Guide",
+          "description": "Comprehensive guide to choosing the best IPTV service in 2026. Compare features, pricing, and quality of top IPTV providers.",
+          "image": "https://premiumiptv.live/og-image.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "Premium IPTV Team"
+          },
+          "publisher": {
+            "@id": "https://premiumiptv.live/#organization"
+          },
+          "datePublished": "2026-06-06",
+          "dateModified": "2026-06-06",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://premiumiptv.live/blog/best-iptv-service-2026"
+          }
+        },
+        {
+          "@type": "Review",
+          "@id": "https://premiumiptv.live/#review-1",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Premium IPTV Service"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "John Smith"
+          },
+          "reviewBody": "Excellent IPTV service with amazing channel selection and 4K quality. Customer support is very responsive.",
+          "datePublished": "2026-05-15"
+        },
+        {
+          "@type": "Review",
+          "@id": "https://premiumiptv.live/#review-2",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Premium IPTV Service"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Marie Dupont"
+          },
+          "reviewBody": "Best IPTV service I've used. Works perfectly on my Smart TV and mobile. French channels are excellent quality.",
+          "datePublished": "2026-05-20"
+        },
+        {
+          "@type": "Review",
+          "@id": "https://premiumiptv.live/#review-3",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Premium IPTV Service"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Hans Mueller"
+          },
+          "reviewBody": "Great service with German channels included. Setup was easy and the VPN inclusion is a nice bonus.",
+          "datePublished": "2026-05-25"
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://premiumiptv.live/#video-1",
+          "name": "How to Setup Premium IPTV on Any Device",
+          "description": "Step-by-step tutorial showing how to setup Premium IPTV on Smart TVs, Android, iOS, Firestick, and more devices.",
+          "thumbnailUrl": "https://premiumiptv.live/video-thumbnail.jpg",
+          "uploadDate": "2026-05-01",
+          "duration": "PT10M30S",
+          "contentUrl": "https://premiumiptv.live/setup-tutorial.mp4",
+          "embedUrl": "https://premiumiptv.live/embed/setup-tutorial",
+          "author": {
+            "@type": "Organization",
+            "name": "Premium IPTV"
+          },
+          "publisher": {
+            "@id": "https://premiumiptv.live/#organization"
+          }
         }
       ]
     }

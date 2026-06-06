@@ -1,4 +1,5 @@
 # Robots.txt for Premium IPTV
+# Updated: June 2026
 # Allow all search engines to crawl the site
 
 User-agent: *
@@ -8,9 +9,16 @@ Allow: /blog/
 Disallow: /checkout
 Disallow: /api/
 Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /*.json$
+Disallow: /sw.js
 
 # Sitemap location
+Sitemap: https://premiumiptv.live/sitemap_index.xml
 Sitemap: https://premiumiptv.live/sitemap.xml
+Sitemap: https://premiumiptv.live/sitemap_images.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
@@ -20,6 +28,12 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
@@ -28,9 +42,36 @@ User-agent: Slurp
 Allow: /
 Crawl-delay: 1
 
-# Block bad bots
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots and aggressive crawlers
 User-agent: AhrefsBot
 Crawl-delay: 10
 
 User-agent: SemrushBot
 Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BacklinkCrawler
+Disallow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

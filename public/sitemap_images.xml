@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main Logo -->
+  <url>
+    <loc>https://premiumiptv.live/</loc>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/logo.png</image:loc>
+      <image:title>Premium IPTV Logo</image:title>
+      <image:caption>Premium IPTV official logo</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Payment Method Images -->
+  <url>
+    <loc>https://premiumiptv.live/checkout</loc>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/payment/crypto.svg</image:loc>
+      <image:title>Cryptocurrency Payment</image:title>
+      <image:caption>Pay with cryptocurrency including Bitcoin and Ethereum</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/payment/mastercard.svg</image:loc>
+      <image:title>Mastercard Payment</image:title>
+      <image:caption>Pay with Mastercard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/payment/paypal.svg</image:loc>
+      <image:title>PayPal Payment</image:title>
+      <image:caption>Pay with PayPal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/payment/revolut.svg</image:loc>
+      <image:title>Revolut Payment</image:title>
+      <image:caption>Pay with Revolut</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/payment/visa.svg</image:loc>
+      <image:title>Visa Payment</image:title>
+      <image:caption>Pay with Visa</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Country Flag Images -->
+  <url>
+    <loc>https://premiumiptv.live/</loc>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/testimonials/uk-flag.svg</image:loc>
+      <image:title>United Kingdom Flag</image:title>
+      <image:caption>IPTV service available in United Kingdom</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/testimonials/usa-flag.svg</image:loc>
+      <image:title>United States Flag</image:title>
+      <image:caption>IPTV service available in United States</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://premiumiptv.live/assets/testimonials/greece-flag.svg</image:loc>
+      <image:title>Greece Flag</image:title>
+      <image:caption>IPTV service available in Greece</image:caption>
+    </image:image>
+  </url>
+</urlset>
