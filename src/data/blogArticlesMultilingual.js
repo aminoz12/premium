@@ -74,10 +74,10 @@ export const getRelatedArticlesByLanguage = (slug, lang = 'en', limit = 3) => {
 // Get all language versions of an article (for hreflang)
 export const getArticleLanguageVersions = (slug) => {
   return {
-    en: `https://premiumiptv.live/blog/${slug}`,
-    fr: `https://premiumiptv.live/fr/blog/${slug}`,
-    el: `https://premiumiptv.live/gr/blog/${slug}`,
-    sq: `https://premiumiptv.live/al/blog/${slug}`
+    en: `https://watchworldcup.us/blog/${slug}`,
+    fr: `https://watchworldcup.us/fr/blog/${slug}`,
+    el: `https://watchworldcup.us/gr/blog/${slug}`,
+    sq: `https://watchworldcup.us/al/blog/${slug}`
   }
 }
 

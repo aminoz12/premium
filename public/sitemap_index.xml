@@ -2,25 +2,13 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Sitemap -->
   <sitemap>
-    <loc>https://premiumiptv.live/sitemap.xml</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://watchworldcup.us/sitemap.xml</loc>
+    <lastmod>2026-06-08</lastmod>
   </sitemap>
-  
+
   <!-- Image Sitemap -->
   <sitemap>
-    <loc>https://premiumiptv.live/sitemap_images.xml</loc>
-    <lastmod>2026-06-06</lastmod>
-  </sitemap>
-  
-  <!-- Blog Sitemap (to be created) -->
-  <sitemap>
-    <loc>https://premiumiptv.live/sitemap_blog.xml</loc>
-    <lastmod>2026-06-06</lastmod>
-  </sitemap>
-  
-  <!-- Video Sitemap (to be created when videos are available) -->
-  <sitemap>
-    <loc>https://premiumiptv.live/sitemap_video.xml</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://watchworldcup.us/sitemap_images.xml</loc>
+    <lastmod>2026-06-08</lastmod>
   </sitemap>
 </sitemapindex>

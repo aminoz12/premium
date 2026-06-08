@@ -149,25 +149,25 @@ const BlogPost = ({ slug, currentLang }) => {
         "@type": "Article",
         "headline": article.title,
         "description": article.excerpt,
-        "image": article.image ? `https://premiumiptv.live${article.image}` : "https://premiumiptv.live/logo.png",
+        "image": article.image ? `https://watchworldcup.us${article.image}` : "https://watchworldcup.us/logo.png",
         "datePublished": article.publishDate,
         "dateModified": article.publishDate,
         "author": {
           "@type": "Organization",
           "name": article.author,
-          "url": "https://premiumiptv.live"
+          "url": "https://watchworldcup.us"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Premium IPTV",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://premiumiptv.live/logo.png"
+            "url": "https://watchworldcup.us/logo.png"
           }
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": `https://premiumiptv.live/blog/${article.slug}`
+          "@id": `https://watchworldcup.us/blog/${article.slug}`
         },
         "articleSection": article.category,
         "keywords": article.tags.join(", ")
@@ -188,7 +188,7 @@ const BlogPost = ({ slug, currentLang }) => {
         canonical.setAttribute('rel', 'canonical')
         document.head.appendChild(canonical)
       }
-      canonical.setAttribute('href', `https://premiumiptv.live/blog/${article.slug}`)
+      canonical.setAttribute('href', `https://watchworldcup.us/blog/${article.slug}`)
       
       // Update Open Graph tags
       const updateOGTag = (property, content) => {
@@ -203,8 +203,8 @@ const BlogPost = ({ slug, currentLang }) => {
       
       updateOGTag('og:title', article.title)
       updateOGTag('og:description', article.excerpt)
-      updateOGTag('og:image', article.image ? `https://premiumiptv.live${article.image}` : 'https://premiumiptv.live/logo.png')
-      updateOGTag('og:url', `https://premiumiptv.live${article.languagePath || ''}/blog/${article.slug}`)
+      updateOGTag('og:image', article.image ? `https://watchworldcup.us${article.image}` : 'https://watchworldcup.us/logo.png')
+      updateOGTag('og:url', `https://watchworldcup.us${article.languagePath || ''}/blog/${article.slug}`)
       updateOGTag('og:type', 'article')
       
       return () => {

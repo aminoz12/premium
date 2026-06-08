@@ -1,32 +1,20 @@
-# Robots.txt for Premium IPTV
+# Robots.txt for Premium IPTV — https://watchworldcup.us
 # Updated: June 2026
-# Allow all search engines to crawl the site
 
+# Default: allow all crawlers
 User-agent: *
 Allow: /
-Allow: /blog
-Allow: /blog/
 Disallow: /checkout
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 Disallow: /tmp/
-Disallow: /*.json$
 Disallow: /sw.js
 
-# Sitemap location
-Sitemap: https://premiumiptv.live/sitemap_index.xml
-Sitemap: https://premiumiptv.live/sitemap.xml
-Sitemap: https://premiumiptv.live/sitemap_images.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Specific rules for major search engines
+# Major search engines
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
@@ -36,21 +24,58 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
-Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
-Crawl-delay: 2
 
-# Block bad bots and aggressive crawlers
+# AI answer engines (AEO) — explicitly welcomed so we can be cited in AI answers
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Social media crawlers (link previews)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Aggressive SEO scrapers — slow down or block
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -66,12 +91,7 @@ Disallow: /
 User-agent: BacklinkCrawler
 Disallow: /
 
-# Allow social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
+# Sitemaps
+Sitemap: https://watchworldcup.us/sitemap_index.xml
+Sitemap: https://watchworldcup.us/sitemap.xml
+Sitemap: https://watchworldcup.us/sitemap_images.xml
