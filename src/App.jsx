@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -12,6 +12,7 @@ import { usePerformance } from './hooks/usePerformance'
 
 // Lazy load non-critical components
 const Channels = lazy(() => import('./components/Channels/Channels'))
+const WorldCup = lazy(() => import('./components/WorldCup/WorldCup'))
 const ContentShowcase = lazy(() => import('./components/ContentShowcase/ContentShowcase'))
 const Features = lazy(() => import('./components/Features/Features'))
 const Pricing = lazy(() => import('./components/Pricing/Pricing'))
@@ -46,7 +47,19 @@ const ComponentLoader = () => (
 
 function App() {
   usePerformance() // Monitor performance metrics
-  
+  const location = useLocation()
+
+  // Send a Google Analytics page_view on every client-side route change
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: location.pathname + location.search,
+        page_location: window.location.href,
+        page_title: document.title
+      })
+    }
+  }, [location.pathname, location.search])
+
   useEffect(() => {
     // Initialize AOS with optimized settings
     AOS.init({
@@ -69,6 +82,9 @@ function App() {
           <>
             <Header />
             <Hero />
+            <Suspense fallback={<ComponentLoader />}>
+              <WorldCup />
+            </Suspense>
             <Suspense fallback={<ComponentLoader />}>
               <Channels />
             </Suspense>
@@ -108,6 +124,9 @@ function App() {
             <Header />
             <Hero />
             <Suspense fallback={<ComponentLoader />}>
+              <WorldCup />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
               <Channels />
             </Suspense>
             <Suspense fallback={<ComponentLoader />}>
@@ -144,6 +163,9 @@ function App() {
             <Header />
             <Hero />
             <Suspense fallback={<ComponentLoader />}>
+              <WorldCup />
+            </Suspense>
+            <Suspense fallback={<ComponentLoader />}>
               <Channels />
             </Suspense>
             <Suspense fallback={<ComponentLoader />}>
@@ -179,6 +201,9 @@ function App() {
           <>
             <Header />
             <Hero />
+            <Suspense fallback={<ComponentLoader />}>
+              <WorldCup />
+            </Suspense>
             <Suspense fallback={<ComponentLoader />}>
               <Channels />
             </Suspense>

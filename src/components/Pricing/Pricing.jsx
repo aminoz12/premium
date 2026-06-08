@@ -134,14 +134,15 @@ const Pricing = () => {
           <p>{t('pricing.securePayment')}</p>
           <PaymentIcons>
             {paymentMethods.map((method, index) => (
-              <img 
-                key={index}
-                src={method.logo} 
-                alt={method.name}
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                }}
-              />
+              <PaymentChip key={index} title={method.name}>
+                <img
+                  src={method.logo}
+                  alt={method.name}
+                  onError={(e) => {
+                    e.target.parentElement.style.display = 'none'
+                  }}
+                />
+              </PaymentChip>
             ))}
           </PaymentIcons>
         </PaymentMethods>
@@ -186,18 +187,11 @@ const PricingCard = styled.div`
     left: 0;
     right: 0;
     height: 4px;
-    background: ${props => props.popular 
-      ? 'linear-gradient(90deg, #ff6b35, #f7931e, #ff8c42, #ff6b35)' 
+    background: ${props => props.popular
+      ? 'linear-gradient(90deg, #ff6b35, #f7931e, #ff8c42)'
       : 'linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent)'};
-    background-size: ${props => props.popular ? '200% 100%' : '100% 100%'};
-    animation: ${props => props.popular ? 'shimmer 3s infinite' : 'none'};
     opacity: ${props => props.popular ? '1' : '0'};
     transition: opacity 0.3s ease;
-  }
-  
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
   }
 
   &:hover {
@@ -341,21 +335,45 @@ const PaymentMethods = styled.div`
 const PaymentIcons = styled.div`
   display: flex;
   justify-content: center;
-  gap: var(--spacing-xl);
+  align-items: center;
+  gap: var(--spacing-4);
   flex-wrap: wrap;
   padding: var(--spacing-lg) 0;
+`
+
+const PaymentChip = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 58px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border-radius: var(--border-radius-xl);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   img {
-    height: 45px;
+    max-height: 40px;
+    max-width: 100%;
     width: auto;
-    opacity: 0.8;
-    transition: all var(--transition-base);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    object-fit: contain;
+    display: block;
+  }
 
-    &:hover {
-      opacity: 1;
-      transform: scale(1.1);
-      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 52px;
+    padding: 7px 10px;
+
+    img {
+      max-height: 34px;
     }
   }
 `

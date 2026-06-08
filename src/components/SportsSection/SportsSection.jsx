@@ -59,7 +59,7 @@ const SportsSection = () => {
         <SectionHeader data-aos="fade-up">
           <h2>{t('sports.title')}</h2>
         </SectionHeader>
-        
+
         <SportsGrid>
           {sportsLeagues.map((league, index) => (
             <motion.div

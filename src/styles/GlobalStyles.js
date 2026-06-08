@@ -133,6 +133,12 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
@@ -140,11 +146,19 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--primary-bg);
     color: var(--text-primary);
     line-height: var(--line-height-normal);
-    overflow-x: hidden;
     font-weight: var(--font-weight-normal);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Prevent media from ever causing horizontal overflow on small screens */
+  img, svg, video, canvas {
+    max-width: 100%;
+  }
+
+  #root {
+    overflow-x: hidden;
   }
 
   /* Professional scrollbar */
@@ -185,26 +199,51 @@ const GlobalStyles = createGlobalStyle`
 
   .section-header {
     text-align: center;
-    margin-bottom: var(--spacing-20);
+    margin-bottom: var(--spacing-16);
     position: relative;
+  }
+
+  /* Premium eyebrow / kicker label above section titles */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent-primary);
+    opacity: 0.6;
   }
 
   .section-header h2 {
     font-size: var(--font-size-5xl);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-6);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--spacing-5);
+    color: var(--text-primary);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .section-header h2 .accent {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    line-height: var(--line-height-tight);
-    letter-spacing: -0.025em;
   }
 
   .section-header p {
     font-size: var(--font-size-xl);
-    color: var(--text-secondary);
-    max-width: 700px;
+    color: var(--text-muted);
+    max-width: 620px;
     margin: 0 auto;
     line-height: var(--line-height-relaxed);
     font-weight: var(--font-weight-normal);
@@ -233,13 +272,17 @@ const GlobalStyles = createGlobalStyle`
     gap: var(--spacing-2);
     padding: var(--spacing-3) var(--spacing-6);
     border: none;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius-xl);
     font-family: inherit;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.01em;
     text-decoration: none;
     cursor: pointer;
-    transition: var(--transition-all);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     white-space: nowrap;
@@ -257,50 +300,58 @@ const GlobalStyles = createGlobalStyle`
 
   .btn-primary {
     background: var(--accent-gradient);
-    color: var(--text-primary);
-    box-shadow: var(--shadow-md);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(255, 107, 53, 0.28);
     border: 1px solid transparent;
   }
 
   .btn-primary:hover:not(:disabled) {
     background: var(--accent-gradient-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glow-accent), var(--shadow-xl);
+    box-shadow: 0 12px 28px rgba(255, 107, 53, 0.38);
   }
 
   .btn-primary:active {
     transform: translateY(0);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 6px 18px rgba(255, 107, 53, 0.28);
   }
 
   .btn-secondary {
-    background: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.06);
     color: var(--text-primary);
-    border: 2px solid var(--accent-primary);
-    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
   }
 
   .btn-secondary:hover:not(:disabled) {
-    background: var(--accent-secondary);
-    border-color: var(--accent-secondary);
-    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.28);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glow-accent), var(--shadow-lg);
   }
 
   .btn-outline {
     background: transparent;
     color: var(--text-secondary);
-    border: 2px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
   }
 
   .btn-outline:hover:not(:disabled) {
     border-color: var(--accent-primary);
-    background: var(--accent-primary);
     color: var(--text-primary);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glow-accent), var(--shadow-lg);
+  }
+
+  .btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.28);
+  }
+
+  .btn-whatsapp:hover:not(:disabled) {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.38);
   }
 
   .btn-ghost {

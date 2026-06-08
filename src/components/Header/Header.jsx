@@ -36,14 +36,21 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId, isLink = false, path = '') => {
+  const scrollToSection = (sectionId, isLink = false, path = '', external = false) => {
     // If support is clicked, redirect to WhatsApp
     if (sectionId === 'support') {
       window.open('https://wa.me/212723279328?text=Hi! I need support for IPTV service', '_blank')
       setIsMobileMenuOpen(false)
       return
     }
-    
+
+    // External static pages (e.g. World Cup landing) need a full page load
+    if (external && path) {
+      window.location.href = path
+      setIsMobileMenuOpen(false)
+      return
+    }
+
     // If it's a link (like blog), navigate to the route using React Router
     if (isLink && path) {
       navigate(path)
@@ -70,6 +77,7 @@ const Header = () => {
     { id: 'channels', label: t('header.channels') },
     { id: 'features', label: t('header.features') },
     { id: 'pricing', label: t('header.pricing') },
+    { id: 'worldcup', label: '⚽ World Cup', external: true, path: '/world-cup-2026-iptv/' },
     { id: 'blog', label: 'Blog', isLink: true, path: '/blog' },
     { id: 'support', label: t('header.support') }
   ]
@@ -93,7 +101,7 @@ const Header = () => {
               <NavLink 
                 key={item.id}
                 active={activeSection === item.id}
-                onClick={() => scrollToSection(item.id, item.isLink, item.path)}
+                onClick={() => scrollToSection(item.id, item.isLink, item.path, item.external)}
               >
                 {item.label}
               </NavLink>
@@ -118,7 +126,7 @@ const Header = () => {
                   >
                     <NavLink 
                       active={activeSection === item.id}
-                      onClick={() => scrollToSection(item.id, item.isLink, item.path)}
+                      onClick={() => scrollToSection(item.id, item.isLink, item.path, item.external)}
                     >
                       {item.label}
                     </NavLink>

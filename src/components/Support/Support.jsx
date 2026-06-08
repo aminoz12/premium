@@ -13,22 +13,6 @@ const Support = () => {
       color: '#25d366',
       buttonText: t('support.whatsapp'),
       action: () => window.open('https://wa.me/212723279328?text=Hi! I need help with IPTV service', '_blank')
-    },
-    {
-      icon: 'fab fa-telegram',
-      title: t('support.telegramTitle'),
-      description: t('support.telegramDescription'),
-      color: '#0088cc',
-      buttonText: t('support.telegram'),
-      action: () => window.open('https://t.me/premiumiptvsupport', '_blank')
-    },
-    {
-      icon: 'fas fa-envelope',
-      title: t('support.emailTitle'),
-      description: t('support.emailDescription'),
-      color: 'var(--accent-primary)',
-      buttonText: t('support.email'),
-      action: () => window.open('mailto:sam91bel@gmail.com', '_blank')
     }
   ]
 
@@ -77,6 +61,8 @@ const SupportOptions = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-xl);
+  max-width: 440px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
