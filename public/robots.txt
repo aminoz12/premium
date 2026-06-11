@@ -95,3 +95,4 @@ Disallow: /
 Sitemap: https://watchworldcup.us/sitemap_index.xml
 Sitemap: https://watchworldcup.us/sitemap.xml
 Sitemap: https://watchworldcup.us/sitemap_images.xml
+Sitemap: https://watchworldcup.us/sitemap_matches.xml

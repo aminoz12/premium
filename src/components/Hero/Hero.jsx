@@ -32,8 +32,8 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0])
 
   const heroImages = [
-    '/assets/header/image1.jpeg',
-    '/assets/header/image2.jpeg'
+    '/assets/header/image1.webp',
+    '/assets/header/image2.webp'
   ]
 
   useEffect(() => {

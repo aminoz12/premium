@@ -11,4 +11,10 @@
     <loc>https://watchworldcup.us/sitemap_images.xml</loc>
     <lastmod>2026-06-08</lastmod>
   </sitemap>
+
+  <!-- World Cup 2026 Match Pages -->
+  <sitemap>
+    <loc>https://watchworldcup.us/sitemap_matches.xml</loc>
+    <lastmod>2026-06-11</lastmod>
+  </sitemap>
 </sitemapindex>
