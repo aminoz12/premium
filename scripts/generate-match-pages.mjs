@@ -1,7 +1,9 @@
-// Generates static SEO match pages for World Cup 2026 from wc2026-fixtures.json
-// Output: public/world-cup-2026-iptv/matches/<slug>/index.html
-//         public/world-cup-2026-iptv/matches/index.html  (all-matches hub)
-//         public/sitemap_matches.xml
+// Generates static SEO pages for World Cup 2026 from wc2026-fixtures.json
+//   public/world-cup-2026-iptv/matches/<slug>/index.html   (one per match)
+//   public/world-cup-2026-iptv/matches/index.html          (all-matches hub)
+//   public/world-cup-2026-iptv/teams/<slug>/index.html      (one per team)
+//   public/world-cup-2026-iptv/teams/index.html             (all-teams hub)
+//   public/sitemap_matches.xml                              (all of the above)
 // Run: node scripts/generate-match-pages.mjs
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs'
@@ -10,7 +12,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
-const OUT = join(ROOT, 'public', 'world-cup-2026-iptv', 'matches')
+const WC = join(ROOT, 'public', 'world-cup-2026-iptv')
 const SITE = 'https://watchworldcup.us'
 const WHATSAPP = '212723279328'
 const TODAY = '2026-06-11'
@@ -19,11 +21,21 @@ const { matches } = JSON.parse(readFileSync(join(__dirname, 'wc2026-fixtures.jso
 
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const matchSlug = (m) => `${slugify(m.home)}-vs-${slugify(m.away)}`
-const prettyDate = (iso) => {
-  const [y, mo, d] = iso.split('-').map(Number)
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
-  return `${months[mo - 1]} ${d}, ${y}`
+const teamSlug = (name) => slugify(name)
+const teamUrl = (name) => `/world-cup-2026-iptv/teams/${teamSlug(name)}/`
+const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+const prettyDate = (iso) => { const [y, mo, d] = iso.split('-').map(Number); return `${months[mo - 1]} ${d}, ${y}` }
+const shortDate = (iso) => { const [, mo, d] = iso.split('-').map(Number); return `${months[mo - 1].slice(0, 3)} ${d}` }
+
+// derive teams -> { name, group, matches[] }
+const teams = {}
+for (const m of matches) {
+  for (const name of [m.home, m.away]) {
+    if (!teams[name]) teams[name] = { name, group: m.group, matches: [] }
+    teams[name].matches.push(m)
+  }
 }
+const teamList = Object.values(teams).sort((a, b) => a.group.localeCompare(b.group) || a.name.localeCompare(b.name))
 
 const GA = `
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-06ENLWJM67"></script>
@@ -58,6 +70,8 @@ const CSS = `
       .meta b{color:#fff}
       .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
       .trust{color:var(--muted);font-size:.85rem}
+      .interlink{margin-top:14px;font-size:.9rem}
+      .interlink a{color:var(--accent);font-weight:600}
       section{padding:34px 0}
       h2{font-size:1.5rem;font-weight:800;margin-bottom:16px}
       h2 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
@@ -74,7 +88,11 @@ const CSS = `
       th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--border)}
       th{color:var(--accent);text-transform:uppercase;font-size:.75rem;letter-spacing:.5px}
       td a{color:var(--accent);font-weight:600}
+      .groupbox{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+      .groupbox h3{font-size:1rem;color:var(--accent);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
+      .groupbox .links a{background:#171717}
       footer{border-top:1px solid var(--border);padding:28px 20px;text-align:center;color:var(--muted);font-size:.85rem;margin-top:30px}
+      footer a{color:var(--accent)}
       .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(12,12,12,.97);border-top:1px solid var(--border);padding:11px 14px;display:none;gap:10px;z-index:999}
       .sticky-cta .btn{flex:1}
       @media(max-width:760px){h1{font-size:1.7rem}.sticky-cta{display:flex}body{padding-bottom:70px}}`
@@ -114,7 +132,8 @@ const topbar = `
 
 const footer = `
     <footer>
-        <p>© 2026 Premium IPTV — Watch the FIFA World Cup 2026 live in 4K on any device.</p>
+        <p><a href="/world-cup-2026-iptv/">World Cup IPTV</a> · <a href="/world-cup-2026-iptv/matches/">All Matches</a> · <a href="/world-cup-2026-iptv/teams/">All Teams</a> · <a href="/blog">Blog</a></p>
+        <p style="margin-top:8px">© 2026 Premium IPTV — Watch the FIFA World Cup 2026 live in 4K on any device.</p>
         <p style="margin-top:6px;font-size:.78rem">Independent streaming service. Not affiliated with or endorsed by FIFA.</p>
     </footer>`
 
@@ -124,6 +143,7 @@ const stickyCta = (msg) => `
         <a href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener" class="btn btn-wa btn-sm">WhatsApp</a>
     </div>`
 
+// ---------- match page ----------
 const matchPage = (m) => {
   const slug = matchSlug(m)
   const url = `${SITE}/world-cup-2026-iptv/matches/${slug}/`
@@ -138,38 +158,20 @@ const matchPage = (m) => {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'SportsEvent',
-        '@id': `${url}#event`,
-        name: `${vs} — FIFA World Cup 2026 Group ${m.group}`,
-        description: desc,
-        startDate: m.date,
-        eventStatus: 'https://schema.org/EventScheduled',
-        eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
-        sport: 'Football',
+        '@type': 'SportsEvent', '@id': `${url}#event`,
+        name: `${vs} — FIFA World Cup 2026 Group ${m.group}`, description: desc,
+        startDate: m.date, eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode', sport: 'Football',
         competitor: [
-          { '@type': 'SportsTeam', name: m.home },
-          { '@type': 'SportsTeam', name: m.away }
+          { '@type': 'SportsTeam', name: m.home, url: `${SITE}${teamUrl(m.home)}` },
+          { '@type': 'SportsTeam', name: m.away, url: `${SITE}${teamUrl(m.away)}` }
         ],
-        location: { '@type': 'Place', name: m.city },
-        organizer: { '@type': 'Organization', name: 'FIFA' },
-        offers: {
-          '@type': 'Offer',
-          name: 'Premium IPTV World Cup Package',
-          price: '25', priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock',
-          url: `${SITE}/checkout`
-        }
+        location: { '@type': 'Place', name: m.city }, organizer: { '@type': 'Organization', name: 'FIFA' },
+        offers: { '@type': 'Offer', name: 'Premium IPTV World Cup Package', price: '25', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: `${SITE}/checkout` }
       },
+      { '@type': 'BroadcastEvent', isLiveBroadcast: true, videoFormat: '4K', broadcastOfEvent: { '@id': `${url}#event` }, startDate: m.date },
       {
-        '@type': 'BroadcastEvent',
-        isLiveBroadcast: true,
-        videoFormat: '4K',
-        broadcastOfEvent: { '@id': `${url}#event` },
-        startDate: m.date
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
+        '@type': 'BreadcrumbList', itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
           { '@type': 'ListItem', position: 2, name: 'World Cup 2026 IPTV', item: `${SITE}/world-cup-2026-iptv/` },
           { '@type': 'ListItem', position: 3, name: 'Matches', item: `${SITE}/world-cup-2026-iptv/matches/` },
@@ -177,23 +179,10 @@ const matchPage = (m) => {
         ]
       },
       {
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `How can I watch ${vs} live?`,
-            acceptedAnswer: { '@type': 'Answer', text: `You can watch ${vs} live in 4K with a Premium IPTV subscription from $25. The match is played on ${date} in ${m.city} (World Cup 2026 Group ${m.group}). Activation takes 1–5 minutes — works on Smart TV, Firestick, Android and iPhone.` }
-          },
-          {
-            '@type': 'Question',
-            name: `Can I stream ${vs} in 4K?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Yes. Premium IPTV streams every FIFA World Cup 2026 match, including ${vs}, in up to 4K/8K quality with stable, buffer-free servers and a free VPN included.` }
-          },
-          {
-            '@type': 'Question',
-            name: `What devices can I use to watch ${vs}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Smart TVs (Samsung, LG, Android TV), Amazon Firestick, Apple TV, iPhone, iPad, Android phones, tablets and PCs. One subscription covers the full tournament — all 104 matches.` }
-          }
+        '@type': 'FAQPage', mainEntity: [
+          { '@type': 'Question', name: `How can I watch ${vs} live?`, acceptedAnswer: { '@type': 'Answer', text: `You can watch ${vs} live in 4K with a Premium IPTV subscription from $25. The match is played on ${date} in ${m.city} (World Cup 2026 Group ${m.group}). Activation takes 1–5 minutes — works on Smart TV, Firestick, Android and iPhone.` } },
+          { '@type': 'Question', name: `Can I stream ${vs} in 4K?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. Premium IPTV streams every FIFA World Cup 2026 match, including ${vs}, in up to 4K/8K quality with stable, buffer-free servers and a free VPN included.` } },
+          { '@type': 'Question', name: `What devices can I use to watch ${vs}?`, acceptedAnswer: { '@type': 'Answer', text: `Smart TVs (Samsung, LG, Android TV), Amazon Firestick, Apple TV, iPhone, iPad, Android phones, tablets and PCs. One subscription covers the full tournament — all 104 matches.` } }
         ]
       }
     ]
@@ -211,12 +200,13 @@ ${topbar}
             <a href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="btn btn-wa">Order on WhatsApp</a>
         </div>
         <p class="trust">Activation in 1–5 min · 4K/8K quality · Free VPN · All 104 matches included</p>
+        <p class="interlink">Following <a href="${teamUrl(m.home)}">${m.home}</a> or <a href="${teamUrl(m.away)}">${m.away}</a>? See their full World Cup schedule.</p>
     </header>
 
     <div class="container">
         <section>
             <h2>How to Watch <span class="grad">${vs}</span></h2>
-            <p style="color:var(--muted);margin-bottom:16px">${m.home} face ${m.away} on ${date} in ${m.city}, in Group ${m.group} of the FIFA World Cup 2026. With Premium IPTV you stream it live in crystal-clear 4K — plus every other match of the tournament — on any device, from anywhere in the world.</p>
+            <p style="color:var(--muted);margin-bottom:16px"><a href="${teamUrl(m.home)}" style="color:#fff;font-weight:600">${m.home}</a> face <a href="${teamUrl(m.away)}" style="color:#fff;font-weight:600">${m.away}</a> on ${date} in ${m.city}, in Group ${m.group} of the FIFA World Cup 2026. With Premium IPTV you stream it live in crystal-clear 4K — plus every other match of the tournament — on any device, from anywhere in the world.</p>
             <ul class="checks">
                 <li>Every World Cup 2026 match live — group stage to the final on July 19</li>
                 <li>4K / 8K Ultra HD quality with buffer-free, stable servers</li>
@@ -237,7 +227,8 @@ ${topbar}
         <section>
             <h2>More Group ${m.group} <span class="grad">Matches</span></h2>
             <div class="links">
-                ${sameGroup.map((x) => `<a href="/world-cup-2026-iptv/matches/${matchSlug(x)}/">${x.home} vs ${x.away} · ${prettyDate(x.date).replace(', 2026', '')}</a>`).join('\n                ')}
+                ${sameGroup.map((x) => `<a href="/world-cup-2026-iptv/matches/${matchSlug(x)}/">${x.home} vs ${x.away} · ${shortDate(x.date)}</a>`).join('\n                ')}
+                <a href="/world-cup-2026-iptv/teams/">All 48 teams →</a>
                 <a href="/world-cup-2026-iptv/matches/">All 2026 matches →</a>
                 <a href="/world-cup-2026-iptv/">World Cup IPTV package →</a>
             </div>
@@ -251,38 +242,129 @@ ${stickyCta(waMsg)}
 `
 }
 
-const indexPage = () => {
-  const url = `${SITE}/world-cup-2026-iptv/matches/`
-  const title = 'World Cup 2026 Match Schedule — Watch Every Game Live in 4K | WatchWorldCup'
-  const desc = 'Full FIFA World Cup 2026 match schedule with live 4K streams for every game. All 72 group-stage fixtures June 11–27, then knockouts to the final on July 19. From $25.'
-  const byDate = [...matches].sort((a, b) => a.date.localeCompare(b.date) || a.group.localeCompare(b.group))
+// ---------- team page ----------
+const teamPage = (t) => {
+  const slug = teamSlug(t.name)
+  const url = `${SITE}/world-cup-2026-iptv/teams/${slug}/`
+  const fixtures = [...t.matches].sort((a, b) => a.date.localeCompare(b.date))
+  const rivals = teamList.filter((x) => x.group === t.group && x.name !== t.name)
+  const title = `Watch ${t.name} at World Cup 2026 — Live in 4K Stream | WatchWorldCup`
+  const desc = `Watch ${t.name}'s FIFA World Cup 2026 matches live in 4K. Group ${t.group} fixtures, dates and how to stream on Smart TV, Firestick, Android & iPhone from $25. Instant activation.`
+  const waMsg = `Hi! I want to watch ${t.name} at the World Cup 2026 live in 4K. Please help me subscribe.`
+
+  const fixtureRows = fixtures.map((m) => {
+    const opp = m.home === t.name ? m.away : m.home
+    const ha = m.home === t.name ? 'vs' : 'at'
+    return `<tr><td>${shortDate(m.date)}</td><td><a href="/world-cup-2026-iptv/matches/${matchSlug(m)}/">${t.name} ${ha} ${opp}</a></td><td>${m.city}</td></tr>`
+  }).join('\n                ')
 
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'ItemList',
-        name: 'FIFA World Cup 2026 Group Stage Matches',
-        numberOfItems: matches.length,
-        itemListElement: byDate.map((m, i) => ({
-          '@type': 'ListItem', position: i + 1,
-          name: `${m.home} vs ${m.away}`,
-          url: `${SITE}/world-cup-2026-iptv/matches/${matchSlug(m)}/`
-        }))
+        '@type': 'SportsTeam', '@id': `${url}#team`, name: t.name, sport: 'Football',
+        url, memberOf: { '@type': 'SportsOrganization', name: `FIFA World Cup 2026 Group ${t.group}` }
       },
       {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
+        '@type': 'BreadcrumbList', itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
           { '@type': 'ListItem', position: 2, name: 'World Cup 2026 IPTV', item: `${SITE}/world-cup-2026-iptv/` },
-          { '@type': 'ListItem', position: 3, name: 'Matches', item: url }
+          { '@type': 'ListItem', position: 3, name: 'Teams', item: `${SITE}/world-cup-2026-iptv/teams/` },
+          { '@type': 'ListItem', position: 4, name: t.name, item: url }
+        ]
+      },
+      {
+        '@type': 'FAQPage', mainEntity: [
+          { '@type': 'Question', name: `How can I watch ${t.name} at the World Cup 2026?`, acceptedAnswer: { '@type': 'Answer', text: `You can watch all of ${t.name}'s World Cup 2026 matches live in 4K with a Premium IPTV subscription from $25. ${t.name} play in Group ${t.group}, with group games on ${fixtures.map((m) => shortDate(m.date)).join(', ')}. Works on Smart TV, Firestick, Android and iPhone.` } },
+          { '@type': 'Question', name: `Which group is ${t.name} in at the World Cup 2026?`, acceptedAnswer: { '@type': 'Answer', text: `${t.name} are in Group ${t.group} at the FIFA World Cup 2026, alongside ${rivals.map((r) => r.name).join(', ')}.` } },
+          { '@type': 'Question', name: `Can I watch ${t.name} in 4K?`, acceptedAnswer: { '@type': 'Answer', text: `Yes — every ${t.name} match streams in up to 4K/8K with Premium IPTV, with a free VPN and buffer-free servers, on any device.` } }
         ]
       }
     ]
   }
 
-  const rows = byDate.map((m) => `<tr><td>${prettyDate(m.date).replace(', 2026', '')}</td><td><a href="/world-cup-2026-iptv/matches/${matchSlug(m)}/">${m.home} vs ${m.away}</a></td><td>Group ${m.group}</td><td>${m.city}</td></tr>`).join('\n                ')
+  return `${head(title, desc, url)}
+<body>
+${topbar}
+    <header class="hero">
+        <div class="pill">⚽ World Cup 2026 · Group ${t.group}</div>
+        <h1>Watch <span class="grad">${t.name}</span> at the World Cup 2026 — Live in 4K</h1>
+        <p class="meta">Stream every ${t.name} match live in 4K — Group ${t.group}, plus all 104 tournament games, from <b>$25</b>.</p>
+        <div class="cta-row">
+            <a href="/checkout" class="btn btn-primary">⚡ Get Instant Access — From $25</a>
+            <a href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="btn btn-wa">Order on WhatsApp</a>
+        </div>
+        <p class="trust">Activation in 1–5 min · 4K/8K quality · Free VPN · All 104 matches included</p>
+    </header>
 
+    <div class="container">
+        <section>
+            <h2>${t.name} — Group ${t.group} <span class="grad">Fixtures</span></h2>
+            <div style="overflow-x:auto;border:1px solid var(--border);border-radius:12px">
+            <table>
+                <thead><tr><th>Date</th><th>Match</th><th>City</th></tr></thead>
+                <tbody>
+                ${fixtureRows}
+                </tbody>
+            </table>
+            </div>
+            <p style="color:var(--muted);margin-top:14px;font-size:.9rem">If ${t.name} advance, their knockout matches (from June 28) are added to the schedule and included in your subscription.</p>
+        </section>
+
+        <section>
+            <h2>How to Watch <span class="grad">${t.name}</span> Live</h2>
+            <ul class="checks">
+                <li>Every ${t.name} match live in 4K — group stage and knockouts</li>
+                <li>${t.name === 'France' ? 'French' : t.name === 'Spain' ? 'Spanish' : t.name === 'Germany' ? 'German' : 'Local'} and international commentary options</li>
+                <li>Works on Smart TV, Firestick, Android, iPhone, iPad and PC</li>
+                <li>Free VPN included — watch ${t.name} from any country</li>
+                <li>Instant activation — login by email in 1–5 minutes</li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h2>FAQ — <span class="grad">${t.name}</span> at the World Cup</h2>
+            <details open><summary>How can I watch ${t.name} at the World Cup 2026?</summary><p>Subscribe to Premium IPTV from $25, get your login in minutes, and stream every ${t.name} match live in 4K on any device. ${t.name} are in Group ${t.group}.</p></details>
+            <details><summary>Who is in ${t.name}'s group?</summary><p>Group ${t.group}: ${t.name}, ${rivals.map((r) => r.name).join(', ')}.</p></details>
+            <details><summary>Can I watch in 4K?</summary><p>Yes — up to 4K/8K on supported channels, with a free VPN and 24/7 support.</p></details>
+        </section>
+
+        <section>
+            <h2>Group ${t.group} <span class="grad">Rivals</span></h2>
+            <div class="links">
+                ${rivals.map((r) => `<a href="${teamUrl(r.name)}">${r.name}</a>`).join('\n                ')}
+                <a href="/world-cup-2026-iptv/teams/">All 48 teams →</a>
+                <a href="/world-cup-2026-iptv/matches/">Full match schedule →</a>
+                <a href="/world-cup-2026-iptv/">World Cup IPTV package →</a>
+            </div>
+        </section>
+    </div>
+${footer}
+${stickyCta(waMsg)}
+    <script type="application/ld+json">${JSON.stringify(schema)}</script>
+</body>
+</html>
+`
+}
+
+// ---------- matches hub ----------
+const matchesIndexPage = () => {
+  const url = `${SITE}/world-cup-2026-iptv/matches/`
+  const title = 'World Cup 2026 Match Schedule — Watch Every Game Live in 4K | WatchWorldCup'
+  const desc = 'Full FIFA World Cup 2026 match schedule with live 4K streams for every game. All 72 group-stage fixtures June 11–27, then knockouts to the final on July 19. From $25.'
+  const byDate = [...matches].sort((a, b) => a.date.localeCompare(b.date) || a.group.localeCompare(b.group))
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'ItemList', name: 'FIFA World Cup 2026 Group Stage Matches', numberOfItems: matches.length, itemListElement: byDate.map((m, i) => ({ '@type': 'ListItem', position: i + 1, name: `${m.home} vs ${m.away}`, url: `${SITE}/world-cup-2026-iptv/matches/${matchSlug(m)}/` })) },
+      { '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'World Cup 2026 IPTV', item: `${SITE}/world-cup-2026-iptv/` },
+        { '@type': 'ListItem', position: 3, name: 'Matches', item: url }
+      ] }
+    ]
+  }
+  const rows = byDate.map((m) => `<tr><td>${shortDate(m.date)}</td><td><a href="/world-cup-2026-iptv/matches/${matchSlug(m)}/">${m.home} vs ${m.away}</a></td><td>Group ${m.group}</td><td>${m.city}</td></tr>`).join('\n                ')
   return `${head(title, desc, url)}
 <body>
 ${topbar}
@@ -294,6 +376,7 @@ ${topbar}
             <a href="/checkout" class="btn btn-primary">⚡ Get Instant Access — From $25</a>
             <a href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hi! I want to watch the World Cup 2026 live in 4K.')}" target="_blank" rel="noopener" class="btn btn-wa">Order on WhatsApp</a>
         </div>
+        <p class="interlink"><a href="/world-cup-2026-iptv/teams/">Browse by team →</a></p>
     </header>
     <div class="container">
         <section>
@@ -327,22 +410,88 @@ ${stickyCta('Hi! I want a World Cup 2026 IPTV subscription.')}
 `
 }
 
-// ---- generate ----
-mkdirSync(OUT, { recursive: true })
+// ---------- teams hub ----------
+const teamsIndexPage = () => {
+  const url = `${SITE}/world-cup-2026-iptv/teams/`
+  const title = 'World Cup 2026 Teams — Watch Every National Team Live in 4K | WatchWorldCup'
+  const desc = 'All 48 FIFA World Cup 2026 teams by group. Find your national team’s fixtures and watch every match live in 4K on any device, from $25. Instant IPTV activation.'
+  const groups = [...new Set(teamList.map((t) => t.group))].sort()
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'ItemList', name: 'FIFA World Cup 2026 Teams', numberOfItems: teamList.length, itemListElement: teamList.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: `${SITE}${teamUrl(t.name)}` })) },
+      { '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'World Cup 2026 IPTV', item: `${SITE}/world-cup-2026-iptv/` },
+        { '@type': 'ListItem', position: 3, name: 'Teams', item: url }
+      ] }
+    ]
+  }
+  const groupBlocks = groups.map((g) => `
+            <div class="groupbox">
+                <h3>Group ${g}</h3>
+                <div class="links">
+                    ${teamList.filter((t) => t.group === g).map((t) => `<a href="${teamUrl(t.name)}">${t.name}</a>`).join('\n                    ')}
+                </div>
+            </div>`).join('\n')
+  return `${head(title, desc, url)}
+<body>
+${topbar}
+    <header class="hero">
+        <div class="pill">⚽ FIFA World Cup 2026 · 48 Teams</div>
+        <h1>World Cup 2026 <span class="grad">Teams</span> — Watch Your Nation Live in 4K</h1>
+        <p class="meta">Pick your national team and watch every match live in 4K. One subscription, <b>all 104 games</b>, from $25.</p>
+        <div class="cta-row">
+            <a href="/checkout" class="btn btn-primary">⚡ Get Instant Access — From $25</a>
+            <a href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hi! I want to watch the World Cup 2026 live in 4K.')}" target="_blank" rel="noopener" class="btn btn-wa">Order on WhatsApp</a>
+        </div>
+        <p class="interlink"><a href="/world-cup-2026-iptv/matches/">See the full match schedule →</a></p>
+    </header>
+    <div class="container">
+        <section>
+            <h2>All 48 Teams <span class="grad">by Group</span></h2>
+            ${groupBlocks}
+        </section>
+    </div>
+${footer}
+${stickyCta('Hi! I want a World Cup 2026 IPTV subscription.')}
+    <script type="application/ld+json">${JSON.stringify(schema)}</script>
+</body>
+</html>
+`
+}
 
-let count = 0
+// ---------- generate ----------
+const MATCHES_DIR = join(WC, 'matches')
+const TEAMS_DIR = join(WC, 'teams')
+mkdirSync(MATCHES_DIR, { recursive: true })
+mkdirSync(TEAMS_DIR, { recursive: true })
+
+let mc = 0
 for (const m of matches) {
-  const dir = join(OUT, matchSlug(m))
+  const dir = join(MATCHES_DIR, matchSlug(m))
   mkdirSync(dir, { recursive: true })
   writeFileSync(join(dir, 'index.html'), matchPage(m))
-  count++
+  mc++
 }
-writeFileSync(join(OUT, 'index.html'), indexPage())
+writeFileSync(join(MATCHES_DIR, 'index.html'), matchesIndexPage())
 
-// sitemap
+let tc = 0
+for (const t of teamList) {
+  const dir = join(TEAMS_DIR, teamSlug(t.name))
+  mkdirSync(dir, { recursive: true })
+  writeFileSync(join(dir, 'index.html'), teamPage(t))
+  tc++
+}
+writeFileSync(join(TEAMS_DIR, 'index.html'), teamsIndexPage())
+
+// sitemap (matches + teams + both hubs)
+const u = (loc, pr) => `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>${pr}</priority>\n  </url>`
 const urls = [
-  `  <url>\n    <loc>${SITE}/world-cup-2026-iptv/matches/</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>`,
-  ...matches.map((m) => `  <url>\n    <loc>${SITE}/world-cup-2026-iptv/matches/${matchSlug(m)}/</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.8</priority>\n  </url>`)
+  u(`${SITE}/world-cup-2026-iptv/matches/`, '0.9'),
+  u(`${SITE}/world-cup-2026-iptv/teams/`, '0.9'),
+  ...matches.map((m) => u(`${SITE}/world-cup-2026-iptv/matches/${matchSlug(m)}/`, '0.8')),
+  ...teamList.map((t) => u(`${SITE}${teamUrl(t.name)}`, '0.8'))
 ]
 writeFileSync(join(ROOT, 'public', 'sitemap_matches.xml'),
 `<?xml version="1.0" encoding="UTF-8"?>
@@ -351,4 +500,4 @@ ${urls.join('\n')}
 </urlset>
 `)
 
-console.log(`Generated ${count} match pages + matches index + sitemap_matches.xml`)
+console.log(`Generated ${mc} match pages + ${tc} team pages + 2 hubs. Sitemap URLs: ${urls.length}`)
