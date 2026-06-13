@@ -1,0 +1,109 @@
+{
+  "comment": "Official 2026 World Cup broadcasters per country (sources: Wikipedia 2026 FIFA World Cup broadcasting rights, FourFourTwo, Goal). teams = that country's qualified team(s) linking to team pages.",
+  "countries": [
+    {
+      "slug": "usa",
+      "name": "the USA",
+      "shortName": "USA",
+      "broadcasters": "FOX and FS1 (English), Telemundo and Universo (Spanish), with streaming on FOX One and Peacock",
+      "pitch": "FOX shows all 104 matches in the US, but FOX One and a cable login cost add up — and you only get English or Spanish feeds. Premium IPTV gives you every match in 4K plus international commentary for a fraction of the price.",
+      "teams": [{ "name": "United States", "slug": "united-states" }]
+    },
+    {
+      "slug": "uk",
+      "name": "the UK",
+      "shortName": "UK",
+      "broadcasters": "BBC (BBC One/Two and iPlayer) and ITV (ITV1/ITV4 and ITVX) — every match free-to-air",
+      "pitch": "Every match is free on BBC and ITV in the UK — but their streams are geo-locked, so UK fans abroad get blocked, and 4K coverage is limited. Premium IPTV unlocks every match in true 4K from anywhere in the world.",
+      "teams": [{ "name": "England", "slug": "england" }, { "name": "Scotland", "slug": "scotland" }]
+    },
+    {
+      "slug": "canada",
+      "name": "Canada",
+      "shortName": "Canada",
+      "broadcasters": "Bell Media — CTV, TSN and RDS (French)",
+      "pitch": "TSN and RDS carry the World Cup in Canada behind a cable or streaming subscription. Premium IPTV gives Canadian fans every match in 4K — including the host-nation games — without the cable bill.",
+      "teams": [{ "name": "Canada", "slug": "canada" }]
+    },
+    {
+      "slug": "france",
+      "name": "France",
+      "shortName": "France",
+      "broadcasters": "M6 (54 matches free-to-air) and beIN Sports (all 104 matches)",
+      "pitch": "For the first time in nearly 50 years TF1 has no matches — M6 shows just 54 free, and you need a beIN Sports subscription for the rest. Premium IPTV gives you all 104 matches in 4K with French commentary, no beIN subscription required.",
+      "teams": [{ "name": "France", "slug": "france" }]
+    },
+    {
+      "slug": "belgium",
+      "name": "Belgium",
+      "shortName": "Belgium",
+      "broadcasters": "VRT and RTBF",
+      "pitch": "VRT and RTBF carry the World Cup free in Belgium, but their streams are geo-locked and limited to Dutch or French commentary. Premium IPTV gives you every match in 4K with any commentary, from anywhere.",
+      "teams": [{ "name": "Belgium", "slug": "belgium" }]
+    },
+    {
+      "slug": "germany",
+      "name": "Germany",
+      "shortName": "Germany",
+      "broadcasters": "ARD and ZDF (free) plus Magenta Sport, which holds all 104 matches",
+      "pitch": "ARD and ZDF only show a share of matches free — Magenta Sport holds all 104 behind a paid Telekom plan. Premium IPTV gives you every match in 4K with German commentary, no Magenta subscription needed.",
+      "teams": [{ "name": "Germany", "slug": "germany" }]
+    },
+    {
+      "slug": "spain",
+      "name": "Spain",
+      "shortName": "Spain",
+      "broadcasters": "RTVE (free, selected matches) and DAZN (the full tournament)",
+      "pitch": "RTVE only airs a selection free — you need DAZN for the complete tournament. Premium IPTV gives you all 104 matches in 4K with Spanish commentary, without a DAZN subscription.",
+      "teams": [{ "name": "Spain", "slug": "spain" }]
+    },
+    {
+      "slug": "portugal",
+      "name": "Portugal",
+      "shortName": "Portugal",
+      "broadcasters": "RTP, SIC, TVI and Sport TV",
+      "pitch": "Coverage in Portugal is split across RTP, SIC, TVI and Sport TV — and full access usually means a Sport TV subscription. Premium IPTV gives you every match in 4K with Portuguese commentary in one place.",
+      "teams": [{ "name": "Portugal", "slug": "portugal" }]
+    },
+    {
+      "slug": "netherlands",
+      "name": "the Netherlands",
+      "shortName": "Netherlands",
+      "broadcasters": "NOS (public broadcaster)",
+      "pitch": "NOS streams the World Cup free in the Netherlands, but it is geo-locked and limited to Dutch commentary in standard quality. Premium IPTV gives you every match in true 4K from anywhere.",
+      "teams": [{ "name": "Netherlands", "slug": "netherlands" }]
+    },
+    {
+      "slug": "italy",
+      "name": "Italy",
+      "shortName": "Italy",
+      "broadcasters": "RAI (free, selected matches) and Sky Sport / NOW (the full tournament)",
+      "pitch": "Italy didn't qualify for 2026 — but you can still follow every match. RAI shows only a selection free and Sky Sport holds the rest. Premium IPTV gives you all 104 matches in 4K with Italian commentary, no Sky subscription.",
+      "teams": []
+    },
+    {
+      "slug": "greece",
+      "name": "Greece",
+      "shortName": "Greece",
+      "broadcasters": "ERT (public broadcaster)",
+      "pitch": "ERT carries the World Cup in Greece, but coverage is geo-locked and in standard quality. Even with Greece not competing in 2026, Premium IPTV lets you follow every match in 4K with Greek or international commentary.",
+      "teams": []
+    },
+    {
+      "slug": "albania",
+      "name": "Albania",
+      "shortName": "Albania",
+      "broadcasters": "TV Klan and SuperSport",
+      "pitch": "TV Klan and SuperSport show the World Cup in Albania, but full access means a SuperSport subscription. Premium IPTV gives you every match in 4K with Albanian and international commentary in one subscription.",
+      "teams": []
+    },
+    {
+      "slug": "romania",
+      "name": "Romania",
+      "shortName": "Romania",
+      "broadcasters": "Antena",
+      "pitch": "Antena holds the World Cup in Romania, but its streams are geo-locked and limited in quality. Premium IPTV gives you every match in true 4K from anywhere, with Romanian or international commentary.",
+      "teams": []
+    }
+  ]
+}

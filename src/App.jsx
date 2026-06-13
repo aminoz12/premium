@@ -8,7 +8,11 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 import GlobalStyles from './styles/GlobalStyles'
+import Seo from './components/Seo/Seo'
 import { usePerformance } from './hooks/usePerformance'
+
+const HOME_TITLE = 'Watch World Cup 2026 Live in 4K — All 104 Matches | Premium IPTV'
+const HOME_DESC = 'Watch every FIFA World Cup 2026 match live in 4K from $25 — plus 35,000+ channels, 147,000 movies & 62,000 series on Smart TV, Firestick, Android & iPhone. Instant activation, free VPN, 24/7 support.'
 
 // Lazy load non-critical components
 const Channels = lazy(() => import('./components/Channels/Channels'))
@@ -80,6 +84,7 @@ function App() {
         {/* Main Homepage */}
         <Route path="/" element={
           <>
+            <Seo title={HOME_TITLE} description={HOME_DESC} path="/" lang="en" />
             <Header />
             <Hero />
             <Suspense fallback={<ComponentLoader />}>
@@ -121,6 +126,7 @@ function App() {
         {/* Language-specific routes */}
         <Route path="/fr/" element={
           <>
+            <Seo title="Regarder la Coupe du Monde 2026 en 4K — IPTV Premium" description="Regardez tous les matchs de la Coupe du Monde 2026 en direct en 4K dès 25 $ — plus de 35 000 chaînes, films et séries sur tous vos appareils. Activation instantanée, VPN gratuit." path="/fr/" lang="fr" />
             <Header />
             <Hero />
             <Suspense fallback={<ComponentLoader />}>
@@ -160,6 +166,7 @@ function App() {
         } />
         <Route path="/gr/" element={
           <>
+            <Seo title="Παρακολουθήστε το Παγκόσμιο Κύπελλο 2026 σε 4K — Premium IPTV" description="Παρακολουθήστε όλους τους αγώνες του Παγκοσμίου Κυπέλλου 2026 ζωντανά σε 4K από 25 $ — πάνω από 35.000 κανάλια, ταινίες και σειρές σε κάθε συσκευή. Άμεση ενεργοποίηση, δωρεάν VPN." path="/gr/" lang="el" />
             <Header />
             <Hero />
             <Suspense fallback={<ComponentLoader />}>
@@ -199,6 +206,7 @@ function App() {
         } />
         <Route path="/al/" element={
           <>
+            <Seo title="Shiko Kupën e Botës 2026 në 4K — Premium IPTV" description="Shiko të gjitha ndeshjet e Kupës së Botës 2026 drejtpërdrejt në 4K nga 25 $ — mbi 35,000 kanale, filma dhe seriale në çdo pajisje. Aktivizim i menjëhershëm, VPN falas." path="/al/" lang="sq" />
             <Header />
             <Hero />
             <Suspense fallback={<ComponentLoader />}>
@@ -239,9 +247,12 @@ function App() {
         
         {/* Other Pages */}
         <Route path="/checkout" element={
-          <Suspense fallback={<ComponentLoader />}>
-            <Checkout />
-          </Suspense>
+          <>
+            <Seo title="Checkout — Premium IPTV World Cup 2026" description="Complete your Premium IPTV subscription and start watching the World Cup 2026 in 4K within minutes." path="/checkout" noindex />
+            <Suspense fallback={<ComponentLoader />}>
+              <Checkout />
+            </Suspense>
+          </>
         } />
         <Route path="/blog" element={
           <Suspense fallback={<ComponentLoader />}>

@@ -53,9 +53,9 @@
     <meta name="msapplication-TileColor" content="#ff6b35">
     <meta name="msapplication-config" content="/browserconfig.xml">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://watchworldcup.us/">
-    
+    <!-- Canonical, title, description and per-route OG/Twitter are managed per route
+         by react-helmet-async (src/components/Seo). Static tags below are defaults. -->
+
     <!-- Hreflang for international targeting - only pages that actually exist -->
     <link rel="alternate" href="https://watchworldcup.us/" hreflang="en" />
     <link rel="alternate" href="https://watchworldcup.us/" hreflang="en-gb" />
@@ -75,10 +75,9 @@
     <link rel="alternate" href="https://watchworldcup.us/al/" hreflang="sq-al" />
     <link rel="alternate" href="https://watchworldcup.us/" hreflang="x-default" />
     
-    <!-- Enhanced Title and Description -->
+    <!-- Default title (overridden per route by react-helmet-async) -->
     <title>Watch World Cup 2026 Live in 4K — All 104 Matches | Premium IPTV, 35,000+ Channels</title>
-    <meta name="description" content="Watch every FIFA World Cup 2026 match live in 4K from $25 — plus 35,000+ channels, 147,000 movies & 62,000 series. Works on Smart TV, Firestick, Android & iPhone. Instant activation, free VPN, 24/7 support.">
-    <meta name="keywords" content="IPTV, Premium IPTV, IPTV UK, IPTV USA, IPTV France, IPTV Germany, IPTV Spain, IPTV Portugal, IPTV Netherlands, IPTV Switzerland, IPTV Greece, IPTV Albania, IPTV Canada, IPTV Cyprus, IPTV subscription, Best IPTV, IPTV service, Live TV streaming, IPTV channels, 4K IPTV, 8K IPTV, IPTV box, Smart TV IPTV, IPTV app">
+    <meta name="keywords" content="watch world cup 2026, world cup 2026 live stream, world cup 2026 iptv, IPTV, Premium IPTV, 4K IPTV, 8K IPTV, IPTV subscription, Best IPTV, Live TV streaming, IPTV channels, Smart TV IPTV, IPTV app">
     
     <!-- Geographic Targeting (geo signals come from hreflang above; keep one valid worldwide hint) -->
     <meta name="geo.placename" content="Worldwide">
@@ -105,15 +104,11 @@
     }
     </script>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Watch World Cup 2026 Live in 4K — All 104 Matches | Premium IPTV">
-    <meta property="og:description" content="Every FIFA World Cup 2026 match live in 4K from $25 — plus 35,000+ channels, movies & series on any device. Instant activation.">
+    <!-- Open Graph / Facebook (og:title/description/url/type set per route by Helmet) -->
     <meta property="og:image" content="https://watchworldcup.us/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Premium IPTV - Best IPTV Service">
-    <meta property="og:url" content="https://watchworldcup.us/">
-    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Premium IPTV">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="en_GB">
@@ -124,10 +119,8 @@
     <meta property="og:locale:alternate" content="nl_NL">
     <meta property="og:locale:alternate" content="el_GR">
     
-    <!-- Twitter Card -->
+    <!-- Twitter Card (title/description set per route by Helmet) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Watch World Cup 2026 Live in 4K — All 104 Matches">
-    <meta name="twitter:description" content="Every FIFA World Cup 2026 match live in 4K from $25 — plus 35,000+ channels on any device. Instant activation.">
     <meta name="twitter:image" content="https://watchworldcup.us/twitter-image.jpg">
     <meta name="twitter:image:alt" content="Premium IPTV Service">
     <meta name="twitter:site" content="@premiumiptv">

@@ -8,6 +8,7 @@ import { getArticleBySlugAndLang, getRecentArticlesByLanguage, getRelatedArticle
 import LazyImage from '../../components/LazyImage/LazyImage'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import Seo from '../../components/Seo/Seo'
 
 const Blog = () => {
   const { slug } = useParams()
@@ -49,9 +50,15 @@ const BlogList = ({ currentLang }) => {
   }
   
   const basePath = getBasePath()
-  
+
   return (
     <>
+      <Seo
+        title="IPTV Blog & World Cup 2026 Guides | Premium IPTV"
+        description="Expert guides on watching the FIFA World Cup 2026 in 4K, IPTV setup, best apps, and device tutorials. Stream every match live from $25."
+        path={`${basePath}/blog`}
+        lang={currentLang}
+      />
       <Header />
       <BlogSection>
         <div className="container">
@@ -125,99 +132,27 @@ const BlogPost = ({ slug, currentLang }) => {
   
   const basePath = getBasePath()
   
-  // Add Article schema and update meta tags
-  useEffect(() => {
-    if (article) {
-      // Update page title
-      document.title = `${article.seoTitle || article.title} | Premium IPTV`
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]')
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta')
-        metaDescription.setAttribute('name', 'description')
-        document.head.appendChild(metaDescription)
-      }
-      metaDescription.setAttribute('content', article.seoDescription || article.excerpt)
-      
-      // Add Article schema
-      const schemaScript = document.createElement('script')
-      schemaScript.type = 'application/ld+json'
-      schemaScript.id = 'article-schema'
-      schemaScript.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": article.title,
-        "description": article.excerpt,
-        "image": article.image ? `https://watchworldcup.us${article.image}` : "https://watchworldcup.us/logo.png",
-        "datePublished": article.publishDate,
-        "dateModified": article.publishDate,
-        "author": {
-          "@type": "Organization",
-          "name": article.author,
-          "url": "https://watchworldcup.us"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Premium IPTV",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://watchworldcup.us/logo.png"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": `https://watchworldcup.us/blog/${article.slug}`
-        },
-        "articleSection": article.category,
-        "keywords": article.tags.join(", ")
-      })
-      
-      // Remove existing schema if any
-      const existingSchema = document.getElementById('article-schema')
-      if (existingSchema) {
-        existingSchema.remove()
-      }
-      
-      document.head.appendChild(schemaScript)
-      
-      // Update canonical URL
-      let canonical = document.querySelector('link[rel="canonical"]')
-      if (!canonical) {
-        canonical = document.createElement('link')
-        canonical.setAttribute('rel', 'canonical')
-        document.head.appendChild(canonical)
-      }
-      canonical.setAttribute('href', `https://watchworldcup.us/blog/${article.slug}`)
-      
-      // Update Open Graph tags
-      const updateOGTag = (property, content) => {
-        let tag = document.querySelector(`meta[property="${property}"]`)
-        if (!tag) {
-          tag = document.createElement('meta')
-          tag.setAttribute('property', property)
-          document.head.appendChild(tag)
-        }
-        tag.setAttribute('content', content)
-      }
-      
-      updateOGTag('og:title', article.title)
-      updateOGTag('og:description', article.excerpt)
-      updateOGTag('og:image', article.image ? `https://watchworldcup.us${article.image}` : 'https://watchworldcup.us/logo.png')
-      updateOGTag('og:url', `https://watchworldcup.us${article.languagePath || ''}/blog/${article.slug}`)
-      updateOGTag('og:type', 'article')
-      
-      return () => {
-        // Cleanup on unmount
-        const schema = document.getElementById('article-schema')
-        if (schema) schema.remove()
-      }
-    }
-  }, [article])
-  
+  // Per-article SEO (canonical, title, description, OG, Article schema) via Helmet
+  const articlePath = `${basePath}/blog/${slug}`
+  const articleJsonLd = article ? {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    image: article.image ? `https://watchworldcup.us${article.image}` : 'https://watchworldcup.us/logo.png',
+    datePublished: article.publishDate,
+    dateModified: article.publishDate,
+    author: { '@type': 'Organization', name: article.author, url: 'https://watchworldcup.us' },
+    publisher: { '@type': 'Organization', name: 'Premium IPTV', logo: { '@type': 'ImageObject', url: 'https://watchworldcup.us/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://watchworldcup.us${articlePath}` },
+    articleSection: article.category,
+    keywords: Array.isArray(article.tags) ? article.tags.join(', ') : ''
+  } : null
+
   if (!article) {
     return (
       <>
+        <Seo title="Article Not Found — Premium IPTV" description="The article you're looking for doesn't exist. Browse our IPTV and World Cup 2026 guides." path={articlePath} noindex />
         <Header />
         <BlogSection>
           <div className="container">
@@ -235,6 +170,14 @@ const BlogPost = ({ slug, currentLang }) => {
   
   return (
     <>
+      <Seo
+        title={`${article.seoTitle || article.title} | Premium IPTV`}
+        description={article.seoDescription || article.excerpt}
+        path={articlePath}
+        lang={currentLang}
+        type="article"
+        jsonLd={articleJsonLd}
+      />
       <Header />
       <BlogPostSection>
         <div className="container">

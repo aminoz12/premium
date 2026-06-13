@@ -12,9 +12,15 @@
     <lastmod>2026-06-08</lastmod>
   </sitemap>
 
-  <!-- World Cup 2026 Match Pages -->
+  <!-- World Cup 2026 Match & Team Pages -->
   <sitemap>
     <loc>https://watchworldcup.us/sitemap_matches.xml</loc>
+    <lastmod>2026-06-11</lastmod>
+  </sitemap>
+
+  <!-- World Cup 2026 Country Pages -->
+  <sitemap>
+    <loc>https://watchworldcup.us/sitemap_countries.xml</loc>
     <lastmod>2026-06-11</lastmod>
   </sitemap>
 </sitemapindex>
