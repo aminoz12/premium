@@ -1,0 +1,25 @@
+{
+  "canonicalOrigin": "https://watchworldcup.us",
+  "status": 308,
+  "rules": [
+    {"source": "/index.html", "target": "/"},
+    {"source": "/channels", "target": "/live-tv"},
+    {"source": "/live-channels", "target": "/live-tv"},
+    {"source": "/world-cup-2026-iptv/teams/*", "target": "/world-cup-2026/teams"},
+    {"source": "/world-cup-2026-iptv/matches/*", "target": "/world-cup-2026"},
+    {"source": "/world-cup-2026-iptv/usa/*", "target": "/world-cup-2026/replays/usa"},
+    {"source": "/world-cup-2026-iptv/*", "target": "/world-cup-2026"},
+    {"source": "/usa", "target": "/world-cup-2026/replays/usa"},
+    {"source": "/uk", "target": "/world-cup-2026/replays"},
+    {"source": "/fr", "target": "/world-cup-2026/replays"},
+    {"source": "/es", "target": "/world-cup-2026/replays"},
+    {"source": "/de", "target": "/world-cup-2026/replays"},
+    {"source": "/gr", "target": "/world-cup-2026/replays"},
+    {"source": "/al", "target": "/world-cup-2026/replays"},
+    {"source": "/blog/world-cup-final-2026", "target": "/world-cup-2026/final"},
+    {"source": "/blog/iptv-setup-guide", "target": "/guides/4k-hdr-sports-setup"},
+    {"source": "/blog/how-to-use-iptv-on-firestick", "target": "/guides/best-device-live-sports"},
+    {"source": "/blog/best-iptv-apps-android", "target": "/guides/best-device-live-sports"},
+    {"source": "/:path+/", "target": "/:path+"}
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "name": "World Cup 2026 Final Standings",
+  "version": "2026-08-11",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://watchworldcup.us/world-cup-2026/final-standings",
+  "record_count": 48,
+  "records": [
+    {
+      "rank": "1",
+      "team": "Spain",
+      "finish": "Champions",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "2",
+      "team": "Argentina",
+      "finish": "Runners-up",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "3",
+      "team": "England",
+      "finish": "Third place",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "4",
+      "team": "France",
+      "finish": "Fourth place",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "5",
+      "team": "Norway",
+      "finish": "Quarter-finals",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "6",
+      "team": "Belgium",
+      "finish": "Quarter-finals",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "7=",
+      "team": "Morocco",
+      "finish": "Quarter-finals",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "7=",
+      "team": "Switzerland",
+      "finish": "Quarter-finals",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "9",
+      "team": "Mexico",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "10",
+      "team": "Colombia",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "11",
+      "team": "Brazil",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "12",
+      "team": "United States",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "13",
+      "team": "Portugal",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "14",
+      "team": "Canada",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "15",
+      "team": "Egypt",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "16",
+      "team": "Paraguay",
+      "finish": "Round of 16",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "17",
+      "team": "Netherlands",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "18",
+      "team": "Germany",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "19",
+      "team": "Côte d'Ivoire",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "20",
+      "team": "Croatia",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "21",
+      "team": "Japan",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "22",
+      "team": "Australia",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "23",
+      "team": "Congo DR",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "24",
+      "team": "Ghana",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "25",
+      "team": "Ecuador",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "26",
+      "team": "South Africa",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "27",
+      "team": "Sweden",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "28",
+      "team": "Austria",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "29",
+      "team": "Bosnia and Herzegovina",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "30",
+      "team": "Algeria",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "31",
+      "team": "Senegal",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "32",
+      "team": "Cabo Verde",
+      "finish": "Round of 32",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "33",
+      "team": "IR Iran",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "34",
+      "team": "Korea Republic",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "35",
+      "team": "Türkiye",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "36",
+      "team": "Scotland",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "37",
+      "team": "Uruguay",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "38",
+      "team": "Saudi Arabia",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "39",
+      "team": "Czechia",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "40",
+      "team": "New Zealand",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "41",
+      "team": "Qatar",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "42",
+      "team": "Curaçao",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "43",
+      "team": "Panama",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "44",
+      "team": "Jordan",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "45",
+      "team": "Haiti",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "46",
+      "team": "Uzbekistan",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "47",
+      "team": "Tunisia",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "rank": "48",
+      "team": "Iraq",
+      "finish": "Group stage",
+      "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/final-tournament-standings",
+      "source_published": "2026-07-20",
+      "last_checked": "2026-08-11"
+    }
+  ]
+}

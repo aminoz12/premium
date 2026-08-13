@@ -1,0 +1,49 @@
+{
+  "name": "World Cup 2026 Replay Source Tracker",
+  "version": "2026-08-11",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://watchworldcup.us/research/world-cup-2026-replay-source-tracker",
+  "record_count": 4,
+  "records": [
+    {
+      "platform": "FOX / FOX One",
+      "region": "United States",
+      "language": "English",
+      "content": "Tournament highlights and World Cup replay hub",
+      "access": "FOX One or applicable platform access; offers change",
+      "verification": "FOX page loaded and displayed post-tournament clips on 11 Aug 2026",
+      "url": "https://www.fox.com/soccer/fifa-world-cup",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "platform": "Tubi",
+      "region": "United States",
+      "language": "English",
+      "content": "USA vs Australia full-match replay (1 hr 46 min)",
+      "access": "Free where available; account/device/region rules apply",
+      "verification": "Tubi match page loaded with full-match replay metadata",
+      "url": "https://tubitv.com/tv-shows/200350225/usa-vs-australia",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "platform": "Tubi",
+      "region": "United States",
+      "language": "English",
+      "content": "USA vs Paraguay full-match replay (1 hr 46 min)",
+      "access": "Free where available; account/device/region rules apply",
+      "verification": "Tubi match page loaded with full-match replay metadata",
+      "url": "https://tubitv.com/tv-shows/200350228/usa-vs-paraguay",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "platform": "Peacock",
+      "region": "United States only",
+      "language": "Spanish",
+      "content": "World Cup platform information and potential on-demand access",
+      "access": "Paid US service; verify current replay window",
+      "verification": "Audit location redirected to region-unavailable page; US availability requires in-region verification",
+      "url": "https://www.peacocktv.com/help/article/Copa-Mundial-2026",
+      "last_checked": "2026-08-11"
+    }
+  ]
+}

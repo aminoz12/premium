@@ -1,0 +1,52 @@
+{
+  "name": "watchworldcup-rebuild",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20 <23"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build --webpack",
+    "start": "next start --hostname 0.0.0.0",
+    "lint": "tsc --noEmit",
+    "seo:inventory": "node scripts/generate-seo-inventory.mjs",
+    "seo:files:check": "node scripts/seo-files-check.mjs",
+    "geo:check": "node scripts/geo-check.mjs",
+    "seo:check": "node scripts/seo-check.mjs",
+    "quality:check": "node scripts/content-quality-check.mjs",
+    "links:check": "node scripts/external-links-check.mjs",
+    "migration:check": "node scripts/migration-check.mjs",
+    "policy:check": "node scripts/indexation-policy-check.mjs",
+    "images:generate": "python3 scripts/generate-og-images.py",
+    "images:check": "node scripts/image-metadata-check.mjs",
+    "data:generate": "python3 scripts/build-data-assets.py",
+    "data:check": "python3 scripts/check-data-assets.py",
+    "cta:check": "node scripts/cta-check.mjs",
+    "icons:check": "node scripts/icon-policy-check.mjs",
+    "webp:convert": "python3 scripts/convert-raster-to-webp.py",
+    "webp:check": "node scripts/webp-assets-check.mjs",
+    "release:check": "npm run lint && npm run build && node scripts/release-check.mjs",
+    "deployment:smoke": "node scripts/deployment-smoke.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "framer-motion": "^13.1.0",
+    "gsap": "^3.15.0",
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.2"
+  }
+}

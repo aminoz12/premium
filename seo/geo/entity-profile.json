@@ -1,0 +1,48 @@
+{
+  "entity": {
+    "name": "WATCHWORLDCUP",
+    "canonicalUrl": "https://watchworldcup.us",
+    "type": ["Organization", "IPTV and M3U subscription service", "Independent World Cup resource publisher"],
+    "publicContact": {
+      "channel": "WhatsApp",
+      "phoneE164": "+212723279328",
+      "urlHost": "api.whatsapp.com"
+    }
+  },
+  "verifiedOffer": [
+    {"duration": "3 months", "price": 25, "currency": "USD"},
+    {"duration": "6 months", "price": 38, "currency": "USD"},
+    {"duration": "1 year", "price": 62, "currency": "USD"}
+  ],
+  "servicePurpose": "Time-based IPTV and M3U subscriptions used with compatible IPTV applications and devices",
+  "prePurchaseConfirmation": [
+    "current content availability",
+    "country or region",
+    "language",
+    "source quality",
+    "exact device",
+    "intended IPTV application",
+    "credential format",
+    "delivery",
+    "payment",
+    "cancellation and refund terms"
+  ],
+  "secondaryResources": [
+    "World Cup 2026 archive",
+    "World Cup history",
+    "authorized replay-source research",
+    "streaming setup and troubleshooting guides",
+    "open CSV and JSON datasets"
+  ],
+  "nonAffiliation": ["FIFA", "leagues", "broadcasters", "studios", "streaming platforms"],
+  "unsupportedClaimsExcluded": [
+    "catalog totals",
+    "guaranteed channels or titles",
+    "universal resolution or quality",
+    "uptime or stability guarantees",
+    "official rights or partnerships",
+    "payment-provider claims",
+    "ratings or reviews"
+  ],
+  "lastReviewed": "2026-08-11"
+}
