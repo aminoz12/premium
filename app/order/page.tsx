@@ -49,7 +49,6 @@ export default function Page() {
           { label: "Order" },
         ]}
       >
-        <OrderWizard />
         <section className="mt-14 grid gap-5 lg:grid-cols-3">
           <article className="premium-card glass rounded-2xl p-7">
             <p className="eyebrow">Before payment</p>

@@ -559,18 +559,29 @@ function WelcomePopup() {
                     free for 24 hours. No credit card required.
                   </p>
                 </div>
-                <ul className="space-y-2 text-sm text-slate-300">
-                  {[
-                    "✅ 10,000+ live channels",
-                    "✅ Full HD & 4K sports",
-                    "✅ Instant activation",
-                    "✅ No commitment",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <ul className="space-y-2 text-sm text-slate-300">
+  {[
+    "✅ 30,000+ live channels",
+    "✅ Full HD & 4K sports",
+    "✅ 100,000+ VOD movies & series",
+    "✅ 99.9% Uptime & Anti-Freeze tech",
+    "✅ TV Guide (EPG) included",
+    "✅ Compatible with all devices",
+    "✅ 24/7 Dedicated customer support",
+    "✅ Catch-up & 7-day replay",
+    "✅ Free automatic updates",
+    "✅ Multi-device & multi-room support",
+    "✅ All major PPV events included",
+    "✅ No VPN required",
+    "✅ Parental control features",
+    "✅ Instant activation",
+    "✅ No commitment",
+  ].map((item) => (
+    <li key={item} className="flex items-center gap-2">
+      {item}
+    </li>
+  ))}
+</ul>
                 <a
                   href={WHATSAPP_FREE_TRIAL}
                   target="_blank"
@@ -1284,11 +1295,21 @@ export default function App() {
                   <p className="mt-2 text-5xl font-black text-white">{plan.price}</p>
                   <ul className="mt-6 space-y-3 text-sm text-slate-300">
                     {[
-                      "10,000+ Live Channels",
-                      "Full HD & 4K Quality",
-                      "Movies & Series On-Demand",
-                      "24/7 WhatsApp Support",
-                      "Instant Activation",
+                  "30,000+ live channels",
+    "Full HD & 4K sports",
+    "100,000+ VOD movies & series",
+    "99.9% Uptime & Anti-Freeze tech",
+    "TV Guide (EPG) included",
+    "Compatible with all devices",
+    "24/7 Dedicated customer support",
+    "Catch-up & 7-day replay",
+    "Free automatic updates",
+    "Multi-device & multi-room support",
+    "All major PPV events included",
+    "No VPN required",
+    "Parental control features",
+    "Instant activation",
+    "No commitment",
                     ].map((feature) => (
                       <li key={feature} className="flex items-center gap-2">
                         <CheckCircleIcon className="h-4 w-4 text-red-400" />
