@@ -67,8 +67,19 @@ export const serviceCategories = [
   },
 ] as const;
 export const planFeatures = [
-  "IPTV / M3U subscription for the selected duration",
-  "Current content availability confirmed before payment",
-  "Compatibility check for your intended device and IPTV app",
-  "WhatsApp ordering and setup guidance",
+                "30,000+ live channels",
+    "Full HD & 4K sports",
+    "100,000+ VOD movies & series",
+    "99.9% Uptime & Anti-Freeze tech",
+    "TV Guide (EPG) included",
+    "Compatible with all devices",
+    "24/7 Dedicated customer support",
+    "Catch-up & 7-day replay",
+    "Free automatic updates",
+    "Multi-device & multi-room support",
+    "All major PPV events included",
+    "No VPN required",
+    "Parental control features",
+    "Instant activation",
+    "No commitment",
 ] as const;
