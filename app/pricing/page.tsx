@@ -44,7 +44,7 @@ export default function Page() {
       />
       <FAQSchema faqs={faqs} path={path} />
       <PageShell
-        eyebrow="Verified plan durations and prices"
+        eyebrow="Listed plan durations and prices"
         title="Choose your IPTV subscription."
         description="Select a 3-month, 6-month or 1-year WATCHWORLDCUP IPTV / M3U plan. Before payment, confirm the current content scope, intended device and app, credential format, delivery process and applicable terms."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]}

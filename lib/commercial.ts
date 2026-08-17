@@ -1,6 +1,6 @@
 import { whatsappOrderUrl } from "./cta";
 export const SERVICE_NAME = "WATCHWORLDCUP IPTV";
-export const VERIFIED_OFFER_DATE = "2026-08-11";
+export const LISTED_OFFER_DATE = "2026-08-11";
 export const subscriptionPlans = [
   {
     id: "3-months",
@@ -67,19 +67,12 @@ export const serviceCategories = [
   },
 ] as const;
 export const planFeatures = [
-                "30,000+ live channels",
-    "Full HD & 4K sports",
-    "100,000+ VOD movies & series",
-    "99.9% Uptime & Anti-Freeze tech",
-    "TV Guide (EPG) included",
-    "Compatible with all devices",
-    "24/7 Dedicated customer support",
-    "Catch-up & 7-day replay",
-    "Free automatic updates",
-    "Multi-device & multi-room support",
-    "All major PPV events included",
-    "No VPN required",
-    "Parental control features",
-    "Instant activation",
-    "No commitment",
+  "Time-based IPTV / M3U subscription duration",
+  "Current content scope confirmed before payment",
+  "Country and language requirements discussed before payment",
+  "Device and intended app reviewed before payment",
+  "Credential format and delivery process confirmed in writing",
+  "Applicable payment, refund and cancellation terms confirmed before payment",
+  "Setup guidance available after order details are confirmed",
+  "No catalog totals, uptime or universal compatibility guarantees are implied",
 ] as const;

@@ -9,7 +9,7 @@
       "urlHost": "api.whatsapp.com"
     }
   },
-  "verifiedOffer": [
+  "listedOffer": [
     {"duration": "3 months", "price": 25, "currency": "USD"},
     {"duration": "6 months", "price": 38, "currency": "USD"},
     {"duration": "1 year", "price": 62, "currency": "USD"}

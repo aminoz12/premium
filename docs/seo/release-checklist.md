@@ -4,6 +4,7 @@ Before deployment:
 
 - Run `npm run lint`, `npm run build`, and `npm run release:check`.
 - Review the sitemap for only canonical HTTP 200 public pages and verify that `lastmod` reflects a meaningful content update.
+- Confirm that every shared plan-card feature is supported by the rights and availability evidence register; otherwise it must describe the pre-payment confirmation workflow rather than promise a service capability.
 - Confirm one H1, unique title/description, self-canonical, explicit index policy and valid visible-content JSON-LD for priority pages.
 - Recheck keyboard navigation, dialog behavior, focus visibility and mobile layout on the homepage, pricing, order, setup and support pages.
 - Confirm no blocked commercial claim has been reintroduced without an approved evidence-register row.

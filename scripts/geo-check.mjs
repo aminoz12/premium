@@ -19,7 +19,7 @@ const indexable=JSON.parse(fs.readFileSync(path.join(root,'seo','indexable-route
 const routeSet=new Set(indexable.routes.map(route=>route.path));
 
 entity.entity.name==='WATCHWORLDCUP'&&entity.entity.canonicalUrl==='https://watchworldcup.us'?pass('Canonical entity identity is fixed'):fail('Entity identity mismatch');
-entity.verifiedOffer.map(plan=>plan.price).join(',')==='25,38,62'?pass('Verified GEO offer facts match production prices'):fail('GEO price mismatch');
+entity.listedOffer.map(plan=>plan.price).join(',')==='25,38,62'?pass('Listed GEO offer facts match production prices'):fail('GEO price mismatch');
 entity.entity.publicContact.phoneE164==='+212723279328'?pass('GEO contact matches production WhatsApp recipient'):fail('GEO contact mismatch');
 answers.answers.every(answer=>routeSet.has(answer.page))?pass('Every answer-engine target is an indexable canonical route'):fail('Answer-engine map targets a non-indexable route');
 geographic.architecture==='subdirectories only'&&!geographic.geoSubdomainsAllowed&&!geographic.doorwayPagesAllowed?pass('Geographic architecture blocks subdomains and doorway pages'):fail('Geographic architecture policy mismatch');

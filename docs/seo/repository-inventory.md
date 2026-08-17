@@ -11,6 +11,7 @@
 | Schema | Server-rendered JSON-LD components in `app/schema.tsx` |
 | Robots/sitemap | `app/robots.ts`, `app/sitemap.ts` |
 | Content/data | Typed TypeScript catalogs in `lib/`, route components, and versioned public CSV/JSON downloads |
+| Content planning | `docs/seo/content-brief-template.md` is required before adding an indexable route |
 | Images | Static WebP assets under `public/images`; generated social images and validation scripts |
 | Analytics | No third-party analytics script currently loads; CTA interaction events stay in the browser data layer |
 | Deployment | Netlify configuration (`netlify.toml`) with Node 20 (`.nvmrc`) |

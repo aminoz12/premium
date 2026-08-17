@@ -8,5 +8,8 @@
 - Removed rendered claims requiring evidence: catalog/customer counts, ratings, guaranteed availability, free trial, uptime/buffering, universal compatibility, payment-method logos and unsupported home-plan prices.
 - Removed Google Analytics from the root layout because the published privacy policy states that no analytics script is installed. Local CTA events remain local browser events only.
 - Added compliance/evidence, repository, indexability and release records under `docs/seo/` and this blocker register.
+- Replaced the remaining shared pricing-card guarantees with a transparent confirmation checklist, added the indexable-content brief template, and made sitemap `lastmod` values follow maintained route/content dates instead of one blanket timestamp.
+- Added a release gate that rejects missing, invalid or blanket sitemap modification dates.
+- Reworded price references from “verified” to “listed” or “owner-provided”; the evidence register keeps price-policy confirmation as a deployment blocker.
 
 No redirect changes were necessary. Sitemap route eligibility remains governed by the existing public route list; timestamps still require content-owner verification before a deployment claiming freshness.

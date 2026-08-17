@@ -102,7 +102,7 @@ The crawl, status, and image checks expect a production server on `http://127.0.
 
 - Commercial homepage and navigation centered on IPTV/M3U subscriptions.
 - Separate Live TV, Sports, Movies, Series, Pricing and Setup pages.
-- Three verified plan prices and site-wide WhatsApp ordering.
+- Three owner-provided plan prices and site-wide WhatsApp ordering.
 - Original category imagery with no real title, channel or platform claims.
 - World Cup archives and research retained as separate secondary resources.
 - `COMMERCIAL-LAUNCH-REQUIREMENTS.md` now governs claim, catalog, checkout and legal expansion.

@@ -7,6 +7,10 @@ const sitemapResponse=await fetch(base+'/sitemap.xml');
 const sitemap=await sitemapResponse.text();
 const entries=[...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
 entries.length===40?pass('sitemap contains exactly 40 indexable URLs'):fail(`sitemap contains ${entries.length} URLs`);
+const lastmods=[...sitemap.matchAll(/<lastmod>(.*?)<\/lastmod>/g)].map(match=>match[1]);
+lastmods.length===entries.length?pass('every sitemap URL has a lastmod value'):fail(`sitemap has ${lastmods.length} lastmod values for ${entries.length} URLs`);
+lastmods.every(value=>!Number.isNaN(Date.parse(value)))?pass('sitemap lastmod values are valid dates'):fail('sitemap contains an invalid lastmod value');
+new Set(lastmods).size>1?pass('sitemap uses content-specific lastmod values'):fail('sitemap uses one blanket lastmod value');
 for(const absolute of entries){
   const expected=new URL(absolute);
   const response=await fetch(base+expected.pathname,{redirect:'manual'});
