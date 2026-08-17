@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { SITE_NAME, SITE_URL } from './site';
+import { canonicalUrl, normalizePath, SITE_NAME, SITE_URL } from './site';
 
 export function pageMetadata({ title, description, path, type = 'website', languages }: { title: string; description: string; path: string; type?: 'website' | 'article'; languages?: Record<string,string> }): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const normalizedPath = normalizePath(path);
+  const url = canonicalUrl(normalizedPath);
   const socialTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-  const imageSlug = path === '/' ? 'home' : path.replace(/^\//, '').replaceAll('/', '--');
+  const imageSlug = normalizedPath === '/' ? 'home' : normalizedPath.replace(/^\//, '').replaceAll('/', '--');
   const socialImage = `${SITE_URL}/images/og/${imageSlug}.webp`;
   return {
     title,

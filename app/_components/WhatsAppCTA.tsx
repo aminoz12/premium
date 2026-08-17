@@ -43,7 +43,7 @@ export function FloatingWhatsAppCTA() {
       <a
         href={WHATSAPP_URL}
         target="_blank"
-        rel="nofollow sponsogreen noopener noreferrer"
+        rel="nofollow sponsored noopener noreferrer"
         onClick={() => trackWhatsAppClick("floating")}
         aria-label="Contact WATCHWORLDCUP IPTV sales on WhatsApp (opens in a new tab)"
         className="relative flex h-14 items-center justify-center gap-2 rounded-full border border-green-400/35 bg-gradient-to-r from-green-600 to-green-800 px-4 font-black text-white shadow-[0_16px_55px_rgba(239,59,79,.28)] transition-all duration-300 before:absolute before:inset-[-5px] before:-z-10 before:rounded-full before:border before:border-green-500/25 hover:-translate-y-1 hover:shadow-[0_20px_65px_rgba(239,59,79,.38)] focus-visible:outline-white"
@@ -74,7 +74,7 @@ export function CommercialCTA({
         <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">
           Message WATCHWORLDCUP at {WHATSAPP_PHONE_DISPLAY}. Confirm current
           content availability, your intended device and IPTV app, what
-          cgreenentials you will receive, and the applicable terms before payment.
+          credentials you will receive, and the applicable terms before payment.
         </p>
       </div>
       <a

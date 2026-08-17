@@ -2,6 +2,18 @@ export const SITE_URL = 'https://watchworldcup.us';
 export const SITE_NAME = 'WATCHWORLDCUP';
 export const UPDATED_ISO = '2026-08-11T09:00:00+01:00';
 
+/** The site uses the apex host and no trailing slash (except at the origin). */
+export function normalizePath(path = '/') {
+  const pathname = path.startsWith('/') ? path : `/${path}`;
+  if (pathname === '/') return '/';
+  return pathname.replace(/\/+$/, '');
+}
+
+export function canonicalUrl(path = '/') {
+  const normalized = normalizePath(path);
+  return normalized === '/' ? SITE_URL : `${SITE_URL}${normalized}`;
+}
+
 export const nav = [
   { href: '/', label: 'Home' },
   { href: '/live-tv', label: 'Live TV' },

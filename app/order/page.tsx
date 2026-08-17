@@ -110,6 +110,9 @@ export default function Page() {
             </Link>
           </div>
         </section>
+        <section className="mt-14" aria-label="Private order preparation">
+          <OrderWizard />
+        </section>
         <section className="mt-16 max-w-4xl">
           <h2 className="text-3xl font-black">Order questions</h2>
           <div className="mt-6 space-y-3">

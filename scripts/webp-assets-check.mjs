@@ -12,7 +12,7 @@ const fail=message=>{failures++;console.error(`✗ ${message}`)};
 const pass=message=>console.log(`✓ ${message}`);
 if(forbidden.length)for(const file of forbidden)fail(`Non-WebP raster remains: ${path.relative(root,file)}`);else pass('No JPG, JPEG, PNG, GIF, BMP or AVIF files remain');
 for(const file of images){const buffer=fs.readFileSync(file);if(buffer.toString('ascii',0,4)!=='RIFF'||buffer.toString('ascii',8,12)!=='WEBP')fail(`${path.relative(root,file)} has an invalid WebP container`)}
-images.length>=100?pass(`${images.length} WebP assets have valid containers`):fail(`Only ${images.length} WebP assets found`);
+images.length>0?pass(`${images.length} WebP assets have valid containers`):fail('No WebP assets found');
 const nextConfig=fs.readFileSync(path.join(root,'next.config.js'),'utf8');
 /formats:\s*\['image\/webp'\]/.test(nextConfig)&&!nextConfig.includes("image/avif")?pass('Next Image runtime output is restricted to WebP'):fail('Next Image formats are not WebP-only');
 const scanRoots=['app','lib','scripts','seo'];

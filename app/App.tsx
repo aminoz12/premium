@@ -19,6 +19,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as THREE from "three";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
+import { homeFaqs } from "@/lib/home-faq";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -914,28 +915,28 @@ const serviceCategories = [
     href: "/live-tv",
     title: "Live TV Channels",
     description:
-      "Access 30,000+ live television channels worldwide — sports, news, entertainment, kids, and more in HD & 4K quality.",
+      "Discuss the live TV categories, countries and languages relevant to your order. Availability is confirmed before payment.",
     image: "/images/commercial/live-tv.webp",
   },
   {
     href: "/sports",
     title: "Live Sports Streaming",
     description:
-      "Stream FIFA World Cup 2026, Premier League, Champions League, La Liga, NBA, NFL, UFC, boxing PPV and all major sports events live.",
+      "Ask about current sports-content availability for your country and intended use. No league or broadcaster affiliation is claimed.",
     image: "/images/commercial/getfree.webp",
   },
   {
     href: "/movies",
     title: "Movies On Demand",
     description:
-      "Watch 100,000+ blockbuster films and classic cinema in Full HD and 4K quality — new titles added daily.",
+      "Confirm the current film categories, language and quality options relevant to your order before payment.",
     image: "/images/commercial/movies.webp",
   },
   {
     href: "/series",
     title: "TV Series & Shows",
     description:
-      "Binge-watch trending TV series, exclusive shows, and complete seasons from global streaming platforms in HD.",
+      "Confirm current series availability and your device or application requirements before ordering.",
     image: "/images/commercial/series.webp",
   },
 ];
@@ -955,11 +956,11 @@ function SEOMeta() {
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/images/logo.png`,
+      url: `${SITE_URL}/logo.svg`,
       width: 512,
       height: 512,
     },
-    image: `${SITE_URL}/images/og-image.jpg`,
+    image: `${SITE_URL}/images/og/home.webp`,
     description:
       "WATCHWORLDCUP is the #1 premium IPTV subscription service for 2026. Stream FIFA World Cup 2026, Premier League, Champions League, and 30,000+ live channels in 4K HD quality. Order via WhatsApp +212723279328.",
     telephone: "+212723279328",
@@ -1032,7 +1033,7 @@ function SEOMeta() {
     name: "WATCHWORLDCUP Premium IPTV Subscription",
     alternateName: "Watch World Cup IPTV Service 2026",
     image: [
-      `${SITE_URL}/images/og-image.jpg`,
+      `${SITE_URL}/images/og/home.webp`,
       `${SITE_URL}/images/commercial/devices.webp`,
     ],
     description:
@@ -1040,7 +1041,7 @@ function SEOMeta() {
     brand: {
       "@type": "Brand",
       name: "WATCHWORLDCUP",
-      logo: `${SITE_URL}/images/logo.png`,
+      logo: `${SITE_URL}/logo.svg`,
     },
     manufacturer: {
       "@type": "Organization",
@@ -1233,7 +1234,7 @@ function SEOMeta() {
     currenciesAccepted: "USD, EUR, GBP, BTC, ETH",
     paymentAccepted: "Cryptocurrency, Mastercard, Visa, PayPal, Revolut",
     areaServed: "Worldwide",
-    image: `${SITE_URL}/images/og-image.jpg`,
+    image: `${SITE_URL}/images/og/home.webp`,
   };
 
   const metaKeywords = [
@@ -1336,7 +1337,7 @@ function SEOMeta() {
       <meta name="msapplication-TileColor" content="#080808" />
       <meta
         name="msapplication-TileImage"
-        content={`${SITE_URL}/images/ms-icon-144x144.png`}
+        content={`${SITE_URL}/logo.svg`}
       />
 
       {/* ── Site Info ── */}
@@ -1372,48 +1373,48 @@ function SEOMeta() {
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/favicon-16x16.png"
+        href="/logo.svg"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon-32x32.png"
+        href="/logo.svg"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="96x96"
-        href="/favicon-96x96.png"
+        href="/logo.svg"
       />
-      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+      <link rel="apple-touch-icon" sizes="57x57" href="/logo.svg" />
+      <link rel="apple-touch-icon" sizes="60x60" href="/logo.svg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/logo.svg" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/logo.svg" />
       <link
         rel="apple-touch-icon"
         sizes="114x114"
-        href="/apple-icon-114x114.png"
+        href="/logo.svg"
       />
       <link
         rel="apple-touch-icon"
         sizes="120x120"
-        href="/apple-icon-120x120.png"
+        href="/logo.svg"
       />
       <link
         rel="apple-touch-icon"
         sizes="144x144"
-        href="/apple-icon-144x144.png"
+        href="/logo.svg"
       />
       <link
         rel="apple-touch-icon"
         sizes="152x152"
-        href="/apple-icon-152x152.png"
+        href="/logo.svg"
       />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/apple-icon-180x180.png"
+        href="/logo.svg"
       />
       <link rel="manifest" href="/manifest.json" />
       <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -1442,10 +1443,10 @@ function SEOMeta() {
         property="og:description"
         content="Watch FIFA World Cup 2026 live and 30,000+ channels in 4K HD. Premium IPTV subscription from $29. Free 24h trial. Order on WhatsApp +212723279328. Premier League, Champions League and more."
       />
-      <meta property="og:image" content={`${SITE_URL}/images/og-image.jpg`} />
+      <meta property="og:image" content={`${SITE_URL}/images/og/home.webp`} />
       <meta
         property="og:image:secure_url"
-        content={`${SITE_URL}/images/og-image.jpg`}
+        content={`${SITE_URL}/images/og/home.webp`}
       />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -1471,7 +1472,7 @@ function SEOMeta() {
         name="twitter:description"
         content="Watch World Cup 2026 and 30,000+ IPTV channels in 4K HD. Free 24h trial. Order on WhatsApp. From $29/3 months. Anti-freeze, multi-device, instant activation."
       />
-      <meta name="twitter:image" content={`${SITE_URL}/images/og-image.jpg`} />
+      <meta name="twitter:image" content={`${SITE_URL}/images/og/home.webp`} />
       <meta
         name="twitter:image:alt"
         content="WATCHWORLDCUP Premium IPTV – World Cup 2026 Live Streaming"
@@ -2074,7 +2075,7 @@ function Hero3DTitle() {
             perspective: "800px",
             transformStyle: "preserve-3d",
           }}
-          aria-label="Watch World Cup IPTV – Best Premium IPTV Service 2026"
+          aria-label="WATCHWORLDCUP IPTV and M3U subscriptions"
         >
           <span
             className="block whitespace-nowrap text-white"
@@ -2823,48 +2824,48 @@ function FeaturesGrid() {
   const features = [
     {
       icon: TvIcon,
-      title: "30,000+ Live Channels",
-      desc: "Worldwide channels in HD & 4K — sports, news, entertainment, kids, music.",
+      title: "Current availability check",
+      desc: "Discuss the content categories, languages and countries that matter to your order before payment.",
     },
     {
       icon: SportsIcon,
-      title: "FIFA World Cup 2026",
-      desc: "All World Cup 2026 matches live via sports channels included in every plan.",
+      title: "Independent service",
+      desc: "WATCHWORLDCUP is not FIFA, a league, broadcaster, studio or official tournament partner.",
     },
     {
       icon: FilmIcon,
-      title: "100,000+ VOD Library",
-      desc: "Blockbuster movies and complete TV series seasons on demand 24/7.",
+      title: "Clear order scope",
+      desc: "Receive written confirmation of the plan duration, content scope and delivery details before paying.",
     },
     {
       icon: CheckCircleIcon,
-      title: "Anti-Freeze Technology",
-      desc: "99.9% uptime server with zero buffering and instant channel switching.",
+      title: "No unsupported performance guarantees",
+      desc: "The site does not claim an uptime level, universal quality level or buffering outcome without current evidence.",
     },
     {
       icon: DeviceIcon,
-      title: "All Devices Supported",
-      desc: "Smart TV, Fire Stick, Android, iOS, MAG, PC, Mac — every device works.",
+      title: "Compatibility discussion",
+      desc: "Confirm your exact device, operating system and intended IPTV application before ordering.",
     },
     {
       icon: ArrowRightIcon,
-      title: "Instant Activation",
-      desc: "Your IPTV subscription is activated within 1-3 hours after payment.",
+      title: "Delivery details first",
+      desc: "Ask for the credential format, delivery process and activation conditions in writing before payment.",
     },
     {
       icon: ListIcon,
-      title: "Catch-up TV (7 Days)",
-      desc: "Missed a match? Replay any content from the last 7 days anytime.",
+      title: "Terms before payment",
+      desc: "Confirm payment method, cancellation and applicable refund terms before you decide to proceed.",
     },
     {
       icon: SportsIcon,
-      title: "Worldwide Coverage",
-      desc: "International channels from USA, UK, Europe, Arabic, Asia, Africa & more.",
+      title: "Territory-specific information",
+      desc: "Content and technical availability can vary by country, language, application and device.",
     },
     {
       icon: MessageIcon,
-      title: "24/7 WhatsApp Support",
-      desc: "Dedicated customer support in English, French, and Arabic — always available.",
+      title: "Published contact route",
+      desc: "Use WhatsApp to request current availability, compatibility details, terms or website support.",
     },
   ];
 
@@ -2875,15 +2876,15 @@ function FeaturesGrid() {
     >
       <AnimatedSection>
         <p className="text-[10px] font-extrabold uppercase tracking-[.2em] text-red-400">
-          Why choose WATCHWORLDCUP IPTV
+          Before you order
         </p>
         <h2 className="mt-4 text-2xl sm:text-3xl font-black text-white md:text-5xl">
-          Everything you need in one IPTV subscription.
+          Make an informed subscription decision.
         </h2>
         <p className="mt-4 max-w-3xl text-sm sm:text-base leading-7 text-slate-300">
-          WATCHWORLDCUP is the best premium IPTV service in 2026, offering
-          industry-leading features, the widest channel selection, and the most
-          stable streaming experience worldwide.
+          The public website avoids unsupported catalog totals, ratings, uptime,
+          quality and universal-compatibility guarantees. Confirm the details
+          that apply to your individual order.
         </p>
       </AnimatedSection>
       <div className="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -2990,16 +2991,13 @@ export default function App() {
   return (
     <>
       <GlobalStyles />
-      <SEOMeta />
-      <HiddenSEOContent />
-      <WelcomePopup />
       {mounted && <Splash progressRef={progressRef} fading={fading} />}
 
       <main itemScope itemType="https://schema.org/WebPage">
         {/* ── Hero ── */}
         <section
           className="relative min-h-[85vh] sm:min-h-[92vh] overflow-hidden border-b border-white/5"
-          aria-label="WATCHWORLDCUP – Best Premium IPTV Service for World Cup 2026"
+          aria-label="WATCHWORLDCUP IPTV and M3U subscriptions"
         >
           <HeroCanvas />
           <div
@@ -3022,8 +3020,7 @@ export default function App() {
                 className="inline-flex items-center gap-2 rounded-full border border-red-400/25 bg-red-400/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-extrabold text-red-300"
               >
                 <span className="h-1.5 sm:h-2 w-1.5 sm:w-2 animate-pulse rounded-full bg-red-400" />
-                #1 Premium IPTV Service 2026 · World Cup 2026 Ready · WhatsApp
-                Order
+                IPTV / M3U subscriptions · WhatsApp ordering
               </motion.div>
 
               <Hero3DTitle />
@@ -3035,11 +3032,9 @@ export default function App() {
                 className="mt-5 sm:mt-7 max-w-3xl text-sm sm:text-base leading-7 sm:leading-8 text-slate-200 md:text-xl"
                 itemProp="description"
               >
-                WATCHWORLDCUP — the best premium IPTV subscription service for
-                2026. Stream FIFA World Cup 2026, Premier League, Champions
-                League, and 30,000+ live channels in 4K HD quality. Get a free
-                24-hour trial via WhatsApp. Plans from $29. Instant activation.
-                24/7 support.
+                Choose a time-based WATCHWORLDCUP IPTV or M3U subscription and
+                confirm the current content scope, country, device, application,
+                delivery process, payment and applicable terms before ordering.
               </motion.p>
 
               <motion.div
@@ -3078,16 +3073,6 @@ export default function App() {
                 >
                   Order IPTV on WhatsApp
                 </a>
-                <a
-                  href={WHATSAPP_FREE_TRIAL}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-green-500/40 bg-green-500/10 px-5 sm:px-7 py-3.5 sm:py-4 font-black text-green-300 transition-all hover:bg-green-500/20 text-sm sm:text-base"
-                  title="Get Free 24h IPTV Trial – WATCHWORLDCUP"
-                >
-                  <GiftIcon className="h-4 w-4" />
-                  Free 24h IPTV Trial
-                </a>
               </motion.div>
 
               {/* ── Micro-trust signals ── */}
@@ -3098,11 +3083,10 @@ export default function App() {
                 className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4"
               >
                 {[
-                  { label: "Instant Activation", Icon: ArrowRightIcon },
-                  { label: "Secure Payment", Icon: CheckCircleIcon },
-                  { label: "4.9/5 Rating", Icon: StarIcon },
-                  { label: "Worldwide", Icon: SportsIcon },
-                  { label: "24/7 Support", Icon: MessageIcon },
+                  { label: "Plan confirmation", Icon: CheckCircleIcon },
+                  { label: "Availability check", Icon: ListIcon },
+                  { label: "Device discussion", Icon: DeviceIcon },
+                  { label: "WhatsApp ordering", Icon: MessageIcon },
                 ].map(({ label, Icon }) => (
                   <span
                     key={label}
@@ -3143,9 +3127,9 @@ export default function App() {
               </h2>
               <div className="mt-5 space-y-3 text-sm text-slate-300">
                 {[
-                  ["1", "Get free 24h trial", "Test before buying — no card"],
-                  ["2", "Choose your plan", "$29 / $49 / $79"],
-                  ["3", "Instant activation", "1-3 hours after payment"],
+                  ["1", "Choose a plan", "Review the listed durations and prices"],
+                  ["2", "Confirm availability", "Discuss country, content and compatibility"],
+                  ["3", "Review terms", "Confirm delivery and payment details first"],
                 ].map(([num, title, sub]) => (
                   <motion.div
                     key={title}
@@ -3165,12 +3149,12 @@ export default function App() {
                 ))}
               </div>
               <a
-                href={WHATSAPP_FREE_TRIAL}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 className="mt-5 flex items-center justify-center gap-2 rounded-2xl bg-green-600 px-4 py-2.5 font-black text-white text-sm hover:bg-green-500 transition-colors"
               >
-                Start Free Trial
+                Ask about a plan
                 <ArrowRightIcon className="h-4 w-4" />
               </a>
             </motion.aside>
@@ -3186,67 +3170,6 @@ export default function App() {
               <div className="h-1.5 sm:h-2 w-0.5 sm:w-1 rounded-full bg-red-400" />
             </div>
           </motion.div>
-        </section>
-
-        {/* ── Trust Bar ── */}
-        <TrustBar />
-
-        <FreeTrialBanner />
-
-        {/* ── SEO Keywords Marquee ── */}
-        <SEOKeywordsMarquee />
-
-        {/* ── Channels & Sports Scroll ── */}
-        <section
-          className="flex flex-col gap-3 sm:gap-4 py-3 sm:py-4"
-          aria-label="Available IPTV channels and sports"
-        >
-          <div className="relative w-full overflow-hidden">
-            <div
-              className="flex w-max animate-infinite-scroll-reverse hover:[animation-play-state:paused]"
-              style={{ animationDuration: `${scrollSpeed}s` }}
-            >
-              {[...channels, ...channels].map((channel, index) => (
-                <div
-                  key={`${channel.id}-${index}`}
-                  className="mx-4 sm:mx-8 flex items-center justify-center transition-transform duration-300 hover:scale-110"
-                >
-                  <img
-                    src={
-                      channel.src.startsWith("/")
-                        ? channel.src
-                        : `/${channel.src}`
-                    }
-                    alt={channel.alt}
-                    className="h-16 sm:h-20 md:h-28 w-auto max-w-[100px] sm:max-w-[150px] object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative w-full overflow-hidden">
-            <div
-              className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused]"
-              style={{ animationDuration: `${scrollSpeed}s` }}
-            >
-              {[...sports, ...sports].map((sport, index) => (
-                <div
-                  key={`${sport.id}-${index}`}
-                  className="mx-4 sm:mx-8 flex items-center justify-center transition-transform duration-300 hover:scale-110"
-                >
-                  <img
-                    src={
-                      sport.src.startsWith("/") ? sport.src : `/${sport.src}`
-                    }
-                    alt={sport.alt}
-                    className="h-16 sm:h-20 md:h-28 w-auto max-w-[100px] sm:max-w-[150px] object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
         </section>
 
         {/* ── Features ── */}
@@ -3331,31 +3254,31 @@ export default function App() {
                 Get your IPTV subscription in 4 easy steps.
               </h2>
               <p className="mt-3 max-w-3xl text-sm text-slate-300">
-                From free trial to full IPTV access — the simplest ordering
-                process in the industry.
+                Review the plan, then confirm the current scope and terms that
+                apply to your order before payment.
               </p>
             </AnimatedSection>
             <div className="mt-8 sm:mt-10 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
               {[
                 [
                   "01",
-                  "Get Free 24h Trial",
-                  "Test the full IPTV service free for 24 hours via WhatsApp. No credit card required.",
+                  "Choose a plan",
+                  "Review the available durations and current plan information.",
                 ],
                 [
                   "02",
                   "Choose Your Plan",
-                  "Select 3 months ($29), 6 months ($49), or 12 months ($79) IPTV subscription.",
+                  "Identify the content, country, device and app requirements you need confirmed.",
                 ],
                 [
                   "03",
                   "Order on WhatsApp",
-                  "Confirm your IPTV plan, device compatibility, and payment securely via WhatsApp.",
+                  "Confirm current availability, credential format, delivery, payment and applicable terms in writing.",
                 ],
                 [
                   "04",
                   "Start Streaming",
-                  "Receive your M3U or Xtream codes. Set up your IPTV app and start watching instantly.",
+                  "Use the provided setup information only after the order details and terms have been confirmed.",
                 ],
               ].map(([n, title, text], index) => {
                 const Icon = orderIcons[index];
@@ -3387,13 +3310,12 @@ export default function App() {
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href={WHATSAPP_FREE_TRIAL}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-green-600 px-6 py-3.5 font-black text-white hover:bg-green-500 transition-colors text-sm"
               >
-                <GiftIcon className="h-4 w-4" />
-                Start Free 24h IPTV Trial
+                Contact us on WhatsApp
               </a>
               <Link
                 href="/pricing"
@@ -3406,10 +3328,8 @@ export default function App() {
           </div>
         </section>
 
-        <MoviesSection />
-
         {/* ── Pricing ── */}
-        <section
+        {/* <section
           className="mx-auto max-w-7xl px-3 sm:px-4 py-16 sm:py-20 md:px-8"
           aria-label="IPTV subscription pricing plans"
         >
@@ -3577,10 +3497,7 @@ export default function App() {
               </motion.div>
             ))}
           </motion.div>
-        </section>
-
-        {/* ── Reviews ── */}
-        <ReviewsSection />
+        </section> */}
 
         {/* ── Devices ── */}
         <section aria-label="Compatible devices for WATCHWORLDCUP IPTV">
@@ -3603,27 +3520,27 @@ export default function App() {
             </motion.div>
             <AnimatedSection delay={0.2}>
               <p className="text-[10px] font-extrabold uppercase tracking-[.2em] text-red-400">
-                Works on all your devices
+                Confirm compatibility first
               </p>
               <h2 className="mt-4 text-2xl sm:text-3xl font-black text-white md:text-5xl">
-                IPTV on Smart TV, Fire Stick, Android, iOS & more.
+                Discuss your device and IPTV application.
               </h2>
               <p className="mt-4 sm:mt-5 text-sm sm:text-base leading-7 sm:leading-8 text-slate-300">
-                WATCHWORLDCUP IPTV is compatible with every major device and
-                operating system. Use M3U playlist or Xtream codes with your
-                preferred IPTV application. Confirm your exact device model with
-                our support team before ordering.
+                Device and application compatibility can vary. Share your exact
+                model, operating system and intended IPTV application with
+                support before payment; do not rely on a generic device list as
+                a compatibility guarantee.
               </p>
               <ul className="mt-5 sm:mt-6 grid gap-2 sm:gap-3 text-xs sm:text-sm text-slate-300 sm:grid-cols-2">
                 {[
-                  "Samsung, LG, Sony Smart TV",
-                  "Amazon Fire Stick & Fire TV",
-                  "iPhone, iPad (iOS 15+)",
-                  "Android phones & tablets",
-                  "Windows 10/11, macOS, Linux",
-                  "MAG boxes, Formuler, Enigma2",
-                  "Apple TV 4K, Chromecast, Roku",
-                  "Xbox, PlayStation 4/5",
+                  "Exact device model",
+                  "Operating system version",
+                  "Intended IPTV application",
+                  "Country or region",
+                  "Preferred content categories",
+                  "Language requirements",
+                  "Credential format needed",
+                  "Delivery and setup questions",
                 ].map((item, i) => (
                   <motion.li
                     key={item}
@@ -3660,8 +3577,6 @@ export default function App() {
           </div>
         </section>
 
-        <FreeTrialBanner />
-
         {/* ── FAQ ── */}
         <section
           className="mx-auto max-w-7xl px-3 sm:px-4 pb-16 sm:pb-24 pt-8 sm:pt-10 md:px-8"
@@ -3677,13 +3592,13 @@ export default function App() {
               WATCHWORLDCUP IPTV FAQ
             </h2>
             <p className="mt-3 sm:mt-4 max-w-3xl text-xs sm:text-sm leading-6 sm:leading-7 text-slate-300">
-              Everything you need to know about WATCHWORLDCUP premium IPTV
-              service — pricing, devices, free trial, World Cup 2026, channels,
-              and ordering.
+              Understand the ordering process, current availability checks and
+              the separation between WATCHWORLDCUP and third-party content
+              providers.
             </p>
           </AnimatedSection>
           <div className="mt-6 sm:mt-8 grid gap-3 sm:gap-4 grid-cols-1 md:grid-cols-2">
-            {serviceFaqs.map(([question, answer], index) => (
+            {homeFaqs.map(({ question, answer }, index) => (
               <FAQItem
                 key={question}
                 question={question}
@@ -3704,8 +3619,8 @@ export default function App() {
               Still have questions?
             </h3>
             <p className="text-sm sm:text-base text-slate-300">
-              Our IPTV support team is available 24/7 on WhatsApp — English,
-              French & Arabic.
+              Use the published WhatsApp channel to discuss a plan, current
+              availability, device compatibility or a website issue.
             </p>
             <p className="text-xs text-slate-500">
               WhatsApp: <strong className="text-white">+212 723 279 328</strong>
@@ -3718,15 +3633,6 @@ export default function App() {
                 className="inline-flex items-center justify-center rounded-2xl border border-green-500/40 bg-green-600 px-5 sm:px-6 py-2.5 sm:py-3 font-black text-white shadow-[0_0_30px_rgba(34,197,94,.2)] transition-all hover:scale-105 hover:bg-green-500 text-sm"
               >
                 Ask on WhatsApp
-              </a>
-              <a
-                href={WHATSAPP_FREE_TRIAL}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-5 sm:px-6 py-2.5 sm:py-3 font-black text-green-300 hover:bg-green-500/20 text-sm"
-              >
-                <GiftIcon className="h-4 w-4" />
-                Get Free 24h IPTV Trial
               </a>
               <Link
                 href="/pricing"

@@ -3,7 +3,6 @@ import "./globals.css";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { FloatingWhatsAppCTA } from "./_components/WhatsAppCTA";
 import { COMMERCIAL_CTA_ENABLED } from "@/lib/cta";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -47,19 +46,6 @@ export default function RootLayout({
       <body className="font-[var(--font-sans)]">
         {children}
         {COMMERCIAL_CTA_ENABLED && <FloatingWhatsAppCTA />}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-DWXM5GTDH9"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-DWXM5GTDH9');
-          `}
-        </Script>
       </body>
     </html>
   );
