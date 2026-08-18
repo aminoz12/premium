@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "tournament": "FIFA World Cup 2026",
+  "hostCountries": ["United States", "Canada", "Mexico"],
+  "hostCities2026": [
+    { "city": "New York / New Jersey", "stadium": "MetLife Stadium", "finalMatchHost": true },
+    { "city": "Los Angeles", "stadium": "SoFi Stadium", "usMntOpener": true },
+    { "city": "Dallas", "stadium": "AT&T Stadium", "semiFinalHost": true },
+    { "city": "Miami", "stadium": "Hard Rock Stadium", "bronzeMatchHost": true },
+    { "city": "Toronto", "stadium": "BMO Field", "canMntOpener": true },
+    { "city": "Mexico City", "stadium": "Estadio Azteca", "openingMatchHost": true }
+  ],
+  "regionalBroadcasters2026": {
+    "US": ["FOX Sports", "Telemundo", "Peacock"],
+    "CA": ["TSN", "RDS"],
+    "MX": ["Televisa", "TV Azteca", "TUDN"],
+    "GB": ["BBC", "ITV"],
+    "AU": ["SBS"]
+  }
+}

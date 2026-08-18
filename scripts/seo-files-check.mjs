@@ -3,12 +3,60 @@ import path from 'node:path';
 
 const root=process.cwd();
 const dir=path.join(root,'seo');
-const required=['README.md','indexable-routes.json','metadata-inventory.csv','runtime-snapshot.json','redirect-map.json','status-policy.json','structured-data-inventory.json','deployment-checklist.md','post-launch-monitoring.md','search-console-submission.md','lighthouse-summary.json','quality-summary.json','lighthouse-home-production.json','lighthouse-home-desktop-production.json'];
-let failures=0;
-const pass=message=>console.log(`✓ ${message}`);
-const fail=message=>{failures++;console.error(`✗ ${message}`)};
-for(const file of required)fs.existsSync(path.join(dir,file))?pass(`seo/${file}`):fail(`Missing seo/${file}`);
-if(failures)process.exit(1);
+const required = [
+  'README.md',
+  'indexable-routes.json',
+  'metadata-inventory.csv',
+  'runtime-snapshot.json',
+  'redirect-map.json',
+  'status-policy.json',
+  'structured-data-inventory.json',
+  'deployment-checklist.md',
+  'post-launch-monitoring.md',
+  'search-console-submission.md',
+  'lighthouse-summary.json',
+  'quality-summary.json',
+  'lighthouse-home-production.json',
+  'lighthouse-home-desktop-production.json',
+  'brand/brand-entity-knowledge-graph.json',
+  'brand/brand-reputation-policy.json',
+  'brand/brand-visual-identity-policy.json',
+  'brand/citation-register.json',
+  'geo/regional-market-map.json',
+  'geo/geo-faq-schema.json',
+  'geo/regional-image-localization.json',
+  'images/image-manifest.json',
+  'images/image-search-index.json',
+  'images/image-seo-standards.json',
+  'images/google-image-seo-guide.json',
+  'technical/crawl-budget-policy.json',
+  'technical/cdn-caching-policy.json',
+  'brand/brand-2026-entity-profile.json',
+  'brand/brand-2026-search-authority.json',
+  'geo/world-cup-2026-regional-broadcast-map.json',
+  'geo/geo-2026-answer-engine-map.json',
+  'images/world-cup-2026-image-catalog.json',
+  'images/image-2026-seo-directives.json',
+  'technical/crawl-policy-2026.json',
+  'brand/brand-press-kit-2026.json',
+  'geo/geo-hreflang-matrix-2026.json',
+  'images/visual-search-keyword-index.json',
+  'technical/core-web-vitals-budget-2026.json',
+  'technical/indexnow-policy.json',
+  'brand/brand-knowledge-graph-claims.json',
+  'geo/geo-canonical-hreflang-rules.json',
+  'images/bing-image-seo-directives.json'
+];
+let failures = 0;
+const pass = (message) => console.log(`✓ ${message}`);
+const fail = (message) => {
+  failures++;
+  console.error(`✗ ${message}`);
+};
+for (const file of required) {
+  fs.existsSync(path.join(dir, file)) ? pass(`seo/${file}`) : fail(`Missing seo/${file}`);
+}
+if (failures) process.exit(1);
 
 const routes=JSON.parse(fs.readFileSync(path.join(dir,'indexable-routes.json'),'utf8'));
 const snapshot=JSON.parse(fs.readFileSync(path.join(dir,'runtime-snapshot.json'),'utf8'));

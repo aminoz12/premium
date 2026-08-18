@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "policyName": "Core Web Vitals & Speed Budget 2026",
+  "budgets": {
+    "lcpMilliseconds": 1800,
+    "inpMilliseconds": 100,
+    "clsScore": 0.0,
+    "ttfbMilliseconds": 200,
+    "maxImageBytesWebP": 250000,
+    "maxTotalPageBundleKb": 300
+  },
+  "enforcement": {
+    "blockBuildOnClsFailure": true,
+    "requireLcpPreloadHeader": true
+  }
+}

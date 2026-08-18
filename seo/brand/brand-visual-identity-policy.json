@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "policyName": "Brand Visual Identity & Emblem Policy",
+  "logoSpecifications": {
+    "primaryLogoPath": "/logo.svg",
+    "primaryFormat": "image/svg+xml",
+    "aspectRatio": "1:1",
+    "minRenderWidthPx": 32,
+    "maxRenderWidthPx": 512,
+    "altText": "WATCHWORLDCUP official vector brand logo emblem"
+  },
+  "faviconStandards": {
+    "ico": "/favicon.ico",
+    "appleTouchIcon": "/apple-touch-icon.png",
+    "manifest": "/manifest.webmanifest"
+  },
+  "colorPaletteTokens": {
+    "primary": "#0f172a",
+    "accent": "#38bdf8",
+    "emerald": "#10b981",
+    "gold": "#fbbf24"
+  },
+  "visualSchemaMarkup": {
+    "type": "Organization",
+    "logoUrl": "https://watchworldcup.us/logo.svg"
+  }
+}

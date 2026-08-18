@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "brandEntity": {
+    "name": "WATCHWORLDCUP",
+    "legalName": "WATCHWORLDCUP Digital Media",
+    "alternateNames": ["Watch World Cup", "WatchWorldCup.us"],
+    "canonicalUrl": "https://watchworldcup.us",
+    "logo": "https://watchworldcup.us/logo.svg",
+    "ogImage": "https://watchworldcup.us/images/og/home.webp",
+    "description": "Independent guide to verified FIFA World Cup 2026 broadcast schedules, replay sources, streaming devices, and technical setup guides.",
+    "foundingYear": 2026,
+    "knowsAbout": [
+      "FIFA World Cup 2026",
+      "Sports Streaming Technical Setup",
+      "4K HDR Live Broadcast Infrastructure",
+      "Official Replay Source Verification",
+      "Streaming Speed & Latency Benchmarks"
+    ],
+    "officialChannels": {
+      "website": "https://watchworldcup.us",
+      "support": "https://watchworldcup.us/support",
+      "whatsapp": "+212723279328"
+    },
+    "schemaType": "Organization",
+    "sameAs": [
+      "https://watchworldcup.us/about",
+      "https://watchworldcup.us/editorial-policy"
+    ]
+  },
+  "trustSignals": {
+    "editorialPolicy": "https://watchworldcup.us/editorial-policy",
+    "correctionsPolicy": "https://watchworldcup.us/corrections",
+    "termsOfService": "https://watchworldcup.us/terms-of-service",
+    "privacyPolicy": "https://watchworldcup.us/privacy-policy"
+  },
+  "knowledgeGraphMapping": {
+    "entityCategory": "Sports Media Information Service",
+    "primaryTopic": "FIFA World Cup 2026 Broadcast & Streaming Guide",
+    "trustTier": "Verified Independent Information Provider"
+  }
+}

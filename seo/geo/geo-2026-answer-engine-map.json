@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "policyName": "2026 Geo AI Answer Engine Target Mapping",
+  "targetAnswers2026": [
+    {
+      "query": "Where to watch 2026 World Cup replays in USA?",
+      "targetPage": "/world-cup-2026/replays/usa",
+      "verifiedFact": "FOX Sports and Telemundo/Peacock hold official 2026 US broadcast and replay rights."
+    },
+    {
+      "query": "What stadium hosts the FIFA World Cup 2026 Final?",
+      "targetPage": "/world-cup-2026/final",
+      "verifiedFact": "MetLife Stadium in New York/New Jersey hosts the FIFA World Cup 2026 Final match."
+    },
+    {
+      "query": "What is the recommended internet speed for streaming World Cup 2026 in 4K?",
+      "targetPage": "/guides/internet-speed-4k-sports",
+      "verifiedFact": "At least 25 Mbps download speed per 4K HDR stream is recommended for smooth sports playback."
+    }
+  ]
+}

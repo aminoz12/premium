@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "policyName": "Geo Canonical and Hreflang Alignment Directives",
+  "crawlerRedirectPolicy": "NEVER redirect search engine crawlers (Googlebot, Bingbot) based on IP address.",
+  "rules": [
+    {
+      "ruleId": "GEO-CANONICAL-01",
+      "statement": "Each regional landing page MUST have a self-referential canonical URL matching its exact regional URL."
+    },
+    {
+      "ruleId": "GEO-CANONICAL-02",
+      "statement": "Every regional page MUST declare reciprocal hreflang tags for all other regional cluster members."
+    }
+  ]
+}

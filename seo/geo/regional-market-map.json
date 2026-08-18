@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "architecture": "subdirectory",
+  "geoDomainsAllowed": false,
+  "geoSubdomainsAllowed": false,
+  "doorwayPagesAllowed": false,
+  "primaryMarkets": [
+    {
+      "countryCode": "US",
+      "countryName": "United States",
+      "language": "en",
+      "locale": "en-US",
+      "canonicalPath": "/world-cup-2026/replays/usa",
+      "isPrimaryClusterMember": true,
+      "officialBroadcasters": ["FOX Sports", "Telemundo", "Peacock"],
+      "timezones": ["UTC-5", "UTC-6", "UTC-7", "UTC-8"]
+    },
+    {
+      "countryCode": "CA",
+      "countryName": "Canada",
+      "language": "en",
+      "locale": "en-CA",
+      "canonicalPath": "/world-cup-2026/replays",
+      "officialBroadcasters": ["TSN", "RDS"],
+      "timezones": ["UTC-3.5", "UTC-4", "UTC-5", "UTC-6", "UTC-7", "UTC-8"]
+    },
+    {
+      "countryCode": "MX",
+      "countryName": "Mexico",
+      "language": "es",
+      "locale": "es-MX",
+      "canonicalPath": "/world-cup-2026/replays",
+      "officialBroadcasters": ["Televisa", "TV Azteca", "TUDN"],
+      "timezones": ["UTC-5", "UTC-6", "UTC-7"]
+    },
+    {
+      "countryCode": "GB",
+      "countryName": "United Kingdom",
+      "language": "en",
+      "locale": "en-GB",
+      "canonicalPath": "/world-cup-2026/replays",
+      "officialBroadcasters": ["BBC", "ITV"],
+      "timezones": ["UTC+0", "UTC+1"]
+    },
+    {
+      "countryCode": "AU",
+      "countryName": "Australia",
+      "language": "en",
+      "locale": "en-AU",
+      "canonicalPath": "/world-cup-2026/replays",
+      "officialBroadcasters": ["SBS"],
+      "timezones": ["UTC+8", "UTC+9.5", "UTC+10"]
+    }
+  ],
+  "hreflangRules": {
+    "defaultLanguage": "x-default",
+    "defaultUrl": "https://watchworldcup.us/world-cup-2026/replays",
+    "enUSUrl": "https://watchworldcup.us/world-cup-2026/replays/usa",
+    "reciprocalRequirement": true
+  }
+}

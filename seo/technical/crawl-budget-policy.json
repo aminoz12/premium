@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "crawlBudgetPolicy": {
+    "hostname": "https://watchworldcup.us",
+    "canonicalTrailingSlash": false,
+    "allowedRobotsDirectives": [
+      "User-agent: *",
+      "Allow: /",
+      "Disallow: /checkout",
+      "Disallow: /order",
+      "Disallow: /_next/",
+      "Sitemap: https://watchworldcup.us/sitemap.xml"
+    ],
+    "noindexRoutes": [
+      "/checkout",
+      "/order"
+    ],
+    "indexableRoutesCount": 40,
+    "parameterHandling": {
+      "stripQueryParameters": true,
+      "canonicalSelfReferencing": true
+    }
+  }
+}

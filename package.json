@@ -20,6 +20,7 @@
     "policy:check": "node scripts/indexation-policy-check.mjs",
     "images:generate": "python3 scripts/generate-og-images.py",
     "images:check": "node scripts/image-metadata-check.mjs",
+    "images:seo": "node scripts/validate-image-seo.mjs",
     "data:generate": "python3 scripts/build-data-assets.py",
     "data:check": "python3 scripts/check-data-assets.py",
     "cta:check": "node scripts/cta-check.mjs",

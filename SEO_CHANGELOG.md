@@ -13,3 +13,13 @@
 - Reworded price references from “verified” to “listed” or “owner-provided”; the evidence register keeps price-policy confirmation as a deployment blocker.
 
 No redirect changes were necessary. Sitemap route eligibility remains governed by the existing public route list; timestamps still require content-owner verification before a deployment claiming freshness.
+
+## 18 August 2026
+
+- Expanded Brand SEO package with `seo/brand/brand-entity-knowledge-graph.json`, `seo/brand/brand-reputation-policy.json`, `seo/brand/brand-visual-identity-policy.json`, `seo/brand/brand-2026-entity-profile.json`, `seo/brand/brand-2026-search-authority.json`, `seo/brand/citation-register.json`, documentation guides in `docs/seo/brand/`, and TypeScript libraries `lib/brand.ts` and `lib/brand-2026.ts`.
+- Expanded Geographic SEO package with `seo/geo/regional-market-map.json`, `seo/geo/geo-faq-schema.json`, `seo/geo/regional-image-localization.json`, `seo/geo/world-cup-2026-regional-broadcast-map.json`, `seo/geo/geo-2026-answer-engine-map.json`, documentation guides in `docs/seo/geo/`, and TypeScript libraries `lib/geo.ts` and `lib/geo-2026.ts`.
+- Expanded Image SEO package with `seo/images/image-manifest.json`, `seo/images/image-search-index.json`, `seo/images/image-seo-standards.json`, `seo/images/google-image-seo-guide.json`, `seo/images/world-cup-2026-image-catalog.json`, `seo/images/image-2026-seo-directives.json`, documentation guides in `docs/seo/images/`, `app/_components/OptimizedImage.tsx`, and TypeScript libraries `lib/image-seo.ts` and `lib/image-seo-2026.ts`.
+- Created Technical SEO package with `seo/technical/crawl-budget-policy.json`, `seo/technical/cdn-caching-policy.json`, `seo/technical/crawl-policy-2026.json`, and documentation guides in `docs/seo/technical/`.
+- Created a complete **Multi-Sitemap Architecture** with specialized XML endpoints (`sitemap-index.xml`, `sitemap.xml`, `sitemap-images.xml`, `sitemap-geo.xml`, `sitemap-brand.xml`, `sitemap-2026.xml`, `sitemap-guides.xml`, `sitemap-news.xml`, `sitemap-video.xml`) and updated `app/robots.ts`.
+- Created automated image audit script `scripts/validate-image-seo.mjs` and updated `scripts/seo-files-check.mjs` to validate all 34 SEO package files in automated CI.
+
