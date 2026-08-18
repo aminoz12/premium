@@ -18,7 +18,7 @@ export async function GET() {
       thumbnailLoc: `${SITE_URL}/images/og/world-cup-2026--replays.webp`,
       title: 'FIFA World Cup 2026 Full Match Replays Guide',
       description: 'How to watch complete 2026 World Cup match replays, highlights, and broadcast streams.',
-      contentLoc: `${SITE_URL}/world-cup-2026/replays`,
+      playerLoc: `${SITE_URL}/embed/world-cup-2026-replays`,
       publicationDate: UPDATED_ISO,
     },
     {
@@ -26,7 +26,7 @@ export async function GET() {
       thumbnailLoc: `${SITE_URL}/images/og/world-cup-2026--replays--usa.webp`,
       title: 'USA FIFA World Cup 2026 Broadcaster Replays (FOX, Telemundo)',
       description: 'Complete guide for US viewers to stream World Cup 2026 replays on demand.',
-      contentLoc: `${SITE_URL}/world-cup-2026/replays/usa`,
+      playerLoc: `${SITE_URL}/embed/world-cup-2026-replays-usa`,
       publicationDate: UPDATED_ISO,
     },
     {
@@ -34,7 +34,7 @@ export async function GET() {
       thumbnailLoc: `${SITE_URL}/images/og/guides--4k-hdr-sports-setup.webp`,
       title: '4K HDR Sports Streaming Setup Walkthrough',
       description: 'Technical walkthrough for configuring Smart TVs, Fire TV, and Apple TV for 4K HDR live sports.',
-      contentLoc: `${SITE_URL}/guides/4k-hdr-sports-setup`,
+      playerLoc: `${SITE_URL}/embed/4k-hdr-sports-setup`,
       publicationDate: UPDATED_ISO,
     },
   ];
@@ -48,7 +48,7 @@ export async function GET() {
       <video:thumbnail_loc>${item.thumbnailLoc}</video:thumbnail_loc>
       <video:title>${escapeXml(item.title)}</video:title>
       <video:description>${escapeXml(item.description)}</video:description>
-      <video:content_loc>${item.contentLoc}</video:content_loc>
+      <video:player_loc>${item.playerLoc}</video:player_loc>
       <video:publication_date>${item.publicationDate}</video:publication_date>
       <video:uploader info="${SITE_URL}/about">${escapeXml(SITE_NAME)}</video:uploader>
     </video:video>
