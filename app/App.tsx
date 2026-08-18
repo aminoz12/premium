@@ -11,7 +11,6 @@ import {
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -64,48 +63,7 @@ const movies: string[] = [
   "TheGorge.webp",
 ];
 
-const serviceFaqs: [string, string][] = [
-  [
-    "What is WATCHWORLDCUP IPTV service?",
-    "WATCHWORLDCUP is a premium IPTV subscription provider offering 30,000+ live channels, 100,000+ VOD movies & series, and 4K sports streaming including FIFA World Cup 2026, Premier League, Champions League, and all major sports events worldwide. We provide M3U playlist and Xtream codes compatible with all IPTV applications and devices.",
-  ],
-  [
-    "How do I order IPTV subscription from WATCHWORLDCUP?",
-    "Ordering is simple and secure via WhatsApp at +212 723 279 328. Choose your plan (3, 6, or 12 months), confirm compatibility with your device and IPTV app, then complete payment. Activation is instant — within 1-3 hours after payment confirmation.",
-  ],
-  [
-    "Which channels are included in the IPTV subscription?",
-    "WATCHWORLDCUP IPTV includes 30,000+ live channels: sports (beIN Sports, Sky Sports, ESPN, BT Sport), entertainment (HBO, Netflix content, Showtime), news (BBC, CNN, Al Jazeera), kids, movies, series, music, and documentary channels from USA, UK, Europe, Arabic countries, and worldwide. Confirm specific channel availability via WhatsApp before ordering.",
-  ],
-  [
-    "Does WATCHWORLDCUP include FIFA World Cup 2026 streaming?",
-    "WATCHWORLDCUP provides IPTV access to sports channels broadcasting FIFA World Cup 2026 matches. We are not affiliated with FIFA, any league, broadcaster, studio, or official tournament partner. Channel availability should be confirmed via WhatsApp.",
-  ],
-  [
-    "Can I get a free IPTV trial before purchasing?",
-    "Yes! WATCHWORLDCUP offers a 24-hour free IPTV trial with full access to all channels and VOD content. No credit card required. Contact us on WhatsApp at +212 723 279 328 to activate your free trial instantly. Test HD and 4K quality, sports channels, and anti-freeze technology before committing.",
-  ],
-  [
-    "Which devices are compatible with WATCHWORLDCUP IPTV?",
-    "Our IPTV service works on all major devices: Smart TVs (Samsung, LG, Sony), Amazon Fire Stick, Fire TV Cube, Android TV boxes, Apple TV, Chromecast, Roku, NVIDIA Shield, iPhone, iPad, Android smartphones and tablets, Windows PC, Mac, MAG boxes, Formuler, Enigma2, Dreambox, Xbox, and PlayStation. Compatible apps include IPTV Smarters Pro, TiviMate, GSE Smart IPTV, Perfect Player, VLC, and Kodi.",
-  ],
-  [
-    "What payment methods does WATCHWORLDCUP accept?",
-    "We accept multiple secure payment methods: Cryptocurrency (Bitcoin, Ethereum, USDT), Mastercard, Visa, PayPal, and Revolut. All payment details are confirmed securely via WhatsApp before any transaction. No hidden fees.",
-  ],
-  [
-    "How quickly is my IPTV subscription activated after payment?",
-    "Most IPTV subscriptions are activated within 1–3 hours after payment confirmation. Our 24/7 WhatsApp support team guides you through the complete setup process for your specific device and IPTV application.",
-  ],
-  [
-    "Does WATCHWORLDCUP IPTV work without a VPN?",
-    "Yes, WATCHWORLDCUP IPTV works without a VPN in most countries. Our premium server infrastructure ensures stable, buffer-free streaming with 99.9% uptime and anti-freeze technology. VPN may be required in some restricted regions — confirm with our support team.",
-  ],
-  [
-    "What is the IPTV subscription price at WATCHWORLDCUP?",
-    "WATCHWORLDCUP offers three affordable IPTV plans: 3 months for $29, 6 months for $49 (most popular), and 12 months for $79. All plans include the same premium features: 30,000+ channels, 4K HD sports, VOD library, EPG guide, catch-up TV, and 24/7 support.",
-  ],
-];
+
 
 const channels: Channel[] = [
   {
@@ -227,385 +185,7 @@ const WHATSAPP_FREE_TRIAL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi!%20I%20wan
 const SITE_URL = "https://watchworldcup.us";
 const SITE_NAME = "WATCHWORLDCUP";
 
-/* ─────────────── SEO keyword bank ─────────────── */
-const seoRegions = [
-  "USA",
-  "UK",
-  "Canada",
-  "Australia",
-  "New Zealand",
-  "Ireland",
-  "France",
-  "Spain",
-  "Germany",
-  "Italy",
-  "Portugal",
-  "Netherlands",
-  "Belgium",
-  "Switzerland",
-  "Austria",
-  "Sweden",
-  "Norway",
-  "Denmark",
-  "Finland",
-  "Poland",
-  "Greece",
-  "Turkey",
-  "Morocco",
-  "Algeria",
-  "Tunisia",
-  "Egypt",
-  "Libya",
-  "Mauritania",
-  "Saudi Arabia",
-  "UAE",
-  "Qatar",
-  "Kuwait",
-  "Bahrain",
-  "Oman",
-  "Jordan",
-  "Lebanon",
-  "Iraq",
-  "Syria",
-  "Yemen",
-  "Palestine",
-  "India",
-  "Pakistan",
-  "Bangladesh",
-  "Sri Lanka",
-  "Nepal",
-  "Indonesia",
-  "Malaysia",
-  "Philippines",
-  "Thailand",
-  "Vietnam",
-  "Singapore",
-  "Japan",
-  "South Korea",
-  "China",
-  "Hong Kong",
-  "Taiwan",
-  "Brazil",
-  "Argentina",
-  "Mexico",
-  "Colombia",
-  "Chile",
-  "Peru",
-  "Uruguay",
-  "Venezuela",
-  "Ecuador",
-  "Bolivia",
-  "Paraguay",
-  "Nigeria",
-  "Ghana",
-  "Kenya",
-  "Tanzania",
-  "Uganda",
-  "Ethiopia",
-  "South Africa",
-  "Angola",
-  "Ivory Coast",
-  "Senegal",
-  "Cameroon",
-  "Arabic",
-  "Europe",
-  "MENA",
-  "Gulf",
-  "Scandinavia",
-  "Latin America",
-  "Africa",
-  "Asia",
-  "North America",
-  "South America",
-  "Worldwide",
-];
 
-const seoEvents = [
-  "FIFA World Cup 2026",
-  "World Cup 2026 qualifiers",
-  "Premier League",
-  "Champions League",
-  "UEFA Europa League",
-  "Europa Conference League",
-  "La Liga",
-  "Serie A",
-  "Bundesliga",
-  "Ligue 1",
-  "Copa America",
-  "AFCON",
-  "Africa Cup of Nations",
-  "Copa Libertadores",
-  "MLS",
-  "NFL",
-  "Super Bowl",
-  "NBA",
-  "NHL",
-  "MLB",
-  "UFC",
-  "boxing",
-  "WWE",
-  "Formula 1",
-  "MotoGP",
-  "Wimbledon",
-  "Roland Garros",
-  "US Open",
-  "Australian Open",
-  "The Masters",
-  "PGA Tour",
-  "IPL cricket",
-  "ICC Cricket World Cup",
-  "Six Nations",
-  "Rugby World Cup",
-  "Tour de France",
-  "Olympics 2026",
-  "El Clasico",
-  "Manchester Derby",
-  "North London Derby",
-  "Champions League final",
-  "FA Cup",
-  "Carabao Cup",
-  "Eredivisie",
-  "Primeira Liga",
-  "Scottish Premiership",
-  "Argentine Primera",
-  "Brasileirao",
-  "Liga MX",
-  "Saudi Pro League",
-];
-
-const seoDevices = [
-  "Smart TV",
-  "Samsung TV",
-  "LG TV",
-  "Sony TV",
-  "Android TV",
-  "Apple TV",
-  "Amazon Fire Stick",
-  "Fire TV",
-  "MAG box",
-  "Formuler",
-  "Enigma2",
-  "Chromecast",
-  "Roku",
-  "Xbox",
-  "PlayStation",
-  "iPhone",
-  "iPad",
-  "Android phone",
-  "Windows PC",
-  "Mac",
-  "NVIDIA Shield",
-];
-
-const seoFeatures = [
-  "M3U playlist",
-  "Xtream codes",
-  "EPG guide",
-  "electronic program guide",
-  "catch-up TV",
-  "anti-freeze",
-  "no VPN",
-  "multi-room",
-  "multi-device",
-  "parental control",
-  "instant activation",
-  "24/7 support",
-  "HD channels",
-  "4K streaming",
-  "8K streaming",
-  "PPV events",
-  "VOD movies",
-  "VOD series",
-  "sports package",
-  "kids channels",
-  "news channels",
-  "music channels",
-  "documentary channels",
-  "international channels",
-  "local channels",
-  "IPTV reseller panel",
-  "IPTV credits",
-  "free IPTV trial",
-  "IPTV test",
-  "IPTV renewal",
-  "IPTV activation code",
-  "IPTV player",
-  "IPTV playlist URL",
-  "IPTV login",
-  "anti-buffer",
-];
-
-const seoGenres = [
-  "sports",
-  "news",
-  "kids",
-  "movies",
-  "series",
-  "documentary",
-  "music",
-  "entertainment",
-  "cooking",
-  "travel",
-  "fashion",
-  "gaming",
-  "cartoon",
-  "religious",
-];
-
-const seoQualifiers = [
-  "best",
-  "cheap",
-  "premium",
-  "reliable",
-  "stable",
-  "fast",
-  "top rated",
-  "affordable",
-  "high quality",
-  "unlimited",
-  "budget",
-  "trusted",
-  "secure",
-  "no contract",
-];
-
-const seoSubjects = [
-  "IPTV service",
-  "IPTV provider",
-  "IPTV subscription",
-  "streaming service",
-  "live TV service",
-  "sports streaming",
-  "movie streaming",
-  "series streaming",
-];
-
-function buildSEOKeywords(): string[] {
-  const out = new Set<string>();
-  const add = (s: string) => {
-    const t = s.trim().replace(/\s+/g, " ");
-    if (t.length > 2 && t.length <= 60) out.add(t.toLowerCase());
-  };
-
-  [
-    "IPTV subscription",
-    "World Cup IPTV 2026",
-    "live sports streaming",
-    "M3U playlist",
-    "best IPTV service",
-    "premium IPTV",
-    "4K IPTV",
-    "HD channels",
-    "IPTV free trial",
-    "IPTV WhatsApp order",
-    "IPTV for football",
-    "FIFA World Cup streaming",
-    "cheap IPTV",
-    "reliable IPTV",
-    "IPTV Smart TV",
-    "IPTV Fire Stick",
-    "IPTV Android",
-    "IPTV iOS",
-    "IPTV MAG box",
-    "IPTV reseller",
-    "watch Premier League",
-    "watch Champions League",
-    "watch La Liga",
-    "IPTV USA",
-    "IPTV UK",
-    "IPTV Canada",
-    "IPTV Europe",
-    "IPTV Arabic",
-    "IPTV sports package",
-    "PPV events",
-    "VOD movies",
-    "IPTV series",
-    "anti-freeze IPTV",
-    "stable IPTV server",
-    "IPTV 24/7 support",
-    "instant activation IPTV",
-    "no VPN IPTV",
-    "multi-room IPTV",
-    "catch-up TV",
-    "EPG guide",
-    "electronic program guide",
-    "IPTV 2026",
-    "best streaming service",
-    "cut the cord",
-    "live TV online",
-    "international channels",
-    "kids channels IPTV",
-    "news channels live",
-    "documentary streaming",
-    "music channels IPTV",
-    "watchworldcup",
-    "watch world cup iptv",
-    "watchworldcup.us",
-    "world cup streaming service",
-    "iptv world cup",
-    "world cup live iptv",
-    "best iptv 2026",
-    "top iptv provider 2026",
-    "iptv subscription 2026",
-    "watchworldcup iptv review",
-    "watchworldcup free trial",
-  ].forEach(add);
-
-  seoRegions.forEach((r) => {
-    add(`${r} IPTV`);
-    add(`${r} IPTV subscription`);
-    add(`best IPTV ${r}`);
-    add(`IPTV service ${r}`);
-    add(`IPTV provider ${r}`);
-    add(`watch ${r} channels`);
-    add(`${r} sports channels`);
-    add(`live TV ${r}`);
-    add(`cheap IPTV ${r}`);
-    add(`${r} IPTV reseller`);
-    add(`${r} M3U playlist`);
-    add(`${r} 4K IPTV`);
-    add(`IPTV subscription for ${r}`);
-    add(`${r} IPTV server`);
-    add(`premium IPTV ${r}`);
-    add(`${r} football streaming`);
-  });
-
-  seoEvents.forEach((e) => {
-    add(`${e} live stream`);
-    add(`watch ${e} online`);
-    add(`${e} streaming`);
-    add(`${e} IPTV`);
-    add(`${e} on IPTV`);
-    add(`live ${e}`);
-  });
-
-  seoDevices.forEach((d) => {
-    add(`${d} IPTV`);
-    add(`${d} IPTV setup`);
-    add(`IPTV for ${d}`);
-    add(`install IPTV on ${d}`);
-    add(`best IPTV app for ${d}`);
-  });
-
-  seoFeatures.forEach((f) => {
-    add(f);
-    add(`${f} IPTV`);
-    add(`IPTV with ${f}`);
-  });
-
-  seoGenres.forEach((g) => {
-    add(`${g} channels IPTV`);
-    add(`IPTV ${g} channels`);
-    add(`watch ${g} online`);
-    add(`${g} streaming IPTV`);
-  });
-
-  seoQualifiers.forEach((q) => seoSubjects.forEach((s) => add(`${q} ${s}`)));
-
-  return Array.from(out);
-}
-
-const seoKeywords: string[] = buildSEOKeywords();
 
 /* ─────────────── Hooks ─────────────── */
 function useIsMobile() {
@@ -941,771 +521,16 @@ const serviceCategories = [
   },
 ];
 
-/* ─────────────── SEO Meta — FULLY OPTIMIZED ─────────────── */
-function SEOMeta() {
-  const structuredDataOrganization = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: "WATCHWORLDCUP",
-    alternateName: [
-      "Watch World Cup IPTV",
-      "WatchWorldCup IPTV Service",
-      "WATCHWORLDCUP.US",
-    ],
-    url: SITE_URL,
-    logo: {
-      "@type": "ImageObject",
-      url: `${SITE_URL}/logo.svg`,
-      width: 512,
-      height: 512,
-    },
-    image: `${SITE_URL}/images/og/home.webp`,
-    description:
-      "WATCHWORLDCUP is the #1 premium IPTV subscription service for 2026. Stream FIFA World Cup 2026, Premier League, Champions League, and 30,000+ live channels in 4K HD quality. Order via WhatsApp +212723279328.",
-    telephone: "+212723279328",
-    email: "support@watchworldcup.us",
-    sameAs: [`https://wa.me/${WHATSAPP_NUMBER}`, `${SITE_URL}`],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: "+212723279328",
-        contactType: "customer service",
-        contactOption: "TollFree",
-        availableLanguage: ["English", "French", "Arabic", "Spanish"],
-        areaServed: "Worldwide",
-        hoursAvailable: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: "00:00",
-          closes: "23:59",
-        },
-      },
-    ],
-    foundingDate: "2023",
-    numberOfEmployees: { "@type": "QuantitativeValue", value: 10 },
-    areaServed: "Worldwide",
-    knowsAbout: [
-      "IPTV",
-      "Live Streaming",
-      "Sports Streaming",
-      "World Cup 2026",
-      "M3U Playlist",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "IPTV Subscription Plans",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: "3 Month IPTV Plan",
-          price: "29",
-          priceCurrency: "USD",
-        },
-        {
-          "@type": "Offer",
-          name: "6 Month IPTV Plan",
-          price: "49",
-          priceCurrency: "USD",
-        },
-        {
-          "@type": "Offer",
-          name: "12 Month IPTV Plan",
-          price: "79",
-          priceCurrency: "USD",
-        },
-      ],
-    },
-  };
-
-  const structuredDataProduct = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${SITE_URL}/#product`,
-    name: "WATCHWORLDCUP Premium IPTV Subscription",
-    alternateName: "Watch World Cup IPTV Service 2026",
-    image: [
-      `${SITE_URL}/images/og/home.webp`,
-      `${SITE_URL}/images/commercial/devices.webp`,
-    ],
-    description:
-      "Premium IPTV subscription with 30,000+ live channels, 100,000+ VOD movies & series, FIFA World Cup 2026 streaming, 4K HD sports, EPG guide, catch-up TV, anti-freeze technology, and multi-device support. Works on Smart TV, Fire Stick, Android, iOS, MAG box, and all devices.",
-    brand: {
-      "@type": "Brand",
-      name: "WATCHWORLDCUP",
-      logo: `${SITE_URL}/logo.svg`,
-    },
-    manufacturer: {
-      "@type": "Organization",
-      name: "WATCHWORLDCUP",
-      url: SITE_URL,
-    },
-    category: "IPTV Streaming Service",
-    keywords:
-      "IPTV, World Cup 2026, live sports streaming, M3U subscription, 4K channels",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "2847",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: [
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "John M." },
-        reviewBody:
-          "Best IPTV service I have used. Crystal clear 4K for Premier League and Champions League. No buffering at all!",
-        datePublished: "2025-03-15",
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Ahmed K." },
-        reviewBody:
-          "Amazing Arabic and sports channels package. World Cup 2026 ready IPTV. Excellent 24/7 WhatsApp support.",
-        datePublished: "2025-04-02",
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Sarah L." },
-        reviewBody:
-          "Tried the free 24h trial and was blown away. Instant activation and works perfectly on my Fire Stick and Samsung TV.",
-        datePublished: "2025-05-10",
-      },
-    ],
-    offers: {
-      "@type": "AggregateOffer",
-      lowPrice: "29",
-      highPrice: "79",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      offerCount: "3",
-      url: `${SITE_URL}/pricing`,
-      priceValidUntil: "2026-12-31",
-      seller: { "@type": "Organization", name: "WATCHWORLDCUP" },
-    },
-  };
-
-  const structuredDataFAQ = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: serviceFaqs.map(([q, a]) => ({
-      "@type": "Question",
-      name: q,
-      acceptedAnswer: { "@type": "Answer", text: a },
-    })),
-  };
-
-  const structuredDataWebSite = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${SITE_URL}/#website`,
-    name: "WATCHWORLDCUP IPTV",
-    alternateName: "Watch World Cup IPTV Service",
-    url: SITE_URL,
-    description:
-      "Best premium IPTV subscription service 2026. Stream World Cup 2026, 30000+ live channels, movies, series in 4K HD.",
-    inLanguage: ["en-US", "fr", "ar"],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
-  };
-
-  const structuredDataWebPage = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${SITE_URL}/#webpage`,
-    url: SITE_URL,
-    name: "WATCHWORLDCUP – Best Premium IPTV Subscription | Watch World Cup 2026 Live",
-    isPartOf: { "@id": `${SITE_URL}/#website` },
-    about: { "@id": `${SITE_URL}/#organization` },
-    description:
-      "Stream FIFA World Cup 2026, live sports, 30000+ channels, movies and series with WATCHWORLDCUP premium IPTV subscription. 4K HD quality, instant activation, 24/7 support.",
-    inLanguage: "en-US",
-    datePublished: "2023-01-01",
-    dateModified: "2026-08-16",
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "IPTV Subscription Plans",
-          item: `${SITE_URL}/pricing`,
-        },
-      ],
-    },
-  };
-
-  const structuredDataService = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${SITE_URL}/#service`,
-    name: "Premium IPTV Streaming Service",
-    alternateName: "WATCHWORLDCUP IPTV",
-    provider: { "@type": "Organization", name: "WATCHWORLDCUP", url: SITE_URL },
-    serviceType: "IPTV Subscription",
-    description:
-      "Premium IPTV and M3U subscription service offering 30,000+ live TV channels, 4K sports including FIFA World Cup 2026, and 100,000+ VOD movies and series. Compatible with all devices worldwide.",
-    areaServed: { "@type": "Place", name: "Worldwide" },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "IPTV Plans",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: "3 Month Premium IPTV",
-          description:
-            "3 months IPTV subscription with 30,000+ channels, 4K sports, VOD library",
-          price: "29.00",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: `${SITE_URL}/pricing`,
-        },
-        {
-          "@type": "Offer",
-          name: "6 Month Premium IPTV",
-          description:
-            "6 months IPTV subscription — most popular plan with full feature access",
-          price: "49.00",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: `${SITE_URL}/pricing`,
-        },
-        {
-          "@type": "Offer",
-          name: "12 Month Premium IPTV",
-          description:
-            "12 months IPTV subscription — best value annual plan with all premium features",
-          price: "79.00",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: `${SITE_URL}/pricing`,
-        },
-      ],
-    },
-    serviceOutput: {
-      "@type": "Thing",
-      name: "Live TV Streaming & VOD Access",
-    },
-  };
-
-  const structuredDataLocalBusiness = {
-    "@context": "https://schema.org",
-    "@type": "OnlineBusiness",
-    "@id": `${SITE_URL}/#business`,
-    name: "WATCHWORLDCUP IPTV Service",
-    url: SITE_URL,
-    telephone: "+212723279328",
-    description:
-      "Premium IPTV subscription provider. Watch World Cup 2026, live sports, 30000+ channels worldwide.",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "00:00",
-      closes: "23:59",
-    },
-    priceRange: "$29 - $79",
-    currenciesAccepted: "USD, EUR, GBP, BTC, ETH",
-    paymentAccepted: "Cryptocurrency, Mastercard, Visa, PayPal, Revolut",
-    areaServed: "Worldwide",
-    image: `${SITE_URL}/images/og/home.webp`,
-  };
-
-  const metaKeywords = [
-    "IPTV subscription 2026",
-    "best IPTV service",
-    "premium IPTV provider",
-    "WATCHWORLDCUP",
-    "watch world cup IPTV",
-    "FIFA World Cup 2026 streaming",
-    "live sports IPTV",
-    "M3U playlist subscription",
-    "4K IPTV channels",
-    "HD IPTV streaming",
-    "Premier League IPTV",
-    "Champions League live stream",
-    "La Liga IPTV",
-    "Serie A streaming",
-    "Bundesliga IPTV",
-    "NFL streaming IPTV",
-    "NBA IPTV",
-    "UFC PPV IPTV",
-    "boxing streaming",
-    "IPTV free trial 24 hours",
-    "cheap IPTV subscription",
-    "affordable IPTV service",
-    "reliable IPTV 2026",
-    "IPTV Smart TV Samsung LG Sony",
-    "IPTV Amazon Fire Stick",
-    "IPTV Android iOS",
-    "IPTV MAG box",
-    "IPTV Formuler",
-    "IPTV Apple TV",
-    "IPTV Chromecast",
-    "IPTV Smarters Pro",
-    "TiviMate IPTV",
-    "anti-freeze IPTV server",
-    "99.9% uptime IPTV",
-    "instant activation IPTV",
-    "multi-device IPTV",
-    "EPG guide IPTV",
-    "catch-up TV IPTV",
-    "VOD movies IPTV",
-    "IPTV series",
-    "IPTV USA channels",
-    "IPTV UK channels",
-    "IPTV Canada",
-    "IPTV Europe",
-    "IPTV Arabic channels",
-    "IPTV beIN Sports",
-    "IPTV Sky Sports",
-    "IPTV ESPN",
-    "IPTV no VPN required",
-    "IPTV WhatsApp order",
-    "IPTV reseller panel",
-    "watchworldcup.us",
-    "world cup live streaming service",
-    "cut the cord IPTV",
-    "best IPTV 2026 review",
-    "top IPTV provider worldwide",
-    "IPTV subscription plans",
-  ].join(", ");
-
-  return (
-    <Head>
-      {/* ── Primary Meta ── */}
-      <title>WATCHWORLDCUP IPTV — M3U Subscriptions for Live TV</title>
-      <meta
-        name="description"
-        content="Choose a WATCHWORLDCUP IPTV or M3U subscription for available live TV, sports, movies and series. Compare plans and order through WhatsApp."
-      />
-      <meta name="keywords" content={metaKeywords} />
-
-      {/* ── Robots & Indexing ── */}
-      <meta
-        name="robots"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-      <meta
-        name="googlebot"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-      <meta
-        name="bingbot"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-      <meta name="slurp" content="index, follow" />
-      <meta name="duckduckbot" content="index, follow" />
-      <meta name="facebot" content="index, follow" />
-      <meta name="ia_archiver" content="index, follow" />
-
-      {/* ── Viewport & Theme ── */}
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=5"
-      />
-      <meta name="theme-color" content="#080808" />
-      <meta name="msapplication-TileColor" content="#080808" />
-      <meta
-        name="msapplication-TileImage"
-        content={`${SITE_URL}/logo.svg`}
-      />
-
-      {/* ── Site Info ── */}
-      <meta name="author" content="WATCHWORLDCUP" />
-      <meta name="copyright" content="WATCHWORLDCUP IPTV Service 2026" />
-      <meta name="language" content="English" />
-      <meta name="content-language" content="en-US" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="revisit-after" content="1 days" />
-      <meta name="category" content="streaming, IPTV, sports, entertainment" />
-      <meta name="classification" content="Business/Internet Services" />
-      <meta name="target" content="all" />
-      <meta name="HandheldFriendly" content="True" />
-      <meta name="MobileOptimized" content="320" />
-
-      {/* ── Geo Tags ── */}
-      <meta name="geo.region" content="MA" />
-      <meta name="geo.country" content="MA" />
-      <meta name="ICBM" content="33.9716, -6.8498" />
-      <meta name="geo.placename" content="Morocco" />
-
-      {/* ── Canonical & Alternates ── */}
-      <link rel="canonical" href={`${SITE_URL}/`} />
-      <link rel="alternate" hrefLang="en" href={`${SITE_URL}/`} />
-      <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/fr/`} />
-      <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/ar/`} />
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/`} />
-
-      {/* ── Favicons & App Icons ── */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/logo.svg"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/logo.svg"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="96x96"
-        href="/logo.svg"
-      />
-      <link rel="apple-touch-icon" sizes="57x57" href="/logo.svg" />
-      <link rel="apple-touch-icon" sizes="60x60" href="/logo.svg" />
-      <link rel="apple-touch-icon" sizes="72x72" href="/logo.svg" />
-      <link rel="apple-touch-icon" sizes="76x76" href="/logo.svg" />
-      <link
-        rel="apple-touch-icon"
-        sizes="114x114"
-        href="/logo.svg"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="120x120"
-        href="/logo.svg"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="144x144"
-        href="/logo.svg"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="152x152"
-        href="/logo.svg"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/logo.svg"
-      />
-      <link rel="manifest" href="/manifest.json" />
-      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-      {/* ── Preconnect & Performance ── */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
-      />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="https://wa.me" />
-      <link rel="dns-prefetch" href="https://threejs.org" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-
-      {/* ── Open Graph ── */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${SITE_URL}/`} />
-      <meta property="og:site_name" content="WATCHWORLDCUP IPTV" />
-      <meta
-        property="og:title"
-        content="WATCHWORLDCUP – #1 Best Premium IPTV 2026 | Watch World Cup Live + 30,000 Channels"
-      />
-      <meta
-        property="og:description"
-        content="Watch FIFA World Cup 2026 live and 30,000+ channels in 4K HD. Premium IPTV subscription from $29. Free 24h trial. Order on WhatsApp +212723279328. Premier League, Champions League and more."
-      />
-      <meta property="og:image" content={`${SITE_URL}/images/og/home.webp`} />
-      <meta
-        property="og:image:secure_url"
-        content={`${SITE_URL}/images/og/home.webp`}
-      />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta
-        property="og:image:alt"
-        content="WATCHWORLDCUP Premium IPTV Subscription – Watch World Cup 2026 Live in 4K"
-      />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:locale:alternate" content="fr_FR" />
-      <meta property="og:locale:alternate" content="ar_MA" />
-      <meta property="og:video" content={`${SITE_URL}/videos/preview.mp4`} />
-
-      {/* ── Twitter / X Card ── */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@watchworldcup" />
-      <meta name="twitter:creator" content="@watchworldcup" />
-      <meta
-        name="twitter:title"
-        content="WATCHWORLDCUP – Best Premium IPTV 2026 | World Cup Live Streaming"
-      />
-      <meta
-        name="twitter:description"
-        content="Watch World Cup 2026 and 30,000+ IPTV channels in 4K HD. Free 24h trial. Order on WhatsApp. From $29/3 months. Anti-freeze, multi-device, instant activation."
-      />
-      <meta name="twitter:image" content={`${SITE_URL}/images/og/home.webp`} />
-      <meta
-        name="twitter:image:alt"
-        content="WATCHWORLDCUP Premium IPTV – World Cup 2026 Live Streaming"
-      />
-      <meta name="twitter:label1" content="Starting from" />
-      <meta name="twitter:data1" content="$29 / 3 months" />
-      <meta name="twitter:label2" content="Free Trial" />
-      <meta name="twitter:data2" content="24 Hours Free IPTV Trial" />
-
-      {/* ── Additional SEO Meta ── */}
-      <meta name="price" content="USD 29" />
-      <meta name="currency" content="USD" />
-      <meta name="availability" content="in stock" />
-      <meta name="identifier-URL" content={SITE_URL} />
-      <meta name="referrer" content="origin-when-cross-origin" />
-      <meta name="format-detection" content="telephone=yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="black-translucent"
-      />
-      <meta name="apple-mobile-web-app-title" content="WATCHWORLDCUP" />
-      <meta name="application-name" content="WATCHWORLDCUP IPTV" />
-
-      {/* ── Structured Data ── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDataOrganization),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDataProduct),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataFAQ) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDataWebSite),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDataWebPage),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDataService),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDataLocalBusiness),
-        }}
-      />
-    </Head>
-  );
-}
-
-/* ─────────────── Hidden SEO Content (Screen-reader accessible) ─────────────── */
-function HiddenSEOContent() {
-  return (
-    <div className="sr-only">
-      <article itemScope itemType="https://schema.org/Article">
-        <h2 itemProp="headline">
-          WATCHWORLDCUP – Best Premium IPTV Subscription Service 2026 | Watch
-          FIFA World Cup Live
-        </h2>
-        <h2>
-          #1 Premium IPTV Provider: 30,000+ Live Channels, 4K HD Sports, World
-          Cup 2026 Streaming
-        </h2>
-        <div itemProp="articleBody">
-          <p>
-            WATCHWORLDCUP (watchworldcup.us) is the world&apos;s best premium
-            IPTV subscription service in 2026, offering 30,000+ live TV
-            channels, 100,000+ VOD movies and series, and crystal-clear 4K HD
-            sports streaming. Watch FIFA World Cup 2026 matches live, stream
-            Premier League, UEFA Champions League, La Liga, Serie A, Bundesliga,
-            Ligue 1, Copa America, AFCON, NBA, NFL Super Bowl, UFC pay-per-view
-            events, boxing championships, Formula 1, MotoGP, Wimbledon, Roland
-            Garros, and all major sporting events from around the world.
-          </p>
-
-          <h3>Why WATCHWORLDCUP is the Best IPTV Service Provider in 2026</h3>
-          <p>
-            WATCHWORLDCUP provides the most stable and reliable IPTV server
-            infrastructure with 99.9% uptime guarantee, anti-freeze and
-            anti-buffer technology, instant activation within 1-3 hours, no VPN
-            required, and 24/7 dedicated customer support via WhatsApp at +212
-            723 279 328. Our premium IPTV subscription includes M3U playlist and
-            Xtream codes compatible with all major IPTV applications including
-            IPTV Smarters Pro, TiviMate, GSE Smart IPTV, Perfect Player, VLC
-            Media Player, and Kodi.
-          </p>
-
-          <h3>IPTV Free Trial 24 Hours – Test Before You Buy</h3>
-          <p>
-            Get your free 24-hour IPTV trial instantly by messaging us on
-            WhatsApp at +212 723 279 328. No credit card required. No
-            commitment. Full access to all 30,000+ live channels and 100,000+
-            VOD content during your free trial period. Experience 4K HD quality,
-            anti-freeze technology, and our premium sports streaming including
-            World Cup 2026 channels.
-          </p>
-
-          <h3>Affordable IPTV Subscription Plans – Best Value in 2026</h3>
-          <ul>
-            <li>3 Month Premium IPTV Plan – $29 USD</li>
-            <li>6 Month Premium IPTV Plan – $49 USD (Most Popular)</li>
-            <li>12 Month Premium IPTV Plan – $79 USD (Best Value)</li>
-          </ul>
-          <p>
-            All IPTV plans include: 30,000+ live channels, 100,000+ VOD movies
-            and series, Full HD and 4K streaming quality, EPG TV guide, catch-up
-            TV with 7-day replay, anti-freeze technology, multi-device and
-            multi-room support, parental controls, free automatic updates, 24/7
-            WhatsApp customer support, and all PPV events included.
-          </p>
-
-          <h3>Compatible Devices for WATCHWORLDCUP IPTV</h3>
-          <p>
-            WATCHWORLDCUP IPTV works on every device and platform. Smart TVs:
-            Samsung Tizen OS, LG webOS, Sony Android TV, Panasonic, Philips.
-            Streaming sticks and boxes: Amazon Fire Stick 4K Max, Fire TV Cube,
-            Amazon Fire TV, Chromecast with Google TV, Roku, Apple TV 4K, NVIDIA
-            Shield TV, MAG 250 254 256 322 424 boxes, Formuler Z8 Z10 Z11,
-            Dreambox, Enigma2, BuzzTV. Mobile devices: iPhone iOS 15+, iPad,
-            Android smartphones and tablets Android 8+. Computers: Windows 10,
-            Windows 11, macOS, Linux Ubuntu. Gaming consoles: Xbox One, Xbox
-            Series X/S, PlayStation 4, PlayStation 5.
-          </p>
-
-          <h3>WATCHWORLDCUP IPTV – Global Channel Coverage</h3>
-          <p>
-            USA channels: ABC, NBC, CBS, FOX, ESPN, ESPN2, ESPN+, NFL Network,
-            NBA TV, MLB Network, NHL Network, HBO, Showtime, Cinemax, Starz,
-            AMC, FX, Discovery, National Geographic, History Channel, CNN, Fox
-            News, MSNBC, Bravo, HGTV, Food Network.
-          </p>
-          <p>
-            UK channels: BBC One, BBC Two, BBC Three, ITV, ITV2, Channel 4,
-            Channel 5, Sky Sports Main Event, Sky Sports Premier League, Sky
-            Sports Football, BT Sport 1, BT Sport 2, BT Sport 3, BT Sport
-            Ultimate, Sky Cinema, Sky Atlantic, Dave, Comedy Central.
-          </p>
-          <p>
-            Sports channels worldwide: beIN Sports 1-13, OSN Sports, MBC Sports,
-            Eurosport 1-2, DAZN, Canal+ Sport, Bein Sport FR, Sport TV Portugal,
-            DMAX, SuperSport, TSN 1-5, Sportsnet, ESPN Latin America, Fox Sports
-            Latin America.
-          </p>
-          <p>
-            Arabic channels: MBC 1-4, MBC Action, MBC Drama, MBC Masr, beIN
-            Sports Arabic, Al Jazeera, Al Arabiya, Sky News Arabia, Dubai TV,
-            Abu Dhabi TV, Saudi Channel 1, Rotana Cinema, Rotana Khalijiya, Nile
-            TV, Egyptian TV, Morocco TV, Tunisia Wataniya.
-          </p>
-
-          <h3>FIFA World Cup 2026 IPTV Streaming – Watch All Matches Live</h3>
-          <p>
-            FIFA World Cup 2026 is hosted in USA, Canada, and Mexico.
-            WATCHWORLDCUP IPTV provides access to all sports channels
-            broadcasting World Cup 2026 qualifying matches and tournament games
-            live in HD and 4K quality. Watch all 48 teams compete in the biggest
-            sporting event of 2026 via your IPTV subscription from any device,
-            anywhere in the world.
-          </p>
-
-          <h3>IPTV Payment Methods – Secure and Easy</h3>
-          <p>
-            WATCHWORLDCUP accepts multiple secure payment methods: Bitcoin
-            (BTC), Ethereum (ETH), USDT Tether cryptocurrency, Mastercard credit
-            and debit cards, Visa credit and debit cards, PayPal, and Revolut
-            digital banking. All payments are confirmed securely via WhatsApp
-            before processing. No hidden fees, no subscription traps.
-          </p>
-
-          <h3>WATCHWORLDCUP IPTV Reviews and Ratings</h3>
-          <p>
-            Rated 4.9/5 stars by 2,847+ customers worldwide. WATCHWORLDCUP is
-            trusted by IPTV users in USA, UK, Canada, Australia, Europe, Middle
-            East, North Africa, and Asia for delivering the best IPTV streaming
-            experience with zero downtime and crystal-clear picture quality.
-          </p>
-
-          <h3>IPTV SEO Keywords – Best IPTV Service Search Terms</h3>
-          <p>
-            Best IPTV 2026, premium IPTV subscription, cheap IPTV service,
-            reliable IPTV provider, stable IPTV server, IPTV no buffering, IPTV
-            World Cup 2026, watch Premier League IPTV, Champions League live
-            IPTV, La Liga streaming IPTV, Serie A IPTV online, Bundesliga IPTV,
-            IPTV USA subscription, IPTV UK channels, IPTV Canada service, IPTV
-            Australia streaming, IPTV Europe package, IPTV Arabic channels
-            subscription, IPTV Saudi Arabia, IPTV UAE, IPTV Morocco, IPTV
-            Algeria, IPTV France, IPTV Germany, IPTV Spain, IPTV Italy, IPTV
-            Smart TV setup, IPTV Fire Stick installation, IPTV Android APK, IPTV
-            iOS app, IPTV MAG box setup, IPTV Formuler configuration, IPTV
-            Smarters Pro subscription, TiviMate IPTV playlist, M3U playlist URL
-            2026, Xtream codes IPTV login, IPTV reseller panel credits, bulk
-            IPTV subscription, wholesale IPTV provider, IPTV 4K ultra HD, IPTV
-            8K streaming, IPTV HDR content, Dolby IPTV audio, IPTV EPG
-            electronic program guide, IPTV catch-up 7 days, IPTV VOD library,
-            IPTV pay per view events, IPTV sports package, IPTV entertainment
-            bundle, IPTV kids channels, IPTV news channels, IPTV documentary
-            channels, IPTV music channels, IPTV religious channels, IPTV cooking
-            channels, cut the cord IPTV alternative, cable TV replacement IPTV,
-            satellite TV IPTV alternative, best streaming service 2026, live TV
-            online streaming, internet television provider.
-          </p>
-        </div>
-      </article>
-    </div>
-  );
-}
-
 /* ─────────────── Trust Badges / Stats Bar ─────────────── */
 function TrustBar() {
   const stats = [
-    { value: "30,000+", label: "Live Channels" },
-    { value: "100,000+", label: "VOD Movies & Series" },
-    { value: "4K HD", label: "Streaming Quality" },
-    { value: "99.9%", label: "Server Uptime" },
-    { value: "2,847+", label: "Happy Customers" },
-    { value: "24/7", label: "WhatsApp Support" },
-    { value: "Free", label: "24h Trial Available" },
+    { value: "Global", label: "Live TV Channels" },
+    { value: "Curated", label: "VOD Movies & Series" },
+    { value: "HD / 4K", label: "Quality Options" },
+    { value: "Fast", label: "Account Setup" },
+    { value: "WhatsApp", label: "Order & Support" },
+    { value: "24/7", label: "Customer Support" },
+    { value: "Test", label: "Trial Guidance" },
   ];
 
   return (
@@ -1745,42 +570,42 @@ function ReviewsSection() {
       name: "John M.",
       country: "USA",
       rating: 5,
-      text: "Best IPTV service I've used. Crystal clear 4K for Premier League and Champions League. Zero buffering, instant setup on my Fire Stick. WATCHWORLDCUP is the real deal!",
+      text: "Great IPTV setup guidance. High definition playback for Premier League and Champions League matches. Fast response on WhatsApp!",
       date: "March 2025",
     },
     {
       name: "Ahmed K.",
       country: "UAE",
       rating: 5,
-      text: "Amazing Arabic and sports channels. beIN Sports, MBC, OSN — all in perfect quality. World Cup 2026 ready! 24/7 WhatsApp support is incredibly fast and helpful.",
+      text: "Wide range of regional and sports channels. prompt support when setting up the M3U playlist on my Smart TV.",
       date: "April 2025",
     },
     {
       name: "Sarah L.",
       country: "UK",
       rating: 5,
-      text: "Tried the free 24h trial and was completely blown away. Sky Sports, BT Sport, all UK channels in HD. Instant activation and works on my Samsung Smart TV. Subscribed immediately!",
+      text: "Tested the service before purchasing. UK sports channels available in HD and easy activation on Samsung TV.",
       date: "May 2025",
     },
     {
       name: "Carlos R.",
       country: "Spain",
       rating: 5,
-      text: "La Liga, Champions League, Serie A — all available. The 12-month plan at $79 is incredible value. Anti-freeze technology means no interruptions during El Clasico. Highly recommended!",
+      text: "Good coverage for football leagues. The 12-month plan offers steady performance and clear channel selection.",
       date: "February 2025",
     },
     {
       name: "Marie D.",
       country: "France",
       rating: 5,
-      text: "Canal+, beIN Sports, Ligue 1 en 4K — parfait! Service fiable, activation instantanée. Support WhatsApp très réactif. Je recommande WATCHWORLDCUP à tous mes amis!",
+      text: "Chaînes de sport et divertissement en HD. Service client WhatsApp réactif pour la configuration initiale.",
       date: "June 2025",
     },
     {
       name: "Hassan B.",
       country: "Morocco",
       rating: 5,
-      text: "Toutes les chaînes arabes disponibles. Le service est excellent avec une qualité HD parfaite. Le essai gratuit de 24h m'a convaincu. Prix très abordable pour la qualité offerte.",
+      text: "Service très pratique avec un bon support technique. Testé avant de passer commande.",
       date: "January 2025",
     },
   ];
@@ -1792,20 +617,14 @@ function ReviewsSection() {
     >
       <AnimatedSection>
         <p className="text-[10px] font-extrabold uppercase tracking-[.2em] text-red-400">
-          Verified customer reviews
+          Customer Feedback
         </p>
         <h2 className="mt-4 text-2xl sm:text-3xl font-black text-white md:text-5xl">
-          Trusted by 2,847+ customers worldwide.
+          What our subscribers say.
         </h2>
-        <div className="mt-3 flex items-center gap-2">
-          <div className="flex" aria-label="Rating: 4.9 out of 5">
-            {[1, 2, 3, 4, 5].map((s) => (
-              <StarIcon key={s} className="h-5 w-5 text-yellow-400" />
-            ))}
-          </div>
-          <span className="text-sm font-bold text-white">4.9/5</span>
-          <span className="text-sm text-slate-400">based on 2,847 reviews</span>
-        </div>
+        <p className="mt-2 text-sm text-slate-400">
+          User experiences shared by subscribers across supported devices and apps.
+        </p>
       </AnimatedSection>
 
       <div className="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -1817,12 +636,10 @@ function ReviewsSection() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
             className="glass rounded-2xl p-5 sm:p-6"
-            itemScope
-            itemType="https://schema.org/Review"
           >
             <div className="flex items-center justify-between mb-3">
               <div>
-                <p className="font-black text-white text-sm" itemProp="author">
+                <p className="font-black text-white text-sm">
                   {review.name}
                 </p>
                 <p className="text-xs text-slate-500">
@@ -1835,21 +652,9 @@ function ReviewsSection() {
                 ))}
               </div>
             </div>
-            <p
-              className="text-xs sm:text-sm leading-6 text-slate-300"
-              itemProp="reviewBody"
-            >
+            <p className="text-xs sm:text-sm leading-6 text-slate-300">
               {review.text}
             </p>
-            <div
-              itemProp="reviewRating"
-              itemScope
-              itemType="https://schema.org/Rating"
-              className="hidden"
-            >
-              <meta itemProp="ratingValue" content={String(review.rating)} />
-              <meta itemProp="bestRating" content="5" />
-            </div>
           </motion.div>
         ))}
       </div>
@@ -2377,20 +1182,20 @@ function WelcomePopup() {
   }, [show, closed, handleClose]);
 
   const trialFeatures = [
-    "30,000+ live channels worldwide",
-    "Full HD & 4K sports streaming",
-    "100,000+ VOD movies & series",
-    "99.9% Uptime & Anti-Freeze tech",
+    "Wide channel selection",
+    "HD & 4K streaming options",
+    "Extensive VOD movies & series collection",
+    "Stable connection infrastructure",
     "TV Guide (EPG) included",
-    "All devices compatible",
+    "Compatible with major devices & apps",
     "24/7 WhatsApp customer support",
-    "Catch-up & 7-day replay",
-    "Free automatic updates",
-    "Multi-device & multi-room",
-    "All PPV events included",
-    "No VPN required",
+    "Catch-up & replay features",
+    "Regular service updates",
+    "Multi-device capability",
+    "Sports coverage options",
+    "Simple setup process",
     "Parental control features",
-    "Instant activation (1-3 hours)",
+    "Fast credential setup",
     "No commitment, no credit card",
   ];
 
@@ -2436,10 +1241,7 @@ function WelcomePopup() {
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm leading-6 sm:leading-7 text-slate-300">
-                  Experience the full power of WATCHWORLDCUP IPTV — FIFA World
-                  Cup 2026, Premier League, Champions League, 30,000+ channels
-                  in 4K HD — completely free for 24 hours. No credit card
-                  required.
+                  Test WATCHWORLDCUP IPTV options — live TV, sports, and VOD channels — for 24 hours. Confirm device compatibility before ordering. No credit card required.
                 </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs sm:text-sm text-slate-300">
                   {trialFeatures.map((item) => (
@@ -2787,35 +1589,7 @@ function MoviesSection() {
   );
 }
 
-/* ─────────────── SEO Keywords Marquee ─────────────── */
-function SEOKeywordsMarquee() {
-  const isMobile = useIsMobile();
-  const speed = isMobile ? 15 : 25;
-  const doubled = [...seoKeywords, ...seoKeywords];
 
-  return (
-    <section
-      className="relative overflow-hidden py-3 sm:py-4 border-y border-white/5 bg-[#080808]/50"
-      aria-hidden="true"
-    >
-      <div className="absolute inset-y-0 left-0 w-8 sm:w-16 bg-gradient-to-r from-[#080808] to-transparent z-10" />
-      <div className="absolute inset-y-0 right-0 w-8 sm:w-16 bg-gradient-to-l from-[#080808] to-transparent z-10" />
-      <div
-        className="flex w-max animate-infinite-scroll"
-        style={{ animationDuration: `${speed}s` }}
-      >
-        {doubled.map((kw, i) => (
-          <span
-            key={i}
-            className="mx-3 sm:mx-4 whitespace-nowrap text-[10px] sm:text-xs font-bold text-slate-600 uppercase tracking-wider"
-          >
-            {kw}
-          </span>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 /* ─────────────── Features Grid ─────────────── */
 function FeaturesGrid() {
@@ -3327,7 +2101,7 @@ export default function App() {
         </section>
 
         {/* ── Pricing ── */}
-        {/* <section
+       <section
           className="mx-auto max-w-7xl px-3 sm:px-4 py-16 sm:py-20 md:px-8"
           aria-label="IPTV subscription pricing plans"
         >
@@ -3495,7 +2269,7 @@ export default function App() {
               </motion.div>
             ))}
           </motion.div>
-        </section> */}
+        </section>
 
         {/* ── Devices ── */}
         <section aria-label="Compatible devices for WATCHWORLDCUP IPTV">

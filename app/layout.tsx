@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "WATCHWORLDCUP IPTV and M3U subscription plans with WhatsApp ordering, setup guidance, and separate World Cup resources.",
   applicationName: SITE_NAME,
-  icons: { icon: "/logo.svg", apple: "/logo.svg" },
+  icons: { icon: [{ url: "/logo.svg", type: "image/svg+xml" }], apple: [{ url: "/logo.svg", type: "image/svg+xml" }] },
   alternates: { types: { "application/rss+xml": `${SITE_URL}/feed.xml` } },
 };
 
