@@ -1300,13 +1300,10 @@ function SEOMeta() {
   return (
     <Head>
       {/* ── Primary Meta ── */}
-      <title>
-        WATCHWORLDCUP – #1 Best Premium IPTV Subscription 2026 | Watch World Cup
-        Live, 30000+ Channels, 4K HD Sports
-      </title>
+      <title>WATCHWORLDCUP IPTV — M3U Subscriptions for Live TV</title>
       <meta
         name="description"
-        content="WATCHWORLDCUP: Best premium IPTV subscription 2026. Watch FIFA World Cup 2026 live, Premier League, Champions League & 30,000+ channels in 4K HD. Free 24h trial. Order on WhatsApp +212723279328. Plans from $29."
+        content="Choose a WATCHWORLDCUP IPTV or M3U subscription for available live TV, sports, movies and series. Compare plans and order through WhatsApp."
       />
       <meta name="keywords" content={metaKeywords} />
 
@@ -1547,10 +1544,10 @@ function HiddenSEOContent() {
   return (
     <div className="sr-only">
       <article itemScope itemType="https://schema.org/Article">
-        <h1 itemProp="headline">
+        <h2 itemProp="headline">
           WATCHWORLDCUP – Best Premium IPTV Subscription Service 2026 | Watch
           FIFA World Cup Live
-        </h1>
+        </h2>
         <h2>
           #1 Premium IPTV Provider: 30,000+ Live Channels, 4K HD Sports, World
           Cup 2026 Streaming
@@ -2077,6 +2074,7 @@ function Hero3DTitle() {
           }}
           aria-label="WATCHWORLDCUP IPTV and M3U subscriptions"
         >
+          <span className="sr-only">WATCHWORLDCUP IPTV and M3U Subscriptions</span>
           <span
             className="block whitespace-nowrap text-white"
             style={{

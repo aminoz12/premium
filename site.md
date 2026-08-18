@@ -1,4 +1,4 @@
-shttps://watchworldcup.us/stemap-index.xml
+https://watchworldcup.us/stemap-index.xml
 https://watchworldcup.us/sitemap.xml
 https://watchworldcup.us/sitemap-images.xml
 https://watchworldcup.us/sitemap-2026.xml

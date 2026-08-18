@@ -11,7 +11,7 @@ import Footer from "./_components/Footer";
 import { homeFaqs } from "@/lib/home-faq";
 
 export const metadata = pageMetadata({
-  title: "WATCHWORLDCUP IPTV — M3U Subscriptions for Live TV & Entertainment",
+  title: "WATCHWORLDCUP IPTV — M3U Subscriptions for Live TV",
   description:
     "Choose a WATCHWORLDCUP IPTV or M3U subscription for available live TV, sports, movies and series. Compare plans and order through WhatsApp.",
   path: "/",
