@@ -58,6 +58,8 @@ const paths = [
   "/corrections",
   "/contact",
   "/support",
+  "/dmca",
+  "/refund-policy",
   "/privacy-policy",
   "/terms-of-service",
 ];

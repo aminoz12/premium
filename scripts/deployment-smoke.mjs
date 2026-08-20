@@ -29,7 +29,7 @@ sitemapCount===40?pass('sitemap contains 40 URLs'):fail(`sitemap contains ${site
 const contact=await(await fetch(base+'/contact')).text();
 !contact.includes('mailto:')&&contact.includes('phone=212723279328')?pass('contact route exposes the fixed WhatsApp recipient'):fail('contact route channel mismatch');
 
-for(const [path,status,location] of [['/channels',308,'/live-tv'],['/world-cup-2026-iptv/teams/mexico/',308,'/world-cup-2026/teams'],['/checkout',410,''],['/cart',404,''],['/client-area',404,''],['/search',404,''],['/?s=world+cup',404,''],['/refund-policy',404,''],['/definitely-not-a-page',404,'']]){
+for(const [path,status,location] of [['/channels',308,'/live-tv'],['/world-cup-2026-iptv/teams/mexico/',308,'/world-cup-2026/teams'],['/checkout',410,''],['/cart',404,''],['/client-area',404,''],['/search',404,''],['/?s=world+cup',404,''],['/refund-policy',200,''],['/definitely-not-a-page',404,'']]){
   const response=await fetch(base+path,{redirect:'manual'});
   const got=response.headers.get('location')||'';
   response.status===status&&(!location||got===location)?pass(`${path} returns ${status}${location?` to ${location}`:''}`):fail(`${path} returned ${response.status}${got?` to ${got}`:''}`);

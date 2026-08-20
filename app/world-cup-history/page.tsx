@@ -6,7 +6,7 @@ import { ArticleSchema,BreadcrumbSchema } from '../schema';
 import { pageMetadata } from '@/lib/seo';
 import { officialSources } from '@/lib/site';
 const path='/world-cup-history';
-export const metadata=pageMetadata({title:'World Cup History — Champions, Eras & Records Since 1930',description:'Explore men’s World Cup history from Uruguay 1930 through Spain’s 2026 title, including champion eras, title records, and an open winners dataset.',path,type:'article'});
+export const metadata=pageMetadata({title:'World Cup History — Champions Since 1930 | WATCHWORLDCUP',description:'Explore men\'s World Cup history from Uruguay 1930 through Spain\'s 2026 title, including champion eras, title records, and an open winners dataset.',path,type:'article'});
 const eras=[
 {years:'1930–1950',title:'The tournament takes shape',text:'Uruguay won the inaugural edition in 1930. Italy became the first team to retain the title in 1938. No tournament was held in 1942 or 1946, and the 1950 edition ended with a final group rather than a standalone final.'},
 {years:'1954–1970',title:'Brazil reaches three titles',text:'West Germany won its first title in 1954. Brazil then won in 1958 and 1962 before adding a third championship in 1970, becoming the first nation to reach that mark.'},

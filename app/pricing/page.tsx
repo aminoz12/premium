@@ -6,9 +6,9 @@ import { BreadcrumbSchema, FAQSchema } from "../schema";
 import { pageMetadata } from "@/lib/seo";
 const path = "/pricing";
 export const metadata = pageMetadata({
-  title: "WATCHWORLDCUP IPTV Pricing — 3 Months, 6 Months or 1 Year",
+  title: "IPTV Subscription Pricing & Plans | WATCHWORLDCUP",
   description:
-    "Compare WATCHWORLDCUP IPTV and M3U subscription prices: $25 for 3 months, $38 for 6 months, or $62 for 1 year. Order through WhatsApp.",
+    "WATCHWORLDCUP IPTV plans: $25 for 3 months, $38 for 6 months, $62 for 1 year. Confirm device compatibility and availability on WhatsApp before payment.",
   path,
 });
 const faqs = [

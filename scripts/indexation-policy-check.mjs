@@ -56,7 +56,7 @@ const removals=[
   ['/api/test',404],
   ['/search',404],
   ['/?s=world+cup',404],
-  ['/refund-policy',404],
+  ['/refund-policy',200],
   ['/definitely-not-a-page',404],
 ];
 for(const[path,status]of removals){

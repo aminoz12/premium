@@ -6,9 +6,9 @@ import { BreadcrumbSchema, FAQSchema } from "../schema";
 import { pageMetadata } from "@/lib/seo";
 const path = "/order";
 export const metadata = pageMetadata({
-  title: "Order WATCHWORLDCUP IPTV — Choose Plan & Continue on WhatsApp",
+  title: "Order IPTV Subscription | WATCHWORLDCUP",
   description:
-    "Select a WATCHWORLDCUP IPTV/M3U plan, add optional country and device compatibility details, then continue the order through WhatsApp.",
+    "Choose an IPTV plan, add your country and device details, and continue to WhatsApp. Confirm availability, payment terms, and setup steps before completing your order.",
   path,
 });
 const faqs = [

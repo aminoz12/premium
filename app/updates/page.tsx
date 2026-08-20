@@ -3,7 +3,7 @@ import PageShell from '../_components/PageShell';
 import { BreadcrumbSchema } from '../schema';
 import { pageMetadata } from '@/lib/seo';
 const path='/updates';
-export const metadata=pageMetadata({title:'Site & Dataset Updates — WATCHWORLDCUP Changelog',description:'Dated changes to WATCHWORLDCUP sources, datasets, editorial coverage, technical quality, and correction status.',path});
+export const metadata=pageMetadata({title:'Site & Dataset Changelog | WATCHWORLDCUP',description:'Dated changes to WATCHWORLDCUP sources, datasets, editorial coverage, technical quality, and correction status. Updated when content or data changes are made.',path});
 const updates=[
   {date:'2026-08-11',title:'Premium 2026 streaming design system refined',text:'Upgraded navigation, hero hierarchy, glass surfaces, card depth, buttons, pricing, order controls, typography, spacing, responsive behavior and motion while preserving routes, claims, data, ordering and SEO functionality.'},
   {date:'2026-08-11',title:'Guided WhatsApp order preparation launched',text:'Added a private-by-design order page with plan selection, optional country/device/app details, branded plan-specific WhatsApp messages, order-intent events, and explicit pre-payment confirmation steps.'},

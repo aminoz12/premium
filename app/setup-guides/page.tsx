@@ -7,9 +7,9 @@ import { BreadcrumbSchema, FAQSchema } from "../schema";
 import { pageMetadata } from "@/lib/seo";
 const path = "/setup-guides";
 export const metadata = pageMetadata({
-  title: "IPTV M3U Setup Guide — TV, Android, iPhone, Fire TV & Desktop",
+  title: "IPTV Setup Guides for TV, Mobile & Fire TV | WATCHWORLDCUP",
   description:
-    "Prepare and configure WATCHWORLDCUP IPTV or M3U subscription details in a compatible IPTV application on supported device families.",
+    "Step-by-step IPTV and M3U setup workflows for Smart TV, Android, iPhone, Fire TV, and desktop. Confirm your device, app, and credential format before configuring.",
   path,
   type: "article",
 });

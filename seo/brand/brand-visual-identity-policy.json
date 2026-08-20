@@ -11,7 +11,7 @@
   },
   "faviconStandards": {
     "ico": "/favicon.ico",
-    "appleTouchIcon": "/apple-touch-icon.png",
+    "appleTouchIcon": "/apple-touch-icon.webp",
     "manifest": "/manifest.webmanifest"
   },
   "colorPaletteTokens": {
