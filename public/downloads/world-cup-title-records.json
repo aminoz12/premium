@@ -1,0 +1,139 @@
+{
+  "name": "World Cup Title and Final Appearance Records",
+  "version": "2026-08-11",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://watchworldcup.us/world-cup-history/records",
+  "record_count": 13,
+  "records": [
+    {
+      "team": "Brazil",
+      "titles": "5",
+      "runner_up_finishes": "2",
+      "final_appearances": "7",
+      "years_won": "1958 | 1962 | 1970 | 1994 | 2002",
+      "years_runner_up": "1950 | 1998",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Germany",
+      "titles": "4",
+      "runner_up_finishes": "4",
+      "final_appearances": "8",
+      "years_won": "1954 | 1974 | 1990 | 2014",
+      "years_runner_up": "1966 | 1982 | 1986 | 2002",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Italy",
+      "titles": "4",
+      "runner_up_finishes": "2",
+      "final_appearances": "6",
+      "years_won": "1934 | 1938 | 1982 | 2006",
+      "years_runner_up": "1970 | 1994",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Argentina",
+      "titles": "3",
+      "runner_up_finishes": "4",
+      "final_appearances": "7",
+      "years_won": "1978 | 1986 | 2022",
+      "years_runner_up": "1930 | 1990 | 2014 | 2026",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "France",
+      "titles": "2",
+      "runner_up_finishes": "2",
+      "final_appearances": "4",
+      "years_won": "1998 | 2018",
+      "years_runner_up": "2006 | 2022",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Spain",
+      "titles": "2",
+      "runner_up_finishes": "0",
+      "final_appearances": "2",
+      "years_won": "2010 | 2026",
+      "years_runner_up": "",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Uruguay",
+      "titles": "2",
+      "runner_up_finishes": "0",
+      "final_appearances": "2",
+      "years_won": "1930 | 1950",
+      "years_runner_up": "",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "England",
+      "titles": "1",
+      "runner_up_finishes": "0",
+      "final_appearances": "1",
+      "years_won": "1966",
+      "years_runner_up": "",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Netherlands",
+      "titles": "0",
+      "runner_up_finishes": "3",
+      "final_appearances": "3",
+      "years_won": "",
+      "years_runner_up": "1974 | 1978 | 2010",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Czechoslovakia",
+      "titles": "0",
+      "runner_up_finishes": "2",
+      "final_appearances": "2",
+      "years_won": "",
+      "years_runner_up": "1934 | 1962",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Hungary",
+      "titles": "0",
+      "runner_up_finishes": "2",
+      "final_appearances": "2",
+      "years_won": "",
+      "years_runner_up": "1938 | 1954",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Croatia",
+      "titles": "0",
+      "runner_up_finishes": "1",
+      "final_appearances": "1",
+      "years_won": "",
+      "years_runner_up": "2018",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    },
+    {
+      "team": "Sweden",
+      "titles": "0",
+      "runner_up_finishes": "1",
+      "final_appearances": "1",
+      "years_won": "",
+      "years_runner_up": "1958",
+      "source_dataset": "https://watchworldcup.us/world-cup-history/winners",
+      "last_checked": "2026-08-11"
+    }
+  ]
+}

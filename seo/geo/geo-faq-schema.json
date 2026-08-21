@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.org",
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can viewers in the United States watch FIFA World Cup 2026 replays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the United States, official broadcast replays for FIFA World Cup 2026 matches are provided by FOX Sports and Telemundo/Peacock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What internet speed is required to stream sports in 4K HDR in North America?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A stable download speed of at least 25 Mbps is recommended for 4K HDR live sports streaming on Fire TV, Apple TV, or Smart TVs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the official pricing plans listed on WATCHWORLDCUP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WATCHWORLDCUP lists transparent pricing plans at $25, $38, and $62 for valid technical setup and service tiers."
+      }
+    }
+  ]
+}

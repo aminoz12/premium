@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "policyName": "Brand Reputation & Trust Enforcement Policy",
+  "eeatFramework": {
+    "experience": "Detailed technical setup testing across Fire TV, Apple TV, Smart TVs, and desktop browsers with documented latency tests.",
+    "expertise": "Verified broadcast schedule mapping cross-referenced with official FIFA press announcements and rights-holder publications.",
+    "authoritativeness": "Strict citation requirements linking every commercial claim to primary rights holders (FIFA, FOX, Peacock, Telemundo).",
+    "trustworthiness": "Transparent pricing disclosures, clear non-affiliation disclosures, visible contact information, and public corrections registry."
+  },
+  "forbiddenClaims": [
+    "35,000+ Channels",
+    "147,000+ Movies",
+    "100% Buffer-Free Guarantee",
+    "#1 Worldwide IPTV Provider",
+    "Official FIFA Broadcaster (Unless primary license held)"
+  ],
+  "requiredDisclosures": {
+    "commercialAffiliation": "Explicitly state independence from FIFA and licensed broadcasters.",
+    "pricingTransparency": "Display exact pricing tier structure ($25, $38, $62) without hidden fees.",
+    "contactAvailability": "Provide direct support pathways via WhatsApp (+212 723 279 328) and support desk."
+  },
+  "verificationRules": {
+    "claimAuditIntervalDays": 30,
+    "sourceLinkVerification": "All external citations must return HTTP 200/301 from verified domains.",
+    "schemaValidation": "No unsupported Product, AggregateRating, or Review schema without audited transaction evidence."
+  }
+}

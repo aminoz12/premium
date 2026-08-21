@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "policyName": "2026 Brand Search Authority & Sitelinks Strategy",
+  "brandKeywordTargets2026": [
+    "WATCHWORLDCUP 2026",
+    "Watch World Cup 2026",
+    "WatchWorldCup.us 2026 guide",
+    "Watch World Cup 2026 replays",
+    "Watch World Cup 2026 setup"
+  ],
+  "sitelinkAnchors2026": [
+    { "anchor": "World Cup 2026 Hub", "path": "/world-cup-2026" },
+    { "anchor": "2026 Replay Tracker", "path": "/world-cup-2026/replays" },
+    { "anchor": "US 2026 Replays", "path": "/world-cup-2026/replays/usa" },
+    { "anchor": "2026 Final Standings", "path": "/world-cup-2026/final-standings" },
+    { "anchor": "2026 Host Cities", "path": "/world-cup-2026/host-cities" }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "catalog2026": {
+    "tournament": "FIFA World Cup 2026",
+    "totalVisualAssets2026": 40,
+    "primaryFormat": "image/webp",
+    "targetAspectRatios": ["1.91:1", "16:9"],
+    "key2026VisualCards": [
+      {
+        "id": "wc-2026-hub",
+        "path": "/images/og/world-cup-2026.webp",
+        "route": "/world-cup-2026",
+        "altText": "FIFA World Cup 2026 Schedule, Replay & Broadcast Guide Hub",
+        "visualKeywords": ["FIFA World Cup 2026 guide", "World Cup 2026 replay tracker", "2026 broadcast schedule graphic"]
+      },
+      {
+        "id": "wc-2026-final",
+        "path": "/images/og/world-cup-2026--final.webp",
+        "route": "/world-cup-2026/final",
+        "altText": "FIFA World Cup 2026 Final Match MetLife Stadium Guide Card",
+        "visualKeywords": ["FIFA World Cup 2026 Final", "2026 final broadcast replay", "MetLife Stadium 2026 final card"]
+      },
+      {
+        "id": "wc-2026-replays-usa",
+        "path": "/images/og/world-cup-2026--replays--usa.webp",
+        "route": "/world-cup-2026/replays/usa",
+        "altText": "USA FIFA World Cup 2026 Replays & Broadcaster Guide (FOX, Telemundo)",
+        "visualKeywords": ["US World Cup 2026 replays", "FOX Sports World Cup 2026 card", "Telemundo Peacock 2026 guide"]
+      },
+      {
+        "id": "wc-2026-host-cities",
+        "path": "/images/og/world-cup-2026--host-cities.webp",
+        "route": "/world-cup-2026/host-cities",
+        "altText": "FIFA World Cup 2026 Host Cities and Stadium Locations Map Card",
+        "visualKeywords": ["2026 host cities map", "World Cup 2026 stadiums graphic", "2026 venue match guide"]
+      }
+    ]
+  }
+}

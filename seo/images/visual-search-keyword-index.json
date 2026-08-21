@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "indexName": "2026 Visual Search Keyword Matrix",
+  "totalKeywordsMapped": 25,
+  "mappings": [
+    {
+      "visualKeyword": "FIFA World Cup 2026 replay guide chart",
+      "targetImage": "/images/og/world-cup-2026--replays.webp",
+      "route": "/world-cup-2026/replays"
+    },
+    {
+      "visualKeyword": "USA FIFA World Cup 2026 FOX Telemundo streaming card",
+      "targetImage": "/images/og/world-cup-2026--replays--usa.webp",
+      "route": "/world-cup-2026/replays/usa"
+    },
+    {
+      "visualKeyword": "World Cup 2026 host cities stadium location map",
+      "targetImage": "/images/og/world-cup-2026--host-cities.webp",
+      "route": "/world-cup-2026/host-cities"
+    },
+    {
+      "visualKeyword": "Fire TV Apple TV 4K sports streaming setup infographic",
+      "targetImage": "/images/og/guides--best-device-live-sports.webp",
+      "route": "/guides/best-device-live-sports"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "policyName": "Regional Image Localization Policy",
+  "regionalImageAssets": [
+    {
+      "region": "US",
+      "route": "/world-cup-2026/replays/usa",
+      "imagePath": "/images/og/world-cup-2026--replays--usa.webp",
+      "localizedAlt": {
+        "en-US": "USA FIFA World Cup 2026 Replays & Broadcaster Guide (FOX, Telemundo)",
+        "es-US": "Guía de repeticiones de la Copa Mundial 2026 en EE. UU. por FOX y Telemundo"
+      },
+      "broadcasterLogosReferenced": ["FOX Sports", "Telemundo", "Peacock"]
+    },
+    {
+      "region": "CA",
+      "route": "/world-cup-2026/replays",
+      "imagePath": "/images/og/world-cup-2026--replays.webp",
+      "localizedAlt": {
+        "en-CA": "Canada FIFA World Cup 2026 Broadcast Replays Guide (TSN, RDS)"
+      },
+      "broadcasterLogosReferenced": ["TSN", "RDS"]
+    },
+    {
+      "region": "GB",
+      "route": "/world-cup-2026/replays",
+      "imagePath": "/images/og/world-cup-2026--replays.webp",
+      "localizedAlt": {
+        "en-GB": "UK FIFA World Cup 2026 Broadcast Replays Guide (BBC, ITV)"
+      },
+      "broadcasterLogosReferenced": ["BBC", "ITV"]
+    }
+  ]
+}

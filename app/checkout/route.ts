@@ -1,0 +1,1 @@
+export function GET(){return new Response('This legacy checkout has been retired. WATCHWORLDCUP does not sell unverified streaming access.',{status:410,headers:{'content-type':'text/plain; charset=utf-8'}})}

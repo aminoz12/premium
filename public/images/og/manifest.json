@@ -1,0 +1,362 @@
+[
+  {
+    "path": "/",
+    "file": "/images/og/home.webp",
+    "title": "LIVE TV. SPORTS. MOVIES. SERIES.",
+    "background": "../commercial/iptv-hero.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 66156
+  },
+  {
+    "path": "/live-tv",
+    "file": "/images/og/live-tv.webp",
+    "title": "Live TV through your IPTV / M3U subscription.",
+    "background": "../commercial/live-tv.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 76996
+  },
+  {
+    "path": "/sports",
+    "file": "/images/og/sports.webp",
+    "title": "Sports and football availability through IPTV.",
+    "background": "stadium-final.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 103880
+  },
+  {
+    "path": "/movies",
+    "file": "/images/og/movies.webp",
+    "title": "Movies through your WATCHWORLDCUP subscription.",
+    "background": "../commercial/movies.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 71026
+  },
+  {
+    "path": "/series",
+    "file": "/images/og/series.webp",
+    "title": "Series remain separate from the movie catalog.",
+    "background": "../commercial/series.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 83348
+  },
+  {
+    "path": "/pricing",
+    "file": "/images/og/pricing.webp",
+    "title": "Choose your IPTV subscription.",
+    "background": "../commercial/devices.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 52106
+  },
+  {
+    "path": "/order",
+    "file": "/images/og/order.webp",
+    "title": "Prepare your WATCHWORLDCUP IPTV order.",
+    "background": "../commercial/devices.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 56198
+  },
+  {
+    "path": "/setup-guides",
+    "file": "/images/og/setup-guides.webp",
+    "title": "Prepare your device and compatible IPTV application.",
+    "background": "../commercial/devices.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 57152
+  },
+  {
+    "path": "/world-cup-2026",
+    "file": "/images/og/world-cup-2026.webp",
+    "title": "FIFA World Cup 2026 tournament archive.",
+    "background": "stadium-final.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 103138
+  },
+  {
+    "path": "/world-cup-2026/final",
+    "file": "/images/og/world-cup-2026--final.webp",
+    "title": "Spain 1–0 Argentina after extra time.",
+    "background": "stadium-final.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 103532
+  },
+  {
+    "path": "/world-cup-2026/final-standings",
+    "file": "/images/og/world-cup-2026--final-standings.webp",
+    "title": "World Cup 2026 final standings: 1–48.",
+    "background": "standings-data.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 87032
+  },
+  {
+    "path": "/world-cup-2026/awards",
+    "file": "/images/og/world-cup-2026--awards.webp",
+    "title": "World Cup 2026 award winners.",
+    "background": "awards-gold.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 90112
+  },
+  {
+    "path": "/world-cup-history",
+    "file": "/images/og/world-cup-history.webp",
+    "title": "World Cup history: champions, eras and records.",
+    "background": "history-archive.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 70112
+  },
+  {
+    "path": "/world-cup-history/winners",
+    "file": "/images/og/world-cup-history--winners.webp",
+    "title": "World Cup winners: every champion from 1930–2026.",
+    "background": "history-archive.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 70820
+  },
+  {
+    "path": "/world-cup-history/records",
+    "file": "/images/og/world-cup-history--records.webp",
+    "title": "World Cup records: most titles and final appearances.",
+    "background": "history-archive.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 71340
+  },
+  {
+    "path": "/world-cup-2026/replays",
+    "file": "/images/og/world-cup-2026--replays.webp",
+    "title": "Where to watch World Cup 2026 replays and highlights.",
+    "background": "replay-stream.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 59868
+  },
+  {
+    "path": "/world-cup-2026/replays/usa",
+    "file": "/images/og/world-cup-2026--replays--usa.webp",
+    "title": "How to rewatch the World Cup 2026 in the United States.",
+    "background": "replay-stream.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 58956
+  },
+  {
+    "path": "/world-cup-2026/teams",
+    "file": "/images/og/world-cup-2026--teams.webp",
+    "title": "All 48 World Cup 2026 teams, organized by group.",
+    "background": "teams-world.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 68770
+  },
+  {
+    "path": "/world-cup-2026/host-cities",
+    "file": "/images/og/world-cup-2026--host-cities.webp",
+    "title": "The North American cities that hosted World Cup 2026.",
+    "background": "host-cities.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 149270
+  },
+  {
+    "path": "/guides",
+    "file": "/images/og/guides.webp",
+    "title": "Practical sports-streaming guides with sources and limits.",
+    "background": "stream-tech.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 89026
+  },
+  {
+    "path": "/guides/is-iptv-legal",
+    "file": "/images/og/guides--is-iptv-legal.webp",
+    "title": "Is IPTV legal? The protocol is not the permission.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 86664
+  },
+  {
+    "path": "/guides/watch-soccer-without-cable",
+    "file": "/images/og/guides--watch-soccer-without-cable.webp",
+    "title": "How to watch soccer without cable—without guessing about rights.",
+    "background": "replay-stream.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 62320
+  },
+  {
+    "path": "/guides/streaming-latency",
+    "file": "/images/og/guides--streaming-latency.webp",
+    "title": "Why your sports stream is delayed—even when it never buffers.",
+    "background": "stream-tech.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 92296
+  },
+  {
+    "path": "/guides/sports-streaming-accessibility",
+    "file": "/images/og/guides--sports-streaming-accessibility.webp",
+    "title": "A replay is not available to everyone if the controls and language tracks are not usable.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 91820
+  },
+  {
+    "path": "/data",
+    "file": "/images/og/data.webp",
+    "title": "World Cup data with sources, fields and checksums.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 88806
+  },
+  {
+    "path": "/research",
+    "file": "/images/og/research.webp",
+    "title": "Measurement before marketing claims.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 85816
+  },
+  {
+    "path": "/research/streaming-benchmark-methodology",
+    "file": "/images/og/research--streaming-benchmark-methodology.webp",
+    "title": "A sports-streaming benchmark another tester can reproduce.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 88892
+  },
+  {
+    "path": "/research/world-cup-2026-replay-source-tracker",
+    "file": "/images/og/research--world-cup-2026-replay-source-tracker.webp",
+    "title": "World Cup 2026 authorized replay source tracker.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 87696
+  },
+  {
+    "path": "/updates",
+    "file": "/images/og/updates.webp",
+    "title": "Site and dataset updates.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 82556
+  },
+  {
+    "path": "/about",
+    "file": "/images/og/about.webp",
+    "title": "An IPTV subscription service with a separate World Cup resource.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 91334
+  },
+  {
+    "path": "/editorial-policy",
+    "file": "/images/og/editorial-policy.webp",
+    "title": "Editorial policy: who, how, and why.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 84898
+  },
+  {
+    "path": "/corrections",
+    "file": "/images/og/corrections.webp",
+    "title": "Report an error or material change.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 84270
+  },
+  {
+    "path": "/contact",
+    "file": "/images/og/contact.webp",
+    "title": "Reach WATCHWORLDCUP through the published channel.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 89350
+  },
+  {
+    "path": "/support",
+    "file": "/images/og/support.webp",
+    "title": "Support that starts with the right diagnostic path.",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 87210
+  },
+  {
+    "path": "/privacy-policy",
+    "file": "/images/og/privacy-policy.webp",
+    "title": "WATCHWORLDCUP privacy policy",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 85942
+  },
+  {
+    "path": "/terms-of-service",
+    "file": "/images/og/terms-of-service.webp",
+    "title": "WATCHWORLDCUP IPTV terms of service",
+    "background": "research-trust.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 86052
+  },
+  {
+    "path": "/guides/internet-speed-4k-sports",
+    "file": "/images/og/guides--internet-speed-4k-sports.webp",
+    "title": "Internet Speed for 4K Sports Streaming: Calculator & Guide",
+    "background": "stream-tech.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 91248
+  },
+  {
+    "path": "/guides/stop-sports-buffering",
+    "file": "/images/og/guides--stop-sports-buffering.webp",
+    "title": "How to Stop Live Sports Buffering: A Diagnostic Guide",
+    "background": "stream-tech.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 89572
+  },
+  {
+    "path": "/guides/best-device-live-sports",
+    "file": "/images/og/guides--best-device-live-sports.webp",
+    "title": "Best Streaming Device for Live Sports: Fire TV vs Apple TV",
+    "background": "stream-tech.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 89240
+  },
+  {
+    "path": "/guides/4k-hdr-sports-setup",
+    "file": "/images/og/guides--4k-hdr-sports-setup.webp",
+    "title": "4K HDR Sports Streaming Checklist: TV, Device, HDMI and Network",
+    "background": "stream-tech.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 90466
+  }
+]

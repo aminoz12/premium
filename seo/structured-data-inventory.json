@@ -1,0 +1,19 @@
+{
+  "policy": "Every schema entity must match visible page content and verified source data.",
+  "global": [
+    {"type": "Organization", "routes": ["/", "/about"], "purpose": "WATCHWORLDCUP brand publisher"},
+    {"type": "WebSite", "routes": ["/"], "purpose": "Canonical website identity"},
+    {"type": "Service", "routes": ["/"], "purpose": "IPTV and M3U subscription service without Offer or Product claims"},
+    {"type": "BreadcrumbList", "routes": ["all eligible interior pages"], "purpose": "Visible breadcrumb hierarchy"},
+    {"type": "FAQPage", "routes": ["pages with visible FAQ sections"], "purpose": "Questions and answers rendered on the page"}
+  ],
+  "editorial": [
+    {"type": "Article", "routes": ["guide, archive and research articles"], "purpose": "Visible source-backed editorial content"},
+    {"type": "SportsEvent", "routes": ["/world-cup-2026", "/world-cup-2026/final"], "purpose": "Completed tournament and final facts"}
+  ],
+  "data": [
+    {"type": "DataCatalog", "routes": ["/data"], "purpose": "Catalog of four public datasets"},
+    {"type": "Dataset", "routes": ["/research/world-cup-2026-replay-source-tracker", "/world-cup-2026/final-standings", "/world-cup-history/winners", "/world-cup-history/records"], "purpose": "Visible tables with matching CSV and JSON distributions"}
+  ],
+  "forbiddenWithoutEvidence": ["Product", "Offer", "AggregateRating", "Review", "QAPage", "SearchAction", "VideoObject"]
+}

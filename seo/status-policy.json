@@ -1,0 +1,25 @@
+{
+  "canonicalOrigin": "https://watchworldcup.us",
+  "indexable": {
+    "status": 200,
+    "robots": "index, follow",
+    "sitemapRequired": true,
+    "selfCanonicalRequired": true
+  },
+  "removed": [
+    {"pattern": "/checkout", "status": 410, "reason": "Retired checkout with no verified public equivalent"},
+    {"pattern": "/cart", "status": 404, "reason": "No cart product exists"},
+    {"pattern": "/client-area", "status": 404, "reason": "No public client area exists"},
+    {"pattern": "/search", "status": 404, "reason": "No internal search product exists"},
+    {"pattern": "/*?s=*", "status": 404, "reason": "Obsolete search-parameter variants"},
+    {"pattern": "/refund-policy", "status": 404, "reason": "No separately approved refund-policy page"},
+    {"pattern": "unknown paths", "status": 404, "reason": "Prevent infinite soft-200 URL space"}
+  ],
+  "crawlerBlocks": ["/api/", "/checkout", "/cart", "/client-area"],
+  "discoveryOnly": ["/robots.txt", "/sitemap.xml", "/feed.xml", "/manifest.webmanifest", "/.well-known/security.txt", "/llms.txt"],
+  "distributionOnly": ["/downloads/*.csv", "/downloads/*.json", "/downloads/*.sha256"],
+  "parameterPolicy": {
+    "trackingParameters": "Serve the canonical page with a clean self-canonical",
+    "searchParameter": "Return 404"
+  }
+}

@@ -1,0 +1,856 @@
+{
+  "generatedAt": "2026-08-11",
+  "sourceOrigin": "http://127.0.0.1:3210",
+  "canonicalOrigin": "https://watchworldcup.us",
+  "checks": {
+    "routeCount": 40,
+    "allStatus200": true,
+    "allExplicitIndexFollow": true,
+    "allOneH1": true,
+    "allSelfCanonical": true,
+    "uniqueTitles": true,
+    "uniqueDescriptions": true,
+    "uniqueSocialImages": true,
+    "geoHreflangReciprocal": true,
+    "robotsAdvertisesSitemap": true
+  },
+  "rows": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "title": "WATCHWORLDCUP IPTV — M3U Subscriptions for Live TV",
+      "description": "Choose a WATCHWORLDCUP IPTV or M3U subscription for available live TV, sports, movies and series. Compare plans and order through WhatsApp.",
+      "canonical": "https://watchworldcup.us",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 1116,
+      "ogImage": "https://watchworldcup.us/images/og/home.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "FAQPage",
+        "ImageObject",
+        "Organization",
+        "Question",
+        "Service",
+        "WebSite"
+      ]
+    },
+    {
+      "pathname": "/live-tv",
+      "status": 200,
+      "title": "Live TV IPTV Categories — WATCHWORLDCUP M3U Service | WATCHWORLDCUP",
+      "description": "Explore the WATCHWORLDCUP live TV service structure for available sports, news, entertainment, kids, music, documentary and international categories.",
+      "canonical": "https://watchworldcup.us/live-tv",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 516,
+      "ogImage": "https://watchworldcup.us/images/og/live-tv.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/sports",
+      "status": 200,
+      "title": "Sports &amp; Football IPTV — Check Current Availability | WATCHWORLDCUP",
+      "description": "Ask WATCHWORLDCUP about currently available football, sports and live-event IPTV coverage. No official rights, league or broadcaster affiliation is implied.",
+      "canonical": "https://watchworldcup.us/sports",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 467,
+      "ogImage": "https://watchworldcup.us/images/og/sports.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/movies",
+      "status": 200,
+      "title": "Movies with WATCHWORLDCUP IPTV — Catalog Availability | WATCHWORLDCUP",
+      "description": "Explore how movie access works with WATCHWORLDCUP IPTV. Request current genres, languages, quality and title availability before ordering.",
+      "canonical": "https://watchworldcup.us/movies",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 446,
+      "ogImage": "https://watchworldcup.us/images/og/movies.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/series",
+      "status": 200,
+      "title": "TV Series with WATCHWORLDCUP IPTV — Current Availability | WATCHWORLDCUP",
+      "description": "Learn how to confirm current TV series, season, episode, genre, language and quality availability with WATCHWORLDCUP IPTV before ordering.",
+      "canonical": "https://watchworldcup.us/series",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 415,
+      "ogImage": "https://watchworldcup.us/images/og/series.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/pricing",
+      "status": 200,
+      "title": "WATCHWORLDCUP IPTV Pricing — 3 Months, 6 Months or 1 Year | WATCHWORLDCUP",
+      "description": "Compare WATCHWORLDCUP IPTV and M3U subscription prices: $25 for 3 months, $38 for 6 months, or $62 for 1 year. Order through WhatsApp.",
+      "canonical": "https://watchworldcup.us/pricing",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 762,
+      "ogImage": "https://watchworldcup.us/images/og/pricing.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/order",
+      "status": 200,
+      "title": "Order WATCHWORLDCUP IPTV — Choose Plan &amp; Continue on WhatsApp | WATCHWORLDCUP",
+      "description": "Select a WATCHWORLDCUP IPTV/M3U plan, add optional country and device compatibility details, then continue the order through WhatsApp.",
+      "canonical": "https://watchworldcup.us/order",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 485,
+      "ogImage": "https://watchworldcup.us/images/og/order.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/setup-guides",
+      "status": 200,
+      "title": "IPTV M3U Setup Guide — TV, Android, iPhone, Fire TV &amp; Desktop | WATCHWORLDCUP",
+      "description": "Prepare and configure WATCHWORLDCUP IPTV or M3U subscription details in a compatible IPTV application on supported device families.",
+      "canonical": "https://watchworldcup.us/setup-guides",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 683,
+      "ogImage": "https://watchworldcup.us/images/og/setup-guides.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026",
+      "status": 200,
+      "title": "World Cup 2026 Archive — Format, Teams, Hosts &amp; Replays | WATCHWORLDCUP",
+      "description": "Explore the completed World Cup 2026 tournament format, stage dates, teams, host cities, and authorized replay information.",
+      "canonical": "https://watchworldcup.us/world-cup-2026",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 578,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "Country",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "SportsEvent"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/final",
+      "status": 200,
+      "title": "World Cup 2026 Final — Spain 1–0 Argentina After Extra Time | WATCHWORLDCUP",
+      "description": "A source-linked archive of the World Cup 2026 final: Spain beat Argentina 1–0 after extra time through Ferran Torres’s 106th-minute goal.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/final",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 549,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--final.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Place",
+        "PostalAddress",
+        "Question",
+        "SportsEvent",
+        "SportsTeam",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/final-standings",
+      "status": 200,
+      "title": "World Cup 2026 Final Standings — All 48 Teams Ranked | WATCHWORLDCUP",
+      "description": "Browse the official World Cup 2026 final tournament standings from Spain at number one through all 48 teams, with finish and downloadable CSV.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/final-standings",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 662,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--final-standings.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "DataDownload",
+        "Dataset",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/awards",
+      "status": 200,
+      "title": "World Cup 2026 Awards — Golden Ball, Boot, Glove &amp; Young Player | WATCHWORLDCUP",
+      "description": "See the official World Cup 2026 award winners and Golden Boot top ten, including Rodri, Kylian Mbappé, Unai Simón, and Pau Cubarsí.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/awards",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 566,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--awards.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-history",
+      "status": 200,
+      "title": "World Cup History — Champions, Eras &amp; Records Since 1930 | WATCHWORLDCUP",
+      "description": "Explore men’s World Cup history from Uruguay 1930 through Spain’s 2026 title, including champion eras, title records, and an open winners dataset.",
+      "canonical": "https://watchworldcup.us/world-cup-history",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 650,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-history.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-history/winners",
+      "status": 200,
+      "title": "World Cup Winners List 1930–2026 — Every Champion &amp; Final | WATCHWORLDCUP",
+      "description": "See every men’s World Cup champion, runner-up, host and deciding result from 1930 through 2026, plus title leaders and a downloadable CSV.",
+      "canonical": "https://watchworldcup.us/world-cup-history/winners",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 818,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-history--winners.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "DataDownload",
+        "Dataset",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-history/records",
+      "status": 200,
+      "title": "World Cup Records — Most Titles, Finals &amp; Champion Nations | WATCHWORLDCUP",
+      "description": "Compare men’s World Cup title leaders, final appearances, runner-up finishes, host champions, retained titles, and deciding methods through 2026.",
+      "canonical": "https://watchworldcup.us/world-cup-history/records",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 716,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-history--records.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "DataDownload",
+        "Dataset",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/replays",
+      "status": 200,
+      "title": "Where to Watch World Cup 2026 Replays &amp; Highlights Legally | WATCHWORLDCUP",
+      "description": "Compare authorized full-match replay and highlight options for the completed World Cup 2026, including US English and Spanish platforms.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/replays",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 583,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--replays.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [
+        {
+          "language": "x-default",
+          "url": "https://watchworldcup.us/world-cup-2026/replays"
+        },
+        {
+          "language": "en-US",
+          "url": "https://watchworldcup.us/world-cup-2026/replays/usa"
+        }
+      ],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/replays/usa",
+      "status": 200,
+      "title": "World Cup 2026 Replays in USA — FOX, Peacock &amp; Highlights | WATCHWORLDCUP",
+      "description": "Compare authorized US World Cup 2026 replay options in English and Spanish, including FOX, FOX One, Peacock, Telemundo, and free highlights.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/replays/usa",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 568,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--replays--usa.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [
+        {
+          "language": "en-US",
+          "url": "https://watchworldcup.us/world-cup-2026/replays/usa"
+        },
+        {
+          "language": "x-default",
+          "url": "https://watchworldcup.us/world-cup-2026/replays"
+        }
+      ],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/teams",
+      "status": 200,
+      "title": "World Cup 2026 Teams — All 48 Nations by Group | WATCHWORLDCUP",
+      "description": "Browse all 48 teams in the expanded World Cup 2026 tournament, organized across twelve groups of four.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/teams",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 405,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--teams.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/world-cup-2026/host-cities",
+      "status": 200,
+      "title": "World Cup 2026 Host Cities — Canada, Mexico &amp; USA | WATCHWORLDCUP",
+      "description": "Explore the 16 host cities that staged World Cup 2026 matches across Canada, Mexico, and the United States.",
+      "canonical": "https://watchworldcup.us/world-cup-2026/host-cities",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 358,
+      "ogImage": "https://watchworldcup.us/images/og/world-cup-2026--host-cities.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/guides",
+      "status": 200,
+      "title": "Sports Streaming Guides — Devices, 4K, Speed &amp; Buffering | WATCHWORLDCUP",
+      "description": "Evidence-led guides for 4K sports streaming, internet speed, buffering diagnosis, device selection, and legal IPTV basics.",
+      "canonical": "https://watchworldcup.us/guides",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 450,
+      "ogImage": "https://watchworldcup.us/images/og/guides.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/guides/is-iptv-legal",
+      "status": 200,
+      "title": "Is IPTV Legal? Technology, Licensing &amp; Warning Signs | WATCHWORLDCUP",
+      "description": "IPTV is a delivery technology; legality depends on content rights. Learn how to identify licensed services, risky claims, and safer alternatives.",
+      "canonical": "https://watchworldcup.us/guides/is-iptv-legal",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 638,
+      "ogImage": "https://watchworldcup.us/images/og/guides--is-iptv-legal.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/guides/watch-soccer-without-cable",
+      "status": 200,
+      "title": "How to Watch Soccer Without Cable Legally in the USA | WATCHWORLDCUP",
+      "description": "Compare legal ways to watch soccer without cable in the United States using antennas, direct streaming apps, live TV services, and replays.",
+      "canonical": "https://watchworldcup.us/guides/watch-soccer-without-cable",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 693,
+      "ogImage": "https://watchworldcup.us/images/og/guides--watch-soccer-without-cable.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/guides/streaming-latency",
+      "status": 200,
+      "title": "Sports Streaming Delay Explained — Latency, HLS &amp; Spoilers | WATCHWORLDCUP",
+      "description": "Understand why live sports streams run behind broadcast, how HLS segments and player buffers add delay, and which tests can isolate the cause.",
+      "canonical": "https://watchworldcup.us/guides/streaming-latency",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 587,
+      "ogImage": "https://watchworldcup.us/images/og/guides--streaming-latency.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/guides/sports-streaming-accessibility",
+      "status": 200,
+      "title": "Sports Streaming Accessibility Checklist | WATCHWORLDCUP",
+      "description": "Check captions, commentary languages, audio description, keyboard access, contrast, and replay controls before choosing a sports platform.",
+      "canonical": "https://watchworldcup.us/guides/sports-streaming-accessibility",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 536,
+      "ogImage": "https://watchworldcup.us/images/og/guides--sports-streaming-accessibility.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/data",
+      "status": 200,
+      "title": "Open World Cup Data Catalog — CSV, JSON &amp; Provenance | WATCHWORLDCUP",
+      "description": "Download WATCHWORLDCUP’s replay-source, 2026 standings, historical winners, and title-record datasets in CSV or JSON with provenance and checksums.",
+      "canonical": "https://watchworldcup.us/data",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 756,
+      "ogImage": "https://watchworldcup.us/images/og/data.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "DataCatalog",
+        "DataDownload",
+        "Dataset",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/research",
+      "status": 200,
+      "title": "WATCHWORLDCUP Research — Streaming Tests &amp; Open Templates | WATCHWORLDCUP",
+      "description": "Open methodology, downloadable measurement templates, and future first-party research on sports streaming devices, latency, quality, and accessibility.",
+      "canonical": "https://watchworldcup.us/research",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 424,
+      "ogImage": "https://watchworldcup.us/images/og/research.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/research/streaming-benchmark-methodology",
+      "status": 200,
+      "title": "Sports Streaming Benchmark Methodology — Open Test Protocol | WATCHWORLDCUP",
+      "description": "A reproducible protocol for measuring startup time, buffering, frame drops, latency, quality, captions, and device behavior in sports streaming apps.",
+      "canonical": "https://watchworldcup.us/research/streaming-benchmark-methodology",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 497,
+      "ogImage": "https://watchworldcup.us/images/og/research--streaming-benchmark-methodology.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Article",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/research/world-cup-2026-replay-source-tracker",
+      "status": 200,
+      "title": "World Cup 2026 Replay Source Tracker — Open Dataset | WATCHWORLDCUP",
+      "description": "A manually checked dataset of authorized World Cup 2026 replay and highlight pages, with region, language, access, verification, and dates.",
+      "canonical": "https://watchworldcup.us/research/world-cup-2026-replay-source-tracker",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 519,
+      "ogImage": "https://watchworldcup.us/images/og/research--world-cup-2026-replay-source-tracker.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "DataDownload",
+        "Dataset",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/updates",
+      "status": 200,
+      "title": "Site &amp; Dataset Updates — WATCHWORLDCUP Changelog | WATCHWORLDCUP",
+      "description": "Dated changes to WATCHWORLDCUP sources, datasets, editorial coverage, technical quality, and correction status.",
+      "canonical": "https://watchworldcup.us/updates",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 746,
+      "ogImage": "https://watchworldcup.us/images/og/updates.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/about",
+      "status": 200,
+      "title": "About WATCHWORLDCUP IPTV — Service, Brand &amp; Standards | WATCHWORLDCUP",
+      "description": "Learn how WATCHWORLDCUP provides IPTV and M3U subscription plans while limiting catalog, quality, compatibility and rights claims to verified information.",
+      "canonical": "https://watchworldcup.us/about",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 396,
+      "ogImage": "https://watchworldcup.us/images/og/about.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization"
+      ]
+    },
+    {
+      "pathname": "/editorial-policy",
+      "status": 200,
+      "title": "Editorial Policy — Sources, Testing, AI &amp; Updates | WATCHWORLDCUP",
+      "description": "How WATCHWORLDCUP researches, verifies, authors, updates, discloses automation, and corrects tournament and streaming guidance.",
+      "canonical": "https://watchworldcup.us/editorial-policy",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 491,
+      "ogImage": "https://watchworldcup.us/images/og/editorial-policy.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/corrections",
+      "status": 200,
+      "title": "Corrections Policy | WATCHWORLDCUP",
+      "description": "How to report factual errors, broken sources, rights changes, accessibility problems, or material updates to WATCHWORLDCUP.",
+      "canonical": "https://watchworldcup.us/corrections",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 304,
+      "ogImage": "https://watchworldcup.us/images/og/corrections.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/contact",
+      "status": 200,
+      "title": "Contact WATCHWORLDCUP | WATCHWORLDCUP",
+      "description": "Contact WATCHWORLDCUP through its published WhatsApp channel for corrections, source updates, accessibility feedback or website support.",
+      "canonical": "https://watchworldcup.us/contact",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 297,
+      "ogImage": "https://watchworldcup.us/images/og/contact.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "BreadcrumbList",
+        "ListItem"
+      ]
+    },
+    {
+      "pathname": "/support",
+      "status": 200,
+      "title": "WATCHWORLDCUP IPTV Support — Setup, Orders &amp; Troubleshooting | WATCHWORLDCUP",
+      "description": "Find help with WATCHWORLDCUP IPTV orders, M3U setup, compatible apps, buffering diagnostics, replay-source corrections and support questions.",
+      "canonical": "https://watchworldcup.us/support",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 344,
+      "ogImage": "https://watchworldcup.us/images/og/support.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Question"
+      ]
+    },
+    {
+      "pathname": "/privacy-policy",
+      "status": 200,
+      "title": "WATCHWORLDCUP Privacy Policy | WATCHWORLDCUP",
+      "description": "How WATCHWORLDCUP handles website access, WhatsApp ordering, support messages, technical logs, subscription credentials and privacy requests.",
+      "canonical": "https://watchworldcup.us/privacy-policy",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 585,
+      "ogImage": "https://watchworldcup.us/images/og/privacy-policy.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": []
+    },
+    {
+      "pathname": "/terms-of-service",
+      "status": 200,
+      "title": "WATCHWORLDCUP IPTV Terms of Service | WATCHWORLDCUP",
+      "description": "Terms for WATCHWORLDCUP IPTV and M3U plan information, WhatsApp ordering, availability, compatibility, credentials, payments and third parties.",
+      "canonical": "https://watchworldcup.us/terms-of-service",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 632,
+      "ogImage": "https://watchworldcup.us/images/og/terms-of-service.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": []
+    },
+    {
+      "pathname": "/guides/internet-speed-4k-sports",
+      "status": 200,
+      "title": "Internet Speed for 4K Sports Streaming: Calculator &amp; Guide | WATCHWORLDCUP",
+      "description": "Calculate the practical internet speed needed for SD, HD, 4K, and 8K IPTV, including multiple streams, Wi-Fi overhead, and other household traffic.",
+      "canonical": "https://watchworldcup.us/guides/internet-speed-4k-sports",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 1221,
+      "ogImage": "https://watchworldcup.us/images/og/guides--internet-speed-4k-sports.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/guides/stop-sports-buffering",
+      "status": 200,
+      "title": "How to Stop Live Sports Buffering: A Diagnostic Guide | WATCHWORLDCUP",
+      "description": "Diagnose IPTV buffering step by step by separating internet, Wi-Fi, device, app, and provider-side causes instead of trying random fixes.",
+      "canonical": "https://watchworldcup.us/guides/stop-sports-buffering",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 1196,
+      "ogImage": "https://watchworldcup.us/images/og/guides--stop-sports-buffering.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/guides/best-device-live-sports",
+      "status": 200,
+      "title": "Best Streaming Device for Live Sports: Fire TV vs Apple TV | WATCHWORLDCUP",
+      "description": "Compare IPTV device types by 4K support, Ethernet, app flexibility, codec compatibility, storage, updates, and ease of use.",
+      "canonical": "https://watchworldcup.us/guides/best-device-live-sports",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 1132,
+      "ogImage": "https://watchworldcup.us/images/og/guides--best-device-live-sports.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    },
+    {
+      "pathname": "/guides/4k-hdr-sports-setup",
+      "status": 200,
+      "title": "4K HDR Sports Streaming Checklist: TV, Device, HDMI and Network | WATCHWORLDCUP",
+      "description": "Verify every link in a 4K IPTV setup—from the stream and decoder to HDMI, television settings, HDR, and network capacity.",
+      "canonical": "https://watchworldcup.us/guides/4k-hdr-sports-setup",
+      "robots": "index, follow",
+      "h1Count": 1,
+      "serverWords": 1087,
+      "ogImage": "https://watchworldcup.us/images/og/guides--4k-hdr-sports-setup.webp",
+      "twitterCard": "summary_large_image",
+      "hreflang": [],
+      "schemaTypes": [
+        "Answer",
+        "Article",
+        "BreadcrumbList",
+        "FAQPage",
+        "ListItem",
+        "Organization",
+        "Question",
+        "WebPage"
+      ]
+    }
+  ]
+}
