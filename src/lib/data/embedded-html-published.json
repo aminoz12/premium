@@ -1,0 +1,33 @@
+[
+  {
+    "path": "/embedded-tools/diagramm-generateCategoricalChart.html",
+    "fileName": "diagramm-generator.html"
+  },
+  { "path": "/embedded-tools/doc-pdf.html", "fileName": "doc-pdf.html" },
+  { "path": "/embedded-tools/edit-image.html", "fileName": "edit-image.html" },
+  { "path": "/embedded-tools/edit-pdf.html", "fileName": "edit-pdf.html" },
+  { "path": "/embedded-tools/fix-image.html", "fileName": "fix-image.html" },
+  { "path": "/embedded-tools/fix-old-image.html", "fileName": "fix-old-image.html" },
+  { "path": "/embedded-tools/free_ebooks.html", "fileName": "free_books.html" },
+  { "path": "/embedded-tools/generate-3d-2d.html", "fileName": "generate-3d-2d.html" },
+  { "path": "/embedded-tools/generate-3d.html", "fileName": "generate-3d.html" },
+  { "path": "/embedded-tools/remove-bg.html", "fileName": "remove-bg.html" },
+  { "path": "/embedded-tools/generate-chart.html", "fileName": "generate-chart.html" },
+  { "path": "/embedded-tools/generate-password.html", "fileName": "generate-password.html" },
+  { "path": "/embedded-tools/generate-qr-code.html", "fileName": "generate-qr-code.html" },
+  { "path": "/embedded-tools/generate-grid.html", "fileName": "generator_grid.html" },
+  { "path": "/embedded-tools/home.html", "fileName": "home.html" },
+  { "path": "/embedded-tools/image-convertir.html", "fileName": "image-convertir.html" },
+  { "path": "/embedded-tools/pdf-to-word.html", "fileName": "pdf-to-word.html" },
+  { "path": "/embedded-tools/random-image.html", "fileName": "random_image.html" },
+  { "path": "/embedded-tools/speed-test.html", "fileName": "speed-test.html" },
+  { "path": "/embedded-tools/text-to-docs.html", "fileName": "text-to-docs.html" },
+  { "path": "/embedded-tools/text-to-pdf.html", "fileName": "text-to-pdf.html" },
+  { "path": "/embedded-tools/uml.html", "fileName": "uml.html" },
+  { "path": "/embedded-tools/Typing.html", "fileName": "Typing.html" },
+  { "path": "/embedded-tools/video-to-audio.html", "fileName": "video-to-audio.html" },
+  { "path": "/embedded-tools/audio-convertir.html", "fileName": "audio-convertir.html" }
+
+
+
+]

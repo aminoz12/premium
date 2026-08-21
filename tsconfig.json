@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    "noImplicitAny": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -23,8 +24,11 @@
       }
     ],
     "paths": {
+      "@/blog/*": [
+        "./src/app/blog/*"
+      ],
       "@/*": [
-        "./*"
+        "./src/*"
       ]
     }
   },
@@ -34,8 +38,13 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "src/app/tools/image-convertir-ai", "src/app/tools/edit-pdf-ai/client-page.jsx"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "examples",
+    "skills",
+    ".next/**",
+    "src/app/blog/blog",
+    "src/app/blog/blog/**"
   ]
 }
